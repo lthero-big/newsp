@@ -1,0 +1,81 @@
+/* v2.7 theme archetypes — layout-level looks keyed by body[data-arch]. Readability first:
+   body ≥16px, line-height ≥1.65, AA contrast (tokens checked at build), textures never over text or images. */
+body{font-size:16px;line-height:1.7}
+.card .meta{font-size:12.5px}
+.card .ex,.card .ex.sum{font-size:16px;line-height:1.72;-webkit-line-clamp:5}
+.card h3{line-height:1.35}
+
+/* ---------- 报刊编辑风 ---------- */
+[data-arch="editorial"] .grid{gap:0 36px}
+[data-arch="editorial"] .card{background:transparent;border:0;border-top:1px solid var(--ink);border-radius:0;box-shadow:none;padding:18px 0 26px}
+[data-arch="editorial"] .card:hover{transform:none}
+[data-arch="editorial"] .card.lead{padding:22px 0 30px;border-top-width:3px}
+[data-arch="editorial"] .card h3{font-size:21px;font-weight:600}
+[data-arch="editorial"] .card.lead h3{font-size:clamp(26px,3vw,38px);line-height:1.18}
+[data-arch="editorial"] .card .ex,[data-arch="editorial"] .card .ex.sum{font-size:17px;line-height:1.78;color:var(--ink)}
+[data-arch="editorial"] .mhead{border-bottom:4px double var(--ink)}
+[data-arch="editorial"] .mhead h2{font-style:italic}
+[data-arch="editorial"] .hero h1{font-weight:600;letter-spacing:-.03em}
+[data-arch="editorial"] .tag{border-radius:0;border-color:var(--line);background:none}
+[data-arch="editorial"] .card[data-batch="pm"]::before{inset:-1px 0 auto 0;width:auto;height:3px;border-radius:0}
+
+/* ---------- 新粗野主义 ---------- */
+[data-arch="brutal"] .card{border:2px solid var(--ink);border-radius:0;box-shadow:5px 5px 0 var(--ink);transition:transform .15s,box-shadow .15s}
+[data-arch="brutal"] .card:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink);border-color:var(--ink)}
+[data-arch="brutal"] .card h3{font-weight:800;font-size:19px}
+[data-arch="brutal"] .card.lead h3{font-weight:900}
+[data-arch="brutal"] .mhead{border-bottom:3px solid var(--ink)}
+[data-arch="brutal"] .mhead .idx{background:var(--accent);color:var(--accent-ink);padding:2px 8px;border:2px solid var(--ink)}
+[data-arch="brutal"] .mhead h2{font-weight:900;text-transform:uppercase}
+[data-arch="brutal"] .hero h1{font-weight:900;letter-spacing:-.04em}
+[data-arch="brutal"] .tag,[data-arch="brutal"] .chip{border:2px solid var(--ink);border-radius:0;background:var(--surface);color:var(--ink)}
+[data-arch="brutal"] .chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+[data-arch="brutal"] .card img{border:2px solid var(--ink)}
+
+/* ---------- 瑞士网格 + 极淡噪点（只在页面底色上，卡片不透明） ---------- */
+[data-arch="swiss"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E")}
+[data-arch="swiss"] .grid{gap:24px}
+[data-arch="swiss"] .card{border:0;border-top:4px solid var(--ink);border-radius:0;box-shadow:none;background:var(--surface)}
+[data-arch="swiss"] .card:hover{transform:none;border-top-color:var(--accent)}
+[data-arch="swiss"] .card h3{font-weight:700;letter-spacing:-.015em}
+[data-arch="swiss"] .card .rank{font-size:15px}
+[data-arch="swiss"] .hero h1{font-weight:900;letter-spacing:-.05em;font-size:clamp(44px,8vw,120px)}
+[data-arch="swiss"] .mhead{border-bottom:0;border-top:8px solid var(--ink);padding-top:12px}
+[data-arch="swiss"] .mhead .idx{font-size:28px;font-weight:900;color:var(--accent)}
+[data-arch="swiss"] .mhead h2{font-weight:900;letter-spacing:-.03em}
+[data-arch="swiss"] .tag,[data-arch="swiss"] .chip{border-radius:0}
+
+/* ---------- Bento 便当格：每行 6+6 / 4+4+4，左右对称 ---------- */
+[data-arch="bento"] .grid{gap:14px;grid-auto-flow:row dense}
+[data-arch="bento"] .card{border-radius:22px;padding:22px}
+[data-arch="bento"] .card:not(.lead){grid-column:span 4}
+[data-arch="bento"] .grid>.card:nth-child(5n+1 of .card:not(.lead,[hidden])),[data-arch="bento"] .grid>.card:nth-child(5n+2 of .card:not(.lead,[hidden])){grid-column:span 6}
+[data-arch="bento"] .card.lead{grid-column:span 12;grid-row:auto}
+[data-arch="bento"] .tag,[data-arch="bento"] .chip{border-radius:999px}
+[data-arch="bento"] .card img{border-radius:14px}
+
+/* ---------- 终端 CRT：扫描线只在两侧留白，内容区底色不透明 ---------- */
+[data-arch="crt"]{background-image:repeating-linear-gradient(0deg,rgba(61,255,139,.05) 0 1px,transparent 1px 3px)}
+[data-arch="crt"] main>*,[data-arch="crt"] .wrap{background:var(--bg)}
+[data-arch="crt"] .top{background:var(--bg)}
+[data-arch="crt"] .card{border-radius:4px;border-color:var(--line);box-shadow:inset 0 0 0 1px rgba(61,255,139,.06)}
+[data-arch="crt"] .card:hover{transform:none;border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 0 18px rgba(61,255,139,.15)}
+[data-arch="crt"] .card h3{font-family:var(--font-body);font-weight:700}
+[data-arch="crt"] .card .src::before{content:"> ";color:var(--accent)}
+[data-arch="crt"] .tag{border-radius:2px;background:none;font-family:var(--font-mono)}
+[data-arch="crt"] .tag::before{content:"--";color:var(--accent)}
+[data-arch="crt"] .mhead h2{font-weight:700}
+[data-arch="crt"] .mhead h2::after{content:"_";color:var(--accent);margin-left:4px}
+
+/* ---------- 极光毛玻璃：静态极光在底色上，卡片 94% 不透明 ---------- */
+[data-arch="aurora"]{background-image:radial-gradient(60vw 50vh at 15% 0%,rgba(124,92,255,.35),transparent 70%),radial-gradient(50vw 50vh at 90% 10%,rgba(0,200,180,.22),transparent 70%),radial-gradient(70vw 60vh at 50% 100%,rgba(255,80,160,.16),transparent 70%);background-attachment:fixed}
+[data-arch="aurora"] .card{background:color-mix(in srgb,var(--surface) 94%,transparent);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.1);border-radius:20px}
+[data-arch="aurora"] .card:hover{border-color:color-mix(in srgb,var(--accent) 60%,transparent)}
+[data-arch="aurora"] .meter,[data-arch="aurora"] .chip{background:color-mix(in srgb,var(--surface) 92%,transparent)}
+[data-arch="aurora"] .card img{border-radius:12px}
+
+@media (max-width:640px){
+  [data-arch] .grid>.card,[data-arch] .grid>.card.lead{grid-column:1/-1!important}
+  [data-arch="swiss"] .hero h1{font-size:clamp(44px,14vw,72px)}
+}
+@media (prefers-reduced-motion:reduce){[data-arch] .card{transition:none}}

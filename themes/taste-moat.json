@@ -1,0 +1,25 @@
+{
+  "id": "taste-moat",
+  "name": "品味护城河",
+  "inspiredBy": "news-taste-moat-picker",
+  "source": "design-daily/data/items/news-taste-moat-picker.json",
+  "scheme": "dark",
+  "weight": 1,
+  "tokens": {
+    "bg": "#0b0b10",
+    "surface": "#14141b",
+    "ink": "#ececf1",
+    "muted": "#8b8b99",
+    "line": "#23232d",
+    "accent": "#d4ff3a",
+    "accent-ink": "#0b0b10",
+    "radius": "12px",
+    "border-w": "1px",
+    "shadow": "0 0 0 1px #23232d",
+    "font-display": "'Instrument Serif','Iowan Old Style','Songti SC','Noto Serif SC',serif",
+    "font-body": "'Inter','PingFang SC',system-ui,sans-serif",
+    "font-mono": "'JetBrains Mono','SF Mono',ui-monospace,monospace",
+    "bg-pattern": "none",
+    "tilt": "0deg"
+  }
+}

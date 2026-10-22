@@ -1,0 +1,9 @@
+/* ix tabbar/dock — magnetic-dock feel for the phone tab bar. Hooks: [data-ixh~="tabbar"], [data-ixh~="tab"]. Entries, order, badges, hide rule unchanged. */
+@media (max-width:640px){
+html[data-ix-tabbar="dock"] [data-ixh~="tab"][aria-current],html[data-ix-tabbar="dock"] [data-ixh~="tab"].on{background:none}
+html[data-ix-tabbar="dock"] [data-ixh~="tab"][aria-current]::after,html[data-ix-tabbar="dock"] [data-ixh~="tab"].on::after{content:"";position:absolute;bottom:3px;left:50%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--ix-accent)}
+html[data-ix-tabbar="dock"] [data-ixh~="tab"] svg{transform-origin:50% 80%}
+html[data-ix-tabbar="dock"] [data-ixh~="tab"]:active{transform:none}
+}
+@media (prefers-reduced-motion:reduce){html[data-ix-tabbar="dock"] [data-ixh~="tab"] svg{transform:none!important}}
+html.dd-rm[data-ix-tabbar="dock"] [data-ixh~="tab"] svg{transform:none!important}

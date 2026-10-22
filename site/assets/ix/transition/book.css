@@ -1,0 +1,11 @@
+/* ix transition/book — 3D page turn between issues (cross-document View Transitions). Only the root snapshot pseudo-elements animate.
+   Types set by ix/boot.js (pagereveal, shared contract): ix-next (to a newer day) / ix-prev (to an older day). Same-document VTs (theme switch) are untouched. */
+@view-transition{navigation:auto}
+html:active-view-transition-type(ix-next)::view-transition-old(root),html:active-view-transition-type(ix-prev)::view-transition-old(root){animation:ixBookOut .56s cubic-bezier(.65,0,.35,1) both;transform-origin:left center;z-index:2;backface-visibility:hidden}
+html:active-view-transition-type(ix-prev)::view-transition-old(root){animation-name:ixBookOutR;transform-origin:right center}
+html:active-view-transition-type(ix-next)::view-transition-new(root),html:active-view-transition-type(ix-prev)::view-transition-new(root){animation:ixBookIn .56s cubic-bezier(.22,1,.36,1) both;z-index:1}
+@keyframes ixBookOut{from{transform:perspective(1500px) rotateY(0)}to{transform:perspective(1500px) rotateY(-100deg);opacity:.6}}
+@keyframes ixBookOutR{from{transform:perspective(1500px) rotateY(0)}to{transform:perspective(1500px) rotateY(100deg);opacity:.6}}
+@keyframes ixBookIn{from{transform:scale(.96);opacity:.4}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){@view-transition{navigation:none}}
+html.dd-rm::view-transition-old(root),html.dd-rm::view-transition-new(root){animation:none!important}

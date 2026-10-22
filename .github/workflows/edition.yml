@@ -1,0 +1,106 @@
+# Scheduled editions on GitHub Actions (or your own self-hosted runner).
+# Turn it on with the repository variable NEWSP_ENABLED=true after the secrets below are set (README · GitHub Actions).
+# Times are Asia/Shanghai: 08:30 full edition, 15:00 and 20:00 incremental. Actions cron may start 5–30 min late.
+name: edition
+on:
+  schedule:
+    - cron: "30 0 * * *"   # 08:30 CST  am
+    - cron: "0 7 * * *"    # 15:00 CST  pm
+    - cron: "0 12 * * *"   # 20:00 CST  pm (20:00 run)
+  workflow_dispatch:
+    inputs:
+      run:
+        description: "am = full edition, pm = incremental"
+        type: choice
+        options: [am, pm]
+        default: am
+      news_run:
+        description: "pm only: 15:00 or 20:00"
+        default: "15:00"
+      mode:
+        description: "publish = live site, preview = edition/manual branch only"
+        type: choice
+        options: [publish, preview]
+        default: publish
+permissions:
+  contents: write
+concurrency:
+  group: newsp-edition
+  cancel-in-progress: false
+jobs:
+  edition:
+    if: vars.NEWSP_ENABLED == 'true'
+    # NEWSP_RUNS_ON: JSON, e.g. "ubuntu-latest" (default) or ["self-hosted","linux"] (home IP: Reddit doesn't 429)
+    runs-on: ${{ fromJSON(vars.NEWSP_RUNS_ON || '"ubuntu-latest"') }}
+    timeout-minutes: 60
+    env:
+      TZ: Asia/Shanghai
+      NEWS_SITE: ${{ vars.NEWS_SITE }}
+      NEWS_DEPLOY: ${{ vars.NEWS_DEPLOY || 'git' }}
+      CF_PAGES_PROJECT: ${{ vars.CF_PAGES_PROJECT || 'newsp' }}
+      RATINGS_TOKEN: ${{ secrets.RATINGS_TOKEN }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      NEWS_LLM: ${{ vars.NEWS_LLM || 'key' }}
+      NEWS_LLM_PROVIDER: ${{ vars.NEWS_LLM_PROVIDER }}
+      NEWS_LLM_BASE_URL: ${{ vars.NEWS_LLM_BASE_URL }}
+      NEWS_LLM_MODEL: ${{ vars.NEWS_LLM_MODEL }}
+      NEWS_LLM_API_KEY: ${{ secrets.NEWS_LLM_API_KEY }}
+      NEWS_LLM_FALLBACK_PROVIDER: ${{ vars.NEWS_LLM_FALLBACK_PROVIDER }}
+      NEWS_LLM_FALLBACK_BASE_URL: ${{ vars.NEWS_LLM_FALLBACK_BASE_URL }}
+      NEWS_LLM_FALLBACK_MODEL: ${{ vars.NEWS_LLM_FALLBACK_MODEL }}
+      NEWS_LLM_FALLBACK_API_KEY: ${{ secrets.NEWS_LLM_FALLBACK_API_KEY }}
+      RSSHUB_BASE: ${{ vars.RSSHUB_BASE }}
+      RSSHUB_ACCESS_KEY: ${{ secrets.RSSHUB_ACCESS_KEY }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      NOTIFY_WEBHOOK_URL: ${{ secrets.NOTIFY_WEBHOOK_URL }}
+      GH_TOKEN: ${{ github.token }}
+      PUBLISH_REBASE: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: install
+        run: |
+          npm ci
+          npm i --no-save playwright-core@1
+          python -m pip install -q -r requirements.txt
+      - name: restore run state (var/)
+        uses: actions/cache/restore@v4
+        with:
+          path: var
+          key: newsp-var-${{ github.run_id }}
+          restore-keys: newsp-var-
+      - name: which run
+        id: pick
+        run: |
+          RUN=${{ inputs.run || '' }}; NR=${{ inputs.news_run || '' }}
+          if [[ -z $RUN ]]; then
+            case "${{ github.event.schedule }}" in "30 0 * * *") RUN=am;; "0 7 * * *") RUN=pm NR=15:00;; *) RUN=pm NR=20:00;; esac
+          fi
+          echo "run=$RUN" >> "$GITHUB_OUTPUT"; echo "news_run=${NR:-15:00}" >> "$GITHUB_OUTPUT"
+      - name: edition
+        env:
+          NEWS_RUN: ${{ steps.pick.outputs.news_run }}
+          CHROME: /usr/bin/google-chrome
+          PLAYWRIGHT_CORE: ${{ github.workspace }}/node_modules/playwright-core/index.mjs
+        run: |
+          git config user.name "newsp-bot"; git config user.email "newsp-bot@users.noreply.github.com"
+          if [[ "${{ inputs.mode || 'publish' }}" == preview ]]; then
+            git switch -c work-preview
+            bash scripts/run-edition.sh ${{ steps.pick.outputs.run }} --preview edition/manual
+          else
+            bash scripts/run-edition.sh ${{ steps.pick.outputs.run }} --publish | tee var/logs/last-summary.txt
+          fi
+      - name: notify
+        if: success() && (inputs.mode || 'publish') == 'publish'
+        run: bash scripts/notify/notify.sh "$(date +%F) ${{ steps.pick.outputs.run }}" var/logs/last-summary.txt || true
+      - name: save run state (var/)
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: var
+          key: newsp-var-${{ github.run_id }}

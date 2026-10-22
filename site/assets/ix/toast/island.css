@@ -1,0 +1,5 @@
+/* ix toast/island — Dynamic-Island toasts. Hook: [data-ixh~="toast"]. Position rules stay with the site (above the tab bar). */
+html[data-ix-toast="island"] [data-ixh~="toast"]{background:var(--ix-ink);color:var(--ix-bg);border:0;border-radius:999px;min-height:44px;box-sizing:border-box;box-shadow:0 10px 30px -10px rgb(0 0 0/.45),0 0 0 1px color-mix(in srgb,var(--ix-bg) 14%,transparent)}
+html[data-ix-toast="island"] [data-ixh~="toast"] button{background:var(--ix-accent);color:var(--ix-on-accent);border-radius:999px}
+@media (prefers-reduced-motion:reduce){html[data-ix-toast="island"] [data-ixh~="toast"]{clip-path:none!important}}
+html.dd-rm[data-ix-toast="island"] [data-ixh~="toast"]{clip-path:none!important}

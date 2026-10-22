@@ -1,0 +1,10 @@
+/* ix sechead/livery — Ferrari race-report livery on module headers (.mhead). Only pseudo-elements and the index chip move. */
+html[data-ix-sechead="livery"] .mhead{position:relative;align-items:center;border-bottom:3px solid var(--ink);padding-bottom:12px;overflow:hidden}
+html[data-ix-sechead="livery"] .mhead .idx{position:relative;z-index:1;display:inline-grid;place-items:center;min-width:46px;height:34px;padding:0 10px;color:#fff;font:700 15px/1 var(--font-display);letter-spacing:-.02em}
+html[data-ix-sechead="livery"] .mhead .idx::before{content:"";position:absolute;inset:0 -6px;z-index:-1;background:#da291c;transform:skewX(-18deg);transform-origin:left;animation:ixLivery .9s cubic-bezier(.65,0,.35,1) both}
+html[data-ix-sechead="livery"] .mhead .idx::after{content:"";position:absolute;top:0;bottom:0;right:-16px;width:5px;background:#fff200;transform:skewX(-18deg);animation:ixLivery .9s .12s cubic-bezier(.65,0,.35,1) both}
+html[data-ix-sechead="livery"] .mhead h2{font-weight:800;letter-spacing:-.03em;text-transform:uppercase;padding-left:8px}
+html[data-ix-sechead="livery"] .mhead .count{font-weight:700;letter-spacing:.12em}
+@keyframes ixLivery{from{transform:skewX(-18deg) scaleX(0)}to{transform:skewX(-18deg) scaleX(1)}}
+@media (prefers-reduced-motion:reduce){html[data-ix-sechead="livery"] .mhead .idx::before,html[data-ix-sechead="livery"] .mhead .idx::after{animation:none}}
+html.dd-rm[data-ix-sechead="livery"] .mhead .idx::before,html.dd-rm[data-ix-sechead="livery"] .mhead .idx::after{animation:none}

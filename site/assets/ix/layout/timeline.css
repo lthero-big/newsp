@@ -1,0 +1,18 @@
+/* ix layout/timeline — CSS only, same HTML. Side rows hang on a vertical rail; the grid below becomes a one-column timeline.
+   Rails/dots are pseudo-elements (card ::after, container ::before); nothing transforms/animates .card or layout containers.
+   Phones (≤640px): untouched (DESIGN-RULES §2 X-like big/small cards). No motion here, so reduced motion needs nothing extra. */
+@media (min-width:641px){
+html[data-ix-layout="timeline"] .ed-side{border-top:0;position:relative;padding-left:24px}
+html[data-ix-layout="timeline"] .ed-more{position:relative;padding-left:24px}
+html[data-ix-layout="timeline"] .ed-side::before,html[data-ix-layout="timeline"] .ed-more::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:2px;border-radius:2px;background:var(--line)}
+html[data-ix-layout="timeline"] .ed-side>.card::after,html[data-ix-layout="timeline"] .ed-more>.card::after{content:"";position:absolute;left:-24px;top:22px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent);box-sizing:border-box;pointer-events:none}
+html[data-ix-layout="timeline"] .ed-side>.card[data-batch="pm"]::after,html[data-ix-layout="timeline"] .ed-more>.card[data-batch="pm"]::after{background:var(--accent)}
+}
+@media (min-width:901px){
+html[data-ix-layout="timeline"] .ed{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px}
+html[data-ix-layout="timeline"] .ed-more{--ix-per:1;grid-template-columns:minmax(0,1fr);gap:14px}
+html[data-ix-layout="timeline"] .ed-more>.card.std,html[data-ix-layout="timeline"] .ed-more>.card.wide,html[data-ix-layout="timeline"] .ed-more>.card.fill,html[data-ix-layout="timeline"] .ed-more>.card.half{grid-column:1/-1}
+html[data-ix-layout="timeline"] .ed-more>.card.wide{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
+html[data-ix-layout="timeline"] .ed-more>.card.std>:not(.foot){max-width:760px}
+}
+@media (prefers-reduced-motion:reduce){html[data-ix-layout="timeline"] .ed-more::before{transition:none}}

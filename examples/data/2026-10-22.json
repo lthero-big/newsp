@@ -1,0 +1,1600 @@
+{
+  "schema_version": "2.0",
+  "date": "2026-10-22",
+  "window": {
+    "start": "2026-10-21T00:28:26Z",
+    "end": "2026-10-22T06:34:51Z",
+    "timezone": "Asia/Shanghai"
+  },
+  "headline": "How AT&T is rethinking in-house legal work with OpenAI",
+  "modules": [
+    {
+      "id": "model",
+      "index": "01",
+      "title": "模型新闻",
+      "desc": "新模型、版本发布与榜单",
+      "count": 9
+    },
+    {
+      "id": "opensource",
+      "index": "02",
+      "title": "开源项目发现",
+      "desc": "新仓库、热门模型权重与工具发布",
+      "count": 6
+    },
+    {
+      "id": "community",
+      "index": "03",
+      "title": "社区新闻",
+      "desc": "HN、Reddit 与 X 上的讨论",
+      "count": 14
+    }
+  ],
+  "items": [
+    {
+      "id": "sha256:39cad894cdd240fbe2dba606200e547216d43a1655f56c86db3d6329a851a826",
+      "module": "model",
+      "kind": "post",
+      "title": "How AT&T is rethinking in-house legal work with OpenAI",
+      "excerpt": "AT&T is working with OpenAI to make legal knowledge easier to access. Learn how its LegalEdge team is rethinking intake and scaling legal judgment.",
+      "url": "https://openai.com/index/att-legal",
+      "source": "rss",
+      "source_label": "openai-news",
+      "published_at": "2026-10-21T17:00:00Z",
+      "metrics": {},
+      "tags": [
+        "AI"
+      ],
+      "keywords": [
+        "OpenAI"
+      ],
+      "score": {
+        "total": 68.47,
+        "engagement": 0.5,
+        "specificity": 0.7,
+        "decay": 0.806,
+        "source_weight": 1.25
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "title_zh": "AT&T 用 OpenAI 重做法务入口",
+      "summary_zh": "AT&T 正与 OpenAI 合作，让法律知识更易获取；LegalEdge 团队重做需求接收并扩大法律判断覆盖。"
+    },
+    {
+      "id": "sha256:94a5f6526eada9bc0f52700eb51d921a09fcfe01b2b364c8982be81ac1418089",
+      "module": "model",
+      "kind": "post",
+      "title": "NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required",
+      "excerpt": "NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required TL;DR NVIDIA Kumo Relational is a pre-trained relational foundation model that makes predictions directly on enterpr…",
+      "url": "https://huggingface.co/blog/nvidia/kumo-relational",
+      "source": "rss",
+      "source_label": "hf-blog",
+      "published_at": "2026-10-21T18:26:30Z",
+      "metrics": {},
+      "tags": [
+        "AI"
+      ],
+      "keywords": [
+        "Hugging Face",
+        "NVIDIA",
+        "machine learning"
+      ],
+      "score": {
+        "total": 62.75,
+        "engagement": 0.5,
+        "specificity": 0.4,
+        "decay": 0.84,
+        "source_weight": 1.25,
+        "feedback": 1.0782,
+        "feedback_why": [
+          "feed:hf-blog"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "image": {
+        "src": "https://cdn-uploads.huggingface.co/production/uploads/6ad8e88370f69967fafc8703/i-Flass3NMPRmc6lVfwO_.png",
+        "width": 8621,
+        "height": 4656,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "title_zh": "NVIDIA Kumo 无需训练也能预测",
+      "summary_zh": "NVIDIA Kumo Relational 是预训练关系基础模型，可直接预测关系数据，表现超过监督机器学习。",
+      "comment_zh": "关系数据预测也开始从专门训练转向直接调用基础模型。"
+    },
+    {
+      "id": "sha256:40a01666d562060bfdf96e1bee46311ea36b1fbc4128b476c54664266fe1cab8",
+      "module": "model",
+      "kind": "post",
+      "title": "How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications",
+      "excerpt": "How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications Models specialized for a domain or a task by fine-tuning general open-source models, such as Qwen and Gemma, inherit a vocabulary…",
+      "url": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization",
+      "source": "rss",
+      "source_label": "hf-blog",
+      "published_at": "2026-10-21T17:35:36Z",
+      "metrics": {},
+      "tags": [
+        "AI",
+        "LLM"
+      ],
+      "keywords": [
+        "AI",
+        "Hugging Face",
+        "inference"
+      ],
+      "score": {
+        "total": 55.59,
+        "engagement": 0.5,
+        "specificity": 0.25,
+        "decay": 0.82,
+        "source_weight": 1.25,
+        "feedback": 1.0782,
+        "feedback_why": [
+          "feed:hf-blog"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "image": {
+        "src": "https://cdn-uploads.huggingface.co/production/uploads/6a725daa5ca641a21ab61956/OWGtXjnbBov-7SI_04o4z.png",
+        "width": 1200,
+        "height": 648,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "title_zh": "专用词表让 SLM 推理成本降77%",
+      "summary_zh": "研究称，为 Qwen、Gemma 等开源模型按领域或任务定制词表，真实应用中的推理成本可降低 77%。"
+    },
+    {
+      "id": "sha256:960f266d21e0fb40388f605cf4f6ef48c3638089e09c99d1b89426b132ffb33f",
+      "module": "model",
+      "kind": "post",
+      "title": "Open-weights models beat every closed model on long documents: Kimi K3 scores 88.7% on AA-LCR, ahead of Claude Fable 5.1 (@AnthropicAI) at 85.3%.",
+      "excerpt": "",
+      "url": "https://x.com/merge_api/status/2112906760604270669",
+      "source": "x",
+      "source_label": "X · @merge_api",
+      "published_at": "2026-10-21T14:00:02Z",
+      "metrics": {
+        "engagement": 35,
+        "replies": 5,
+        "likes_x": 33,
+        "reposts": 1
+      },
+      "tags": [
+        "AI",
+        "LLM"
+      ],
+      "keywords": [
+        "Claude",
+        "GPT",
+        "GPT-5",
+        "Kimi",
+        "model",
+        "open weights"
+      ],
+      "score": {
+        "total": 49.73,
+        "engagement": 0.373,
+        "specificity": 1,
+        "decay": 0.739,
+        "source_weight": 0.9
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "image": {
+        "src": "https://pbs.twimg.com/media/HVKNf8CWQAAqZoN?format=jpg&name=large",
+        "srcset": "https://pbs.twimg.com/media/HVKNf8CWQAAqZoN?format=jpg&name=small 680w, https://pbs.twimg.com/media/HVKNf8CWQAAqZoN?format=jpg&name=medium 1200w, https://pbs.twimg.com/media/HVKNf8CWQAAqZoN?format=jpg&name=large 2048w, https://pbs.twimg.com/media/HVKNf8CWQAAqZoN?format=jpg&name=orig 3840w",
+        "width": 3840,
+        "height": 2160,
+        "alt": "",
+        "logo": false
+      },
+      "author": {
+        "handle": "merge_api",
+        "name": "Merge",
+        "avatar": "https://pbs.twimg.com/profile_images/2079671168269987840/PBpGK8rM_400x400.jpg",
+        "verified": true
+      },
+      "title_zh": "Kimi K3 长文档评测超过闭源模型",
+      "summary_zh": "网友称 AA-LCR 中 Kimi K3 得88.7%，Claude Fable 5.1 得85.3%。"
+    },
+    {
+      "id": "sha256:3f1a11956436b167380065dcbfb11acfb4b7400895eeef122ae6e9ec1be674ee",
+      "module": "model",
+      "kind": "post",
+      "title": "Broad access through consistent standards",
+      "excerpt": "How OpenAI works with distribution partners to uphold consistent safeguards, support responsible access, and clarify expectations in our Usage Policies.",
+      "url": "https://openai.com/index/broad-access-through-consistent-standards",
+      "source": "rss",
+      "source_label": "openai-news",
+      "published_at": "2026-10-21T21:00:00Z",
+      "metrics": {},
+      "tags": [
+        "AI"
+      ],
+      "keywords": [
+        "OpenAI"
+      ],
+      "score": {
+        "total": 48.31,
+        "engagement": 0.5,
+        "specificity": 0.1,
+        "decay": 0.905,
+        "source_weight": 1.25
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "title_zh": "OpenAI 与分发伙伴统一安全标准",
+      "summary_zh": "OpenAI 将与分发伙伴统一安全措施，支持负责任访问，并明确 Usage Policies 要求。"
+    },
+    {
+      "id": "sha256:5b4e08461387ba3b44832eb32623a231bc98422af2b9c0aa208f73f388840205",
+      "module": "model",
+      "kind": "post",
+      "title": "Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium.",
+      "excerpt": "Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium. Many ML practitioners have some intuition about how to make models run fast, but fewer know how to analyze why a model is slow.",
+      "url": "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1",
+      "source": "rss",
+      "source_label": "hf-blog",
+      "published_at": "2026-10-21T16:04:43Z",
+      "metrics": {},
+      "tags": [
+        "AI"
+      ],
+      "keywords": [
+        "Hugging Face"
+      ],
+      "score": {
+        "total": 48.12,
+        "engagement": 0.5,
+        "specificity": 0.1,
+        "decay": 0.785,
+        "source_weight": 1.25,
+        "feedback": 1.0782,
+        "feedback_why": [
+          "feed:hf-blog"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "image": {
+        "src": "https://cdn-uploads.huggingface.co/production/uploads/6ac67ea29579ea34f1f7e470/hEodPVvQZI24jETLbPooP.png",
+        "width": 3824,
+        "height": 1530,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "title_zh": "TorchNeuron 性能分析，从系统层找瓶颈",
+      "summary_zh": "系列首篇聚焦 AWS Trainium 的系统级性能分析，讲解如何排查模型运行缓慢的原因。"
+    },
+    {
+      "id": "sha256:b1215e1aefc04c61e203617a80fd84e7760e29072f8e8c5c2b0a50c22fe019fd",
+      "module": "model",
+      "kind": "post",
+      "title": "ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform",
+      "excerpt": "From local businesses to global brands, more advertisers can now reach people as they explore, compare and decide what to buy in ChatGPT.",
+      "url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
+      "source": "rss",
+      "source_label": "openai-news",
+      "published_at": "2026-10-21T13:00:00Z",
+      "metrics": {},
+      "tags": [
+        "AI",
+        "LLM"
+      ],
+      "keywords": [
+        "ChatGPT",
+        "OpenAI"
+      ],
+      "score": {
+        "total": 48.03,
+        "engagement": 0.5,
+        "specificity": 0.25,
+        "decay": 0.718,
+        "source_weight": 1.25
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "title_zh": "ChatGPT Ads 扩至26国，广告主超10万",
+      "summary_zh": "ChatGPT Ads 已扩展到 26 个新国家，超过 100,000 家广告主用它触达购物决策中的用户。",
+      "comment_zh": "广告覆盖面扩大后，ChatGPT 正从问答入口变成新的投放渠道。"
+    },
+    {
+      "id": "sha256:c2ed162a157709f5cb47598d7a4a9ff0ca7927682ea3c9a0e259f86971bb2de7",
+      "module": "model",
+      "kind": "post",
+      "title": "Granite Speech 5.0: Transcribe, Translate, and Attribute more Accurately and Faster",
+      "excerpt": "Granite Speech 5.0: Transcribe, Translate, and Attribute more Accurately and Faster We're excited to share three updates to IBM's Granite Speech collection: a new speech-language model, granite-speech-5.0-2b, and revised…",
+      "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
+      "source": "rss",
+      "source_label": "hf-blog",
+      "published_at": "2026-10-21T14:58:18Z",
+      "metrics": {},
+      "tags": [
+        "AI"
+      ],
+      "keywords": [
+        "Hugging Face"
+      ],
+      "score": {
+        "total": 47.3,
+        "engagement": 0.5,
+        "specificity": 0.1,
+        "decay": 0.76,
+        "source_weight": 1.25,
+        "feedback": 1.0782,
+        "feedback_why": [
+          "feed:hf-blog"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "image": {
+        "src": "https://cdn-uploads.huggingface.co/production/uploads/653fb52cbfd890805461d691/M_JJyIOBOWVzHXdy7CVVG.png",
+        "width": 1200,
+        "height": 648,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "title_zh": "Granite Speech 5.0 让语音处理更快更准",
+      "summary_zh": "IBM 更新 Granite Speech 系列，推出新语音语言模型，提升转写、翻译和说话人归属的准确度与速度。"
+    },
+    {
+      "id": "sha256:60b327d6ad835cd9daa71ea19e402679fec61e58685ed4f465e7c7d116390ae0",
+      "module": "opensource",
+      "kind": "repo",
+      "title": "kanaworksai-hue/audio-studio-mcp",
+      "excerpt": "Local AI BGM and sound effects for Claude Code and any MCP client. Stable Audio 3 on Apple Silicon (MLX) and Windows NVIDIA GPUs (PyTorch). No cloud, no API key.",
+      "url": "https://github.com/kanaworksai-hue/audio-studio-mcp",
+      "source": "github",
+      "source_label": "GitHub",
+      "published_at": "2026-10-18T11:13:56Z",
+      "metrics": {
+        "stars": 421,
+        "forks": 29
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "图片视频音频",
+        "Agent"
+      ],
+      "keywords": [
+        "AI",
+        "Claude",
+        "Claude Code",
+        "MCP",
+        "NVIDIA",
+        "music generation"
+      ],
+      "score": {
+        "total": 58.79,
+        "engagement": 0.645,
+        "specificity": 0.7,
+        "decay": 0.54,
+        "source_weight": 1,
+        "feedback": 1.16,
+        "feedback_why": [
+          "kw:mcp"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "image": {
+        "src": "https://raw.githubusercontent.com/kanaworksai-hue/audio-studio-mcp/HEAD/docs/assets/banner-en.jpg",
+        "width": 1600,
+        "height": 800,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "title_zh": "audio-studio-mcp 本地生成配乐音效",
+      "summary_zh": "为 Claude Code 等 MCP 客户端生成音频，无需云服务或 API 密钥。"
+    },
+    {
+      "id": "sha256:20e62b0be77e30f972604be89b710e1c0a16ce365ccbad57854ace16c6d528fa",
+      "module": "opensource",
+      "kind": "post",
+      "title": "Show HN: Renor – private memory for coding agents, shared across tools over MCP",
+      "excerpt": "Self-hosted Renor, real session: Claude Code saves a decision, a fresh Codex session recalls it. Waiting time sped up.",
+      "url": "https://github.com/patrickpassosb/renor-engine",
+      "source": "hn",
+      "source_label": "Hacker News",
+      "published_at": "2026-10-21T19:22:31Z",
+      "metrics": {
+        "points": 2,
+        "comments": 0
+      },
+      "tags": [
+        "AI",
+        "Agent"
+      ],
+      "keywords": [
+        "MCP",
+        "agent",
+        "coding agent"
+      ],
+      "score": {
+        "total": 55.07,
+        "engagement": 0.122,
+        "specificity": 1,
+        "decay": 0.863,
+        "source_weight": 1,
+        "feedback": 1.16,
+        "feedback_why": [
+          "kw:mcp"
+        ]
+      },
+      "links": [
+        {
+          "label": "讨论",
+          "url": "https://news.ycombinator.com/item?id=50186146"
+        }
+      ],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "image": {
+        "src": "https://raw.githubusercontent.com/patrickpassosb/renor-engine/HEAD/docs/assets/renor-readme-demo.gif",
+        "width": 1280,
+        "height": 712,
+        "alt": "",
+        "type": "gif",
+        "logo": false
+      },
+      "title_zh": "Renor 用 MCP 给编码 Agent 共享记忆",
+      "summary_zh": "自托管 Renor 能保存 Claude Code 的决策，让新开的 Codex 会话通过 MCP 找回这些记录。"
+    },
+    {
+      "id": "sha256:a1ee33a52509d4458ad21e96e0fe0b3b91da4f4a3c6f710075fc4a115952211e",
+      "module": "opensource",
+      "kind": "post",
+      "title": "Show HN: Omnara – Open-Source Alternative to Claude Managed Agents",
+      "excerpt": "Hey y'all, Kartik from Omnara ( ) here. We're building an open-source API for running durable agents. You create an agent with an API call, and Omnara runs the agent loop, gives the agent sandboxes to run commands in, an…",
+      "url": "https://github.com/omnara-ai/omnara",
+      "source": "hn",
+      "source_label": "Hacker News",
+      "published_at": "2026-10-21T16:44:53Z",
+      "metrics": {
+        "points": 18,
+        "comments": 6
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "Agent"
+      ],
+      "keywords": [
+        "AI",
+        "Anthropic",
+        "Claude",
+        "Claude Code",
+        "Codex",
+        "MCP"
+      ],
+      "score": {
+        "total": 48.96,
+        "engagement": 0.436,
+        "specificity": 0.4,
+        "decay": 0.8,
+        "source_weight": 1,
+        "feedback": 1.16,
+        "feedback_why": [
+          "kw:mcp"
+        ]
+      },
+      "links": [
+        {
+          "label": "讨论",
+          "url": "https://news.ycombinator.com/item?id=50183892"
+        }
+      ],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "image": {
+        "src": "https://repository-images.githubusercontent.com/1016411413/ed725ee5-25c6-40a2-b2a5-1ffd4749afbe",
+        "width": 1280,
+        "height": 640,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "title_zh": "Omnara 用开源 API 跑持久化 Agent",
+      "summary_zh": "Omnara 提供开源 API，开发者调用接口创建 Agent，由平台运行循环并提供沙箱环境。"
+    },
+    {
+      "id": "sha256:da82d0245b803f7c2cb72768e5a7ba49b14faca2823a0e517b4fb747205cf26c",
+      "module": "opensource",
+      "kind": "post",
+      "title": "Show HN: ReviewerAgent and StopContinue, for CC and Codex with Pi",
+      "excerpt": "This package is designed to solve two problems: 1. Frontier models like Fable 5.1, Opus 5.5, Astra 6.0 and Sol 6.1 all make errors and bugs that can be found by another model (even a much smaller model like Luna). 2.",
+      "url": "https://github.com/rladr-org/reviewer-agent",
+      "source": "hn",
+      "source_label": "Hacker News",
+      "published_at": "2026-10-21T22:22:59Z",
+      "metrics": {
+        "points": 2,
+        "comments": 0
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "Agent"
+      ],
+      "keywords": [
+        "Claude",
+        "Claude Code",
+        "Codex",
+        "GPT",
+        "agent",
+        "model"
+      ],
+      "score": {
+        "total": 39.77,
+        "engagement": 0.122,
+        "specificity": 0.7,
+        "decay": 0.941,
+        "source_weight": 1
+      },
+      "links": [
+        {
+          "label": "讨论",
+          "url": "https://news.ycombinator.com/item?id=50188494"
+        }
+      ],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "title_zh": "ReviewerAgent：让模型检查代码错误",
+      "summary_zh": "ReviewerAgent和StopContinue面向Claude Code与Codex，用另一个模型检查代码错误。"
+    },
+    {
+      "id": "sha256:f77e9421dbc5f3379a18bb2c47e4ce65894d271e3d2e55bc906a0c55cb18d466",
+      "module": "opensource",
+      "kind": "release",
+      "title": "llama.cpp b11801（另有 9 个版本：b11800、b11795、b11793…）",
+      "excerpt": "model: Add support for SenseNova U1 model ( #28919 ) model : add SenseNova U1 understanding support Add support for the dense SenseNova U1 understanding branch, including the U1.5-8B-MoT model.",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11801",
+      "source": "rss",
+      "source_label": "llamacpp-releases",
+      "published_at": "2026-10-21T21:59:22Z",
+      "metrics": {
+        "points": 0
+      },
+      "tags": [
+        "AI",
+        "LLM"
+      ],
+      "keywords": [
+        "AI",
+        "GGUF",
+        "LLM",
+        "Llama",
+        "model"
+      ],
+      "score": {
+        "total": 34.3,
+        "engagement": 0.5,
+        "specificity": 0.7,
+        "decay": 0.931,
+        "source_weight": 1.25,
+        "feedback": 0.4618,
+        "feedback_why": [
+          "feed:llamacpp-releases",
+          "repo:ggml-org/llama.cpp"
+        ]
+      },
+      "links": [
+        {
+          "label": "b11800",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11800"
+        },
+        {
+          "label": "b11795",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11795"
+        },
+        {
+          "label": "b11793",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11793"
+        }
+      ],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "title_zh": "llama.cpp 支持 SenseNova U1",
+      "summary_zh": "b11801 加入稠密理解分支支持，包括 U1.5-8B-MoT 模型。"
+    },
+    {
+      "id": "sha256:3179e7f8cd34ccfd5874302558453868699848568ebe168ab7f4f6dbb6c09ba2",
+      "module": "opensource",
+      "kind": "repo",
+      "title": "trhhubsd/ARTEX",
+      "excerpt": "ARTEX · AI autonomous penetration testing system (multi-agent LLM, Go + Next.js) · AI 自主渗透测试系统 · 百度 agent+ 攻防挑战赛冠军",
+      "url": "https://github.com/trhhubsd/ARTEX",
+      "source": "github",
+      "source_label": "GitHub",
+      "published_at": "2026-10-08T20:35:22Z",
+      "metrics": {
+        "stars": 1559,
+        "forks": 761
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "Agent"
+      ],
+      "keywords": [
+        "AI",
+        "LLM",
+        "MCP",
+        "agent"
+      ],
+      "score": {
+        "total": 33.37,
+        "engagement": 0.888,
+        "specificity": 0.1,
+        "decay": 0.102,
+        "source_weight": 1,
+        "feedback": 1.16,
+        "feedback_why": [
+          "kw:mcp"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "image": {
+        "src": "https://raw.githubusercontent.com/trhhubsd/ARTEX/HEAD/screenshots/dashboard.png",
+        "width": 2880,
+        "height": 1800,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "title_zh": "ARTEX：多 Agent 自主渗透测试夺冠",
+      "summary_zh": "ARTEX是用Go和Next.js构建的多Agent自主渗透测试系统，曾获百度攻防挑战赛冠军。",
+      "comment_zh": "多 Agent 开始进入安全攻防，自动化测试门槛正在下降。"
+    },
+    {
+      "id": "sha256:5c777dc5eda38b6a8e06cd2a7581716c509519916b0a901770ca0913706e0489",
+      "module": "community",
+      "kind": "post",
+      "title": "OpenAI models are coming to Google Cloud",
+      "excerpt": "",
+      "url": "https://openai.com/index/openai-models-google-cloud/",
+      "source": "hn",
+      "source_label": "Hacker News",
+      "published_at": "2026-10-21T12:53:11Z",
+      "metrics": {
+        "points": 224,
+        "comments": 98
+      },
+      "tags": [
+        "AI"
+      ],
+      "keywords": [
+        "OpenAI",
+        "model"
+      ],
+      "score": {
+        "total": 72.1,
+        "engagement": 0.858,
+        "specificity": 0.85,
+        "decay": 0.716,
+        "source_weight": 1
+      },
+      "links": [
+        {
+          "label": "RSS",
+          "url": "https://openai.com/index/openai-models-google-cloud"
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/OpenAI/status/2112988118471295323"
+        },
+        {
+          "label": "讨论",
+          "url": "https://news.ycombinator.com/item?id=50180079"
+        }
+      ],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "title_zh": "OpenAI 模型将进入 Google Cloud",
+      "summary_zh": "报道称 OpenAI 模型即将登陆 Google Cloud，企业使用这些模型的云平台入口将进一步增加。"
+    },
+    {
+      "id": "sha256:18a70d5846aa97c620660d6d0337a2069d1d33aa802e3effbb03fb999f3f59bc",
+      "module": "community",
+      "kind": "post",
+      "title": "We've updated MLCR-AA, our leaderboard for Wisedocs' Medical Long Context Reasoning benchmark, with Claude Sonnet 5.5 and GPT-6 Astra now tied for the #1 score",
+      "excerpt": "We've updated MLCR-AA, our leaderboard for Wisedocs' Medical Long Context Reasoning benchmark, with Claude Sonnet 5.5 and GPT-6 Astra now tied for the #1 score We've updated how MLCR-AA prompts and grades models on @wise…",
+      "url": "https://x.com/ArtificialAnlys/status/2112935427422527584",
+      "source": "x",
+      "source_label": "X · @ArtificialAnlys",
+      "published_at": "2026-10-21T15:53:56Z",
+      "metrics": {
+        "engagement": 210,
+        "replies": 29,
+        "likes_x": 180,
+        "reposts": 15
+      },
+      "tags": [
+        "AI",
+        "LLM"
+      ],
+      "keywords": [
+        "Claude",
+        "GPT",
+        "GPT-5",
+        "benchmark",
+        "model"
+      ],
+      "score": {
+        "total": 69.75,
+        "engagement": 0.587,
+        "specificity": 1,
+        "decay": 0.781,
+        "source_weight": 0.9,
+        "feedback": 1.1546,
+        "feedback_why": [
+          "x:@artificialanlys"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "image": {
+        "src": "https://pbs.twimg.com/media/HVKmYIbb0AAuF42?format=jpg&name=large",
+        "srcset": "https://pbs.twimg.com/media/HVKmYIbb0AAuF42?format=jpg&name=small 680w, https://pbs.twimg.com/media/HVKmYIbb0AAuF42?format=jpg&name=medium 1200w, https://pbs.twimg.com/media/HVKmYIbb0AAuF42?format=jpg&name=large 2048w, https://pbs.twimg.com/media/HVKmYIbb0AAuF42?format=jpg&name=orig 2464w",
+        "width": 2464,
+        "height": 1976,
+        "alt": "",
+        "logo": false
+      },
+      "author": {
+        "handle": "ArtificialAnlys",
+        "name": "Artificial Analysis",
+        "avatar": "https://pbs.twimg.com/profile_images/2042402069320290304/A8C1lP07_400x400.jpg",
+        "verified": true
+      },
+      "title_zh": "Claude 5.5与GPT-6 Astra并列第一",
+      "summary_zh": "Artificial Analysis更新医疗长上下文推理评测榜，两款模型目前并列最高分。"
+    },
+    {
+      "id": "sha256:ac04de72e4d515d9554ba3d4f5dcd84202bfa6de13efd5e931404ea1d3c30399",
+      "module": "community",
+      "kind": "post",
+      "title": "LayerFS: The filesystem for AI coding agents",
+      "excerpt": "Compute exists only while a command runs. - Compute: Agents spend ~80% thinking, ~10% in Bash. - FS: Each file tool call is one atomic Store op.",
+      "url": "https://layerfs.ai/",
+      "source": "hn",
+      "source_label": "Hacker News",
+      "published_at": "2026-10-21T12:34:46Z",
+      "metrics": {
+        "points": 69,
+        "comments": 42
+      },
+      "tags": [
+        "AI",
+        "Agent"
+      ],
+      "keywords": [
+        "AI",
+        "agent",
+        "coding agent"
+      ],
+      "score": {
+        "total": 68.1,
+        "engagement": 0.682,
+        "specificity": 1,
+        "decay": 0.709,
+        "source_weight": 1
+      },
+      "links": [
+        {
+          "label": "讨论",
+          "url": "https://news.ycombinator.com/item?id=50179857"
+        }
+      ],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "image": {
+        "src": "https://layerfs.ai/github-preview.png",
+        "width": 1280,
+        "height": 640,
+        "alt": "",
+        "logo": false
+      },
+      "title_zh": "LayerFS 让算力只在命令运行时启用",
+      "summary_zh": "面向编程 Agent 的文件系统，每次文件工具调用都对应一次原子的 Store 操作。"
+    },
+    {
+      "id": "sha256:4f521f3fe28884345453b7af8b51274d05b0a69b66694000074fc1ac12098ca3",
+      "module": "community",
+      "kind": "post",
+      "title": "代码迁移准确率从 5.4% 飙至 97.9%！OpenAI 挑战 COBOL，几十年的老系统真能交给 AI 了？",
+      "excerpt": "几十年前写下的代码，今天还有多少人看得懂？ 在银行、保险、制造业以及公共服务机构，一些核心业务系统已经运行了数十年。它们可能使用 COBOL、Fortran 等如今并不流行的编程语言，原始开发者早已离职，技术文档不一定完整，许多业务规则甚至只存在于代码里。 这些系统并不一定经常出现故障，却往往很难修改。对企业来说，重写一套系统的难度，有时远远超过从零开发一套新系统。",
+      "url": "https://www.infoq.cn/article/LZsVYHAH1jyOtLg6Yiwk",
+      "source": "rss",
+      "source_label": "InfoQ AI",
+      "published_at": "2026-10-21T07:00:29Z",
+      "metrics": {},
+      "tags": [
+        "AI",
+        "LLM"
+      ],
+      "keywords": [
+        "AI",
+        "GPT",
+        "GPT-5",
+        "OpenAI"
+      ],
+      "score": {
+        "total": 64.97,
+        "engagement": 0.5,
+        "specificity": 0.85,
+        "decay": 0.604,
+        "source_weight": 1.25,
+        "feedback": 1.0139,
+        "feedback_why": [
+          "feed:infoq ai",
+          "site:infoq.cn"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "image": {
+        "src": "https://static001.infoq.cn/resource/image/23/01/234c78540f60ab210676c015e8f0ae01.png",
+        "width": 2284,
+        "height": 1280,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "title_zh": "OpenAI 挑战 COBOL，迁移准确率跃升",
+      "summary_zh": "报道称代码迁移准确率从 5.4% 升至 97.9%，目标是业务规则深埋代码的老系统。",
+      "comment_zh": "迁移准确率不等于上线可靠性，老系统最难的是验证隐含业务规则。"
+    },
+    {
+      "id": "sha256:0336c2290ec14333b03da2f9b9a3f3f2fdf36b8e9ed008232db03a7c052959d3",
+      "module": "community",
+      "kind": "post",
+      "title": "Claude Duet",
+      "excerpt": "Claude Duet Get back to what needs you Claude Duet is a proactive agent that understands what needs your attention. It takes on tasks of all sizes, keeps working while you’re away, and waits for your ok when it matters.",
+      "url": "https://claude.com/product/claude-duet",
+      "source": "hn",
+      "source_label": "Hacker News",
+      "published_at": "2026-10-21T19:14:01Z",
+      "metrics": {
+        "points": 297,
+        "comments": 254
+      },
+      "tags": [
+        "AI",
+        "LLM"
+      ],
+      "keywords": [
+        "Claude"
+      ],
+      "score": {
+        "total": 64.6,
+        "engagement": 0.942,
+        "specificity": 0.25,
+        "decay": 0.86,
+        "source_weight": 1
+      },
+      "links": [
+        {
+          "label": "讨论",
+          "url": "https://news.ycombinator.com/item?id=50186037"
+        }
+      ],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "image": {
+        "src": "https://claude.com/static/claude-duet/og.jpg",
+        "width": 2400,
+        "height": 1260,
+        "alt": "",
+        "logo": false
+      },
+      "title_zh": "Claude Duet 主动接任务，人离开也继续干",
+      "summary_zh": "这款主动型 Agent 会识别哪些事情需要你关注，承接大小任务，在你离开时继续工作。"
+    },
+    {
+      "id": "sha256:8034e00cf2d912f280148bc7a213263d300ecee65d80df6da74e998019b9b4b0",
+      "module": "community",
+      "kind": "post",
+      "title": "Anthropic's Public Benefit Charter",
+      "excerpt": "Our charter is to responsibly develop and maintain advanced AI for the long-term benefit of humanity. Anthropic is a Public Benefit Corporation (PBC), a designation that requires us to balance the financial interests of…",
+      "url": "https://www.anthropic.com/public-benefit-charter",
+      "source": "hn",
+      "source_label": "Hacker News",
+      "published_at": "2026-10-21T18:29:54Z",
+      "metrics": {
+        "points": 45,
+        "comments": 56
+      },
+      "tags": [
+        "AI"
+      ],
+      "keywords": [
+        "Anthropic"
+      ],
+      "score": {
+        "total": 63.6,
+        "engagement": 0.651,
+        "specificity": 0.7,
+        "decay": 0.841,
+        "source_weight": 1
+      },
+      "links": [
+        {
+          "label": "讨论",
+          "url": "https://news.ycombinator.com/item?id=50185438"
+        }
+      ],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "title_zh": "Anthropic 公益章程把长期人类利益列为目标",
+      "summary_zh": "公司以公益公司身份运营，章程要求负责任地开发和维护先进 AI，着眼人类长期利益。"
+    },
+    {
+      "id": "sha256:62ace97273fec6591341ce42656f989116dcc09a3c377e24864c5731595db99b",
+      "module": "community",
+      "kind": "post",
+      "title": "Flux Klein 9B Distilled vs Flux 3 Klein Distilled vs Qwen 2.1 Turbo vs Krea 3 vs Nano Banana 2.1 vs Ideogram 4.5 on a somewhat tricky two-input-image edit",
+      "excerpt": "Prompt: Completely change the art style of image 1 to fully lifelike real life professional editorial DSLR photograph style.",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1xc1dpl/flux_klein_9b_distilled_vs_flux_3_klein_distilled/",
+      "source": "reddit",
+      "source_label": "r/StableDiffusion",
+      "published_at": "2026-10-21T22:24:00Z",
+      "metrics": {
+        "points": 1,
+        "comments": 0
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "图片视频音频"
+      ],
+      "keywords": [
+        "FLUX",
+        "Ideogram",
+        "Nano Banana",
+        "Qwen",
+        "text-to-image"
+      ],
+      "score": {
+        "total": 60.32,
+        "engagement": 0.072,
+        "specificity": 1,
+        "decay": 0.942,
+        "source_weight": 0.85,
+        "feed_weight": 1,
+        "feedback": 1.1552,
+        "feedback_why": [
+          "kw:nano_banana",
+          "sub:stablediffusion"
+        ]
+      },
+      "links": [
+        {
+          "label": "原文",
+          "url": "https://i.redd.it/zh3hnb6tbwwh1.png"
+        }
+      ],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "title_zh": "Krea 3 等六模型对比双图编辑",
+      "summary_zh": "网友晒出六款模型的双图编辑对比，要求把首图改成写实专业摄影风格，供选模型时参考。"
+    },
+    {
+      "id": "sha256:f8d716d19a9a37b8e4aa9fa3fe8466c8b7301dfba847a7975d8fa6166fb91d12",
+      "module": "community",
+      "kind": "post",
+      "title": "17岁Kimi前研究员陈广宇被曝投奔Jeff Dean创业团队，新公司正寻求500亿美元估值",
+      "excerpt": "月之暗面 Kimi 模型核心研发人员、天才少年陈广宇此前宣布离职，未来去向备受外界关注。目前看下一站，似乎有了新答案。 10 月 20 日，据长期追踪硅谷 AI 人才流动的匿名账号 Arfur Grok 披露，陈广宇（Nathan Chen）已加入 Google 前首席科学家 Jeff Dean 创办的 AI 初创公司 Discovery Loop。该账号高频披露 AI 人才去向，准确性较高。",
+      "url": "https://www.infoq.cn/article/yH0DHL8Nil26ES43TeF1",
+      "source": "rss",
+      "source_label": "InfoQ AI",
+      "published_at": "2026-10-21T06:39:11Z",
+      "metrics": {},
+      "tags": [
+        "AI",
+        "LLM"
+      ],
+      "keywords": [
+        "AI",
+        "Anthropic",
+        "Claude",
+        "Grok",
+        "Kimi",
+        "NVIDIA"
+      ],
+      "score": {
+        "total": 59.61,
+        "engagement": 0.5,
+        "specificity": 0.7,
+        "decay": 0.598,
+        "source_weight": 1.25,
+        "feedback": 1.0139,
+        "feedback_why": [
+          "feed:infoq ai",
+          "site:infoq.cn"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "image": {
+        "src": "https://static001.infoq.cn/resource/image/b3/48/b3581a77165f0976635b6c8b08d19348.png",
+        "width": 1080,
+        "height": 608,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "title_zh": "陈广宇被曝加入 Jeff Dean 创业团队",
+      "summary_zh": "报道称，匿名账号爆料17岁陈广宇加入其创业公司，新公司正寻求500亿美元估值。"
+    },
+    {
+      "id": "sha256:0d3f6f4e785e68e282b612f88d605eea23297b55820eb39eefa0e6df7fdb994d",
+      "module": "community",
+      "kind": "post",
+      "title": "Walk towards the light",
+      "excerpt": "Walk towards the light Created in @Somake_ai Model: GPT Image 2.5 Sunburst 🏞 Prompt: A surreal landscape featuring a winding path through a dense field of vibrant orange flowers, leading towards a dark forest of silhouet…",
+      "url": "https://x.com/churvikv/status/2112944568056320182",
+      "source": "x",
+      "source_label": "X · @churvikv",
+      "published_at": "2026-10-21T16:30:16Z",
+      "metrics": {
+        "engagement": 98,
+        "replies": 40,
+        "likes_x": 78,
+        "reposts": 10
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "图片视频音频"
+      ],
+      "keywords": [
+        "AI",
+        "GPT",
+        "GPT Image",
+        "model"
+      ],
+      "score": {
+        "total": 36.65,
+        "engagement": 0.537,
+        "specificity": 0.1,
+        "decay": 0.794,
+        "source_weight": 0.9,
+        "feedback": 1.0792,
+        "feedback_why": [
+          "x:@churvikv"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "image": {
+        "src": "https://pbs.twimg.com/media/HVKuuEJWkAAshXR?format=jpg&name=orig",
+        "srcset": "https://pbs.twimg.com/media/HVKuuEJWkAAshXR?format=jpg&name=small 680w, https://pbs.twimg.com/media/HVKuuEJWkAAshXR?format=jpg&name=orig 1088w",
+        "width": 1088,
+        "height": 608,
+        "alt": "",
+        "logo": false
+      },
+      "prompt_pick": true,
+      "prompt": {
+        "text": "A surreal landscape featuring a winding path through a dense field of vibrant orange flowers, leading towards a dark forest of silhouetted pine trees; the background is dominated by an intense, glowing light source at the horizon, with dramatic radiating lines creating a sense of energy and movement, giving the scene a dreamlike and mystical atmosphere.",
+        "from": "post"
+      },
+      "author": {
+        "handle": "churvikv",
+        "name": "Viki",
+        "avatar": "https://pbs.twimg.com/profile_images/1646825232663994368/QM8Iy2m3_400x400.jpg",
+        "verified": false
+      },
+      "title_zh": "GPT Image 2.5 Sunburst 提示词分享",
+      "summary_zh": "作者用 Somake 创作超现实风景，晒出橙色花海中的蜿蜒小路，并附提示词供复用。"
+    },
+    {
+      "id": "sha256:3b7ad01967ab8a0b8bdd5a020eeb67cc90f0765c86c27dfc795afd8eadc2bea1",
+      "module": "community",
+      "kind": "post",
+      "title": "GPT image 2.5",
+      "excerpt": "GPT image 2.5 Prompt: Create a beautiful, vintage-inspired hand-drawn illustration of [COUNTRY / CITY / LANDMARK], designed as an elegant travel coloring-book artwork on a warm ivory background.",
+      "url": "https://x.com/Naiknelofar788/status/2112917886130094338",
+      "source": "x",
+      "source_label": "X · @Naiknelofar788",
+      "published_at": "2026-10-21T14:44:14Z",
+      "metrics": {
+        "engagement": 76,
+        "replies": 17,
+        "likes_x": 60,
+        "reposts": 8
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "图片视频音频"
+      ],
+      "keywords": [
+        "GPT",
+        "GPT Image"
+      ],
+      "score": {
+        "total": 58.52,
+        "engagement": 0.482,
+        "specificity": 0.85,
+        "decay": 0.755,
+        "source_weight": 0.9,
+        "feedback": 1.1507,
+        "feedback_why": [
+          "x:@naiknelofar788"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-22T00:28:26Z",
+      "gallery": [
+        {
+          "src": "https://pbs.twimg.com/media/HVKXlXFa8AEgIfl?format=jpg&name=orig",
+          "width": 1122,
+          "height": 1402
+        },
+        {
+          "src": "https://pbs.twimg.com/media/HVKXmGAaMAAwm-4?format=jpg&name=orig",
+          "width": 1122,
+          "height": 1402
+        },
+        {
+          "src": "https://pbs.twimg.com/media/HVKXnHla0AA451g?format=jpg&name=orig",
+          "width": 1145,
+          "height": 1374
+        }
+      ],
+      "prompt_pick": true,
+      "prompt": {
+        "text": "Create a beautiful, vintage-inspired hand-drawn illustration of [COUNTRY / CITY / LANDMARK], designed as an elegant travel coloring-book artwork on a warm ivory background.\n\nTransform the destination into a charming miniature world using delicate black ink outlines, intricate architectural details, and a sophisticated minimalist composition.\n\nInclude its most iconic landmarks, majestic mountains, traditional buildings, local transportation, cultural objects, and recognizable elements of everyday life, all blending naturally into one harmonious scene.\n\n✨ Artistic details:\n\nLandmarks: Feature the most recognizable architecture of the destination as the centerpiece.\n\nNature: Add mountains, flowing rivers, rolling hills, clouds, tiny trees, and delicate leaves inspired by the local landscape.\n\nCultural elements: Include traditional objects, local boats, pottery, lanterns, teapots, or other meaningful cultural details.\n\nLine art: Use clean, delicate black outlines with varied line thickness, intricate patterns, and beautiful hand-drawn imperfections.\n\nColor accents: Keep most of the illustration in elegant black-and-white line art, but fill selected elements with gorgeous colors—soft teal water, sage-green trees, warm terracotta rooftops, golden sunlight, and subtle pastel accents.\n\nComposition: Arrange the elements in layered horizontal sections, creating depth without making the artwork look crowded.\n\nBackground: Use a clean, warm ivory paper texture with plenty of negative space.\n\nAtmosphere: Peaceful, nostalgic, artistic, and full of cultural charm, like a page from a premium vintage travel sketchbook.\n\nTypography: Write the destination's name in elegant, hand-lettered typography at the bottom, with a tiny decorative flourish.\n\nStyle: Vintage travel illustration, architectural line drawing, minimalist coloring-book aesthetic, selective watercolor fills, fine black ink, handmade sketchbook texture, sophisticated editorial design.\n\nAspect ratio: 4:5 vertical composition. Ultra-detailed, crisp outlines, balanced layout, beautiful and instantly recognizable destination.",
+        "from": "post"
+      },
+      "author": {
+        "handle": "Naiknelofar788",
+        "name": "simeon-sanai",
+        "avatar": "https://pbs.twimg.com/profile_images/2014919869259735040/MbBiQ58q_400x400.jpg",
+        "verified": false
+      },
+      "title_zh": "GPT image 2.5 提示词：复古旅行涂色画",
+      "summary_zh": "作者分享暖象牙色背景的复古手绘旅行插画提示词，可替换国家、城市或地标后复用。"
+    },
+    {
+      "id": "sha256:57a82b10a7fcf791f97d27251e81851948615ff27cb6ea5d926efbba9e3542da",
+      "module": "model",
+      "kind": "post",
+      "title": "what the f*ck, DeepSeek V4.1 Flash just went fully uncensored 18+😋",
+      "excerpt": "what the f*ck, DeepSeek V4.1 Flash just went fully uncensored 18+😋 -refusals removed, no system prompt tricks -sees images and videos too -1M context + tool calling -open weights, MIT. FREEE try it here:",
+      "url": "https://x.com/alizeh_ai/status/2113123815488397717",
+      "source": "x",
+      "source_label": "X · @alizeh_ai",
+      "published_at": "2026-10-22T04:22:32Z",
+      "metrics": {
+        "engagement": 59,
+        "replies": 7,
+        "likes_x": 53,
+        "reposts": 3
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "Agent"
+      ],
+      "keywords": [
+        "AI",
+        "DeepSeek",
+        "open weights",
+        "tool use"
+      ],
+      "score": {
+        "total": 50.28,
+        "engagement": 0.427,
+        "specificity": 0.7,
+        "decay": 0.938,
+        "source_weight": 0.9
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-22T06:34:51Z",
+      "image": {
+        "src": "https://pbs.twimg.com/media/HVNS3lCa8AE2Av0?format=jpg&name=large",
+        "srcset": "https://pbs.twimg.com/media/HVNS3lCa8AE2Av0?format=jpg&name=small 680w, https://pbs.twimg.com/media/HVNS3lCa8AE2Av0?format=jpg&name=medium 1200w, https://pbs.twimg.com/media/HVNS3lCa8AE2Av0?format=jpg&name=orig 1799w",
+        "width": 1799,
+        "height": 868,
+        "alt": "",
+        "logo": false
+      },
+      "author": {
+        "handle": "alizeh_ai",
+        "name": "Alizeh",
+        "avatar": "https://pbs.twimg.com/profile_images/2109321063649968128/WX8yF4wq_400x400.jpg",
+        "verified": false
+      },
+      "run": "15:00",
+      "title_zh": "DeepSeek V4.1 Flash 被称移除拒答",
+      "summary_zh": "作者称无需系统提示词技巧，还支持图像、视频和工具调用，权重以 MIT 许可开放。"
+    },
+    {
+      "id": "sha256:4dcc51ca0f1c991916fd4c53d37a3adf84eec3fb63e75ff9fceff1d384c507bd",
+      "module": "community",
+      "kind": "post",
+      "title": "Early morning cozy feeling and some fun in kitchen created on @atlas_cloud_ai with nano Banana 2.1",
+      "excerpt": "",
+      "url": "https://x.com/KaminiKamini222/status/2113065486862995711",
+      "source": "x",
+      "source_label": "X · @KaminiKamini222",
+      "published_at": "2026-10-22T00:30:45Z",
+      "metrics": {
+        "engagement": 22,
+        "replies": 16,
+        "likes_x": 20,
+        "reposts": 1
+      },
+      "tags": [
+        "AI",
+        "图片视频音频"
+      ],
+      "keywords": [
+        "AI",
+        "Nano Banana"
+      ],
+      "score": {
+        "total": 60.91,
+        "engagement": 0.379,
+        "specificity": 0.85,
+        "decay": 0.839,
+        "source_weight": 0.9,
+        "feedback": 1.236,
+        "feedback_why": [
+          "kw:nano_banana",
+          "x:@kaminikamini222"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-22T06:34:51Z",
+      "gallery": [
+        {
+          "src": "https://pbs.twimg.com/media/HVMd2TgbUAAldE5?format=jpg&name=large",
+          "width": 1376,
+          "height": 768
+        },
+        {
+          "src": "https://pbs.twimg.com/media/HVMd213awAAqSr5?format=jpg&name=large",
+          "width": 2752,
+          "height": 1536
+        }
+      ],
+      "author": {
+        "handle": "KaminiKamini222",
+        "name": "mini singh AI world",
+        "avatar": "https://pbs.twimg.com/profile_images/2068658772256731136/pnLXGTKL_400x400.jpg",
+        "verified": false
+      },
+      "run": "15:00",
+      "title_zh": "nano Banana 2.1 创作清晨厨房氛围",
+      "summary_zh": "网友用 nano Banana 2.1 在 atlas_cloud_ai 创作温馨厨房场景。"
+    },
+    {
+      "id": "sha256:8042c4cdf6b93d2c67858f826ce0617a996683e8ab6c2124192114ec0ee0d287",
+      "module": "community",
+      "kind": "post",
+      "title": "OpenAI CLI",
+      "excerpt": "The official CLI for the OpenAI REST API. brew install openai/tools/openai To test or install the CLI locally, you need Go version 1.26 or later installed.",
+      "url": "https://github.com/openai/openai-cli",
+      "source": "hn",
+      "source_label": "Hacker News",
+      "published_at": "2026-10-22T05:23:11Z",
+      "metrics": {
+        "points": 18,
+        "comments": 7
+      },
+      "tags": [
+        "AI"
+      ],
+      "keywords": [
+        "OpenAI"
+      ],
+      "score": {
+        "total": 57.67,
+        "engagement": 0.443,
+        "specificity": 0.7,
+        "decay": 0.966,
+        "source_weight": 1
+      },
+      "links": [
+        {
+          "label": "讨论",
+          "url": "https://news.ycombinator.com/item?id=50191507"
+        }
+      ],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-22T06:34:51Z",
+      "run": "15:00",
+      "title_zh": "OpenAI CLI 让命令行直连官方 API",
+      "summary_zh": "官方工具支持通过 brew 安装，本地测试或安装需 Go 1.26 及以上版本。"
+    },
+    {
+      "id": "sha256:43c3aa71468a26e6c15783ea22b6983cc41b8227ef3f4efe64163ba01d94d689",
+      "module": "community",
+      "kind": "post",
+      "title": "We support @The_AFM musicians fighting for consent, credit and compensation when their work is used for AI development and music generation. The future of music",
+      "excerpt": "We support @The_AFM musicians fighting for consent, credit and compensation when their work is used for AI development and music generation. The future of music must belong to the people who make it. #HumanMadeHumanPaid",
+      "url": "https://x.com/sagaftra/status/2113057841472844007",
+      "source": "x",
+      "source_label": "X · @sagaftra",
+      "published_at": "2026-10-22T00:00:22Z",
+      "metrics": {
+        "engagement": 60,
+        "replies": 0,
+        "likes_x": 30,
+        "reposts": 15
+      },
+      "tags": [
+        "AI",
+        "图片视频音频"
+      ],
+      "keywords": [
+        "AI",
+        "music generation"
+      ],
+      "score": {
+        "total": 51.01,
+        "engagement": 0.342,
+        "specificity": 0.85,
+        "decay": 0.827,
+        "source_weight": 0.9,
+        "feedback": 1.0796,
+        "feedback_why": [
+          "kw:music_generation"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-22T06:34:51Z",
+      "image": {
+        "src": "https://pbs.twimg.com/media/HVMW6M6WEAALF2-?format=jpg&name=orig",
+        "srcset": "https://pbs.twimg.com/media/HVMW6M6WEAALF2-?format=jpg&name=small 680w, https://pbs.twimg.com/media/HVMW6M6WEAALF2-?format=jpg&name=orig 1080w",
+        "width": 1080,
+        "height": 1350,
+        "alt": "",
+        "logo": false
+      },
+      "author": {
+        "handle": "sagaftra",
+        "name": "SAG-AFTRA",
+        "avatar": "https://pbs.twimg.com/profile_images/1983207854053134336/z5X75XiM_400x400.jpg",
+        "verified": true
+      },
+      "run": "15:00",
+      "title_zh": "SAG-AFTRA 支持音乐人争取 AI 使用权利",
+      "summary_zh": "演员工会声援 AFM 音乐人，要求作品用于 AI 开发和音乐生成时获得同意、署名与报酬。",
+      "comment_zh": "AI 音乐的成本不止算力，还包括创作者的授权与报酬。"
+    },
+    {
+      "id": "sha256:a3fd262640d23db4d4030f120d633afc22e6e060b5222889b4c54690cf1e42f2",
+      "module": "community",
+      "kind": "post",
+      "title": "Autumn didn’t just fall this year, it learned how to dance. 🍂",
+      "excerpt": "Autumn didn’t just fall this year, it learned how to dance. 🍂 Nature provides the canvas, but human imagination breathes life into it.",
+      "url": "https://x.com/yourPlugAI/status/2113133036116041739",
+      "source": "x",
+      "source_label": "X · @yourPlugAI",
+      "published_at": "2026-10-22T04:59:10Z",
+      "metrics": {
+        "engagement": 69,
+        "replies": 64,
+        "likes_x": 65,
+        "reposts": 2
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "图片视频音频"
+      ],
+      "keywords": [
+        "GPT",
+        "GPT Image"
+      ],
+      "score": {
+        "total": 37.23,
+        "engagement": 0.528,
+        "specificity": 0.1,
+        "decay": 0.955,
+        "source_weight": 0.9
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-22T06:34:51Z",
+      "gallery": [
+        {
+          "src": "https://pbs.twimg.com/media/HVNbN98WIAACMmB?format=jpg&name=large",
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "src": "https://pbs.twimg.com/media/HVNbPVXXAAABtw0?format=jpg&name=large",
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "src": "https://pbs.twimg.com/media/HVNbQeEWkAAV2ur?format=jpg&name=large",
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "src": "https://pbs.twimg.com/media/HVNbRk9XQAAImQq?format=jpg&name=large",
+          "width": 3072,
+          "height": 2048
+        }
+      ],
+      "prompt_pick": true,
+      "prompt": {
+        "text": "Flat-lay macro photograph of delicate leaf-carving artwork featuring [SUBJECT/POSTURE, e.g., a graceful ballerina en pointe / a romantic dancing couple holding hands], meticulously sculpted from a single [LEAF TYPE/COLOR, e.g., large serrated golden-amber maple leaf / dry oak leaf].\n\nThe figure features [3D DETAIL/TEXTURE, e.g., a fan-pleated 3D leaf-slice dress / visible leaf veins running across the body]. Set against a [BACKGROUND SURFACE, e.g., dark polished wood surface / light birch wood table / wet rainy asphalt path] under [LIGHTING STYLE, e.g., warm cinematic side-lighting / soft studio backlighting].\n\nUltra-detailed organic textures, clean composition, artistic design. --ar [ASPECT RATIO, e.g., 3:2 / 16:9 / 1:1]",
+        "from": "post"
+      },
+      "author": {
+        "handle": "yourPlugAI",
+        "name": "Gilbert Odera | Your AI Plug",
+        "avatar": "https://pbs.twimg.com/profile_images/2065576114131468288/lXg1S-77_400x400.jpg",
+        "verified": false
+      },
+      "run": "15:00",
+      "title_zh": "yourPlugAI 分享让秋天起舞的创意",
+      "summary_zh": "网友 @yourPlugAI 分享秋日舞蹈主题创作，表达以自然为画布、用人类想象力赋予生机的想法。"
+    }
+  ],
+  "arena": {
+    "boards": [
+      {
+        "name": "code",
+        "snapshot_date": null,
+        "fetch_status": "failed",
+        "rows": []
+      },
+      {
+        "name": "agent_code",
+        "snapshot_date": null,
+        "fetch_status": "failed",
+        "rows": []
+      },
+      {
+        "name": "text_to_image",
+        "snapshot_date": null,
+        "fetch_status": "failed",
+        "rows": []
+      },
+      {
+        "name": "image_edit",
+        "snapshot_date": null,
+        "fetch_status": "failed",
+        "rows": []
+      },
+      {
+        "name": "vision",
+        "snapshot_date": null,
+        "fetch_status": "failed",
+        "rows": []
+      }
+    ]
+  },
+  "stats": {
+    "fetched": 538,
+    "kept_after_filter": 361,
+    "selected": 29,
+    "dropped": {
+      "no_keyword": 96,
+      "removed": 0,
+      "off_topic": 7,
+      "seen_before": 39
+    },
+    "sources": {
+      "hn": {
+        "fetched": 94
+      },
+      "reddit": {
+        "fetched": 250,
+        "errors": [
+          "LocalLLaMA:new:pullpush:FetchError:http:429",
+          "StableDiffusion:new:pullpush:FetchError:http:429",
+          "comfyui:new:pullpush:FetchError:http:429"
+        ]
+      },
+      "rss": {
+        "fetched": 28
+      },
+      "rsshub": {
+        "fetched": 17,
+        "errors": [
+          "rsshub-anthropic:FetchError:http:503"
+        ]
+      },
+      "github": {
+        "fetched": 47
+      },
+      "hf": {
+        "fetched": 20
+      },
+      "ossinsight": {
+        "fetched": 0,
+        "skipped": "ossinsight data_quality=unavailable"
+      },
+      "x": {
+        "fetched": 96
+      }
+    },
+    "incremental": {
+      "fetched": 474,
+      "added": 5,
+      "dropped": {
+        "no_keyword": 75,
+        "removed": 0,
+        "known": 295,
+        "stale": 4,
+        "below_bar": 42,
+        "seen_before": 31,
+        "off_topic": 1
+      }
+    }
+  },
+  "meta": {
+    "generated_at": "2026-10-22T00:30:52+00:00",
+    "generator": "news-daily/rules",
+    "visibility": "public",
+    "updated_at": "2026-10-22T06:36:40+00:00"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "infinite-canvas",
+  "name": "无限画布",
+  "inspiredBy": "news-magicos-infinite-canvas",
+  "source": "design-daily/data/items/news-magicos-infinite-canvas.json",
+  "scheme": "light",
+  "weight": 1,
+  "tokens": {
+    "bg": "#f6f6f3",
+    "surface": "#ffffff",
+    "ink": "#1b1b1f",
+    "muted": "#6c6c75",
+    "line": "#dcdcd6",
+    "accent": "#a855f7",
+    "accent-ink": "#ffffff",
+    "radius": "14px",
+    "border-w": "1px",
+    "shadow": "0 2px 0 #dcdcd6, 0 12px 24px -18px rgba(0,0,0,.25)",
+    "font-display": "'Space Grotesk','Inter','PingFang SC',system-ui,sans-serif",
+    "font-body": "'Inter','PingFang SC',system-ui,sans-serif",
+    "font-mono": "'JetBrains Mono','SF Mono',ui-monospace,monospace",
+    "bg-pattern": "radial-gradient(#1b1b1f22 1px, transparent 1.2px) 0 0/22px 22px",
+    "tilt": "0deg"
+  }
+}

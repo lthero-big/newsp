@@ -1,0 +1,5 @@
+# newsp on your own machine (crontab -e). Times in Asia/Shanghai; adjust CRON_TZ to yours.
+CRON_TZ=Asia/Shanghai
+30 8 * * *  cd /path/to/newsp && bash scripts/selfhost.sh am >> var/logs/cron.log 2>&1
+0 15 * * *  cd /path/to/newsp && NEWS_RUN=15:00 bash scripts/selfhost.sh pm >> var/logs/cron.log 2>&1
+0 20 * * *  cd /path/to/newsp && NEWS_RUN=20:00 bash scripts/selfhost.sh pm >> var/logs/cron.log 2>&1

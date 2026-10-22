@@ -1,0 +1,25 @@
+{
+  "id": "bubble-poster",
+  "name": "泡泡字海报",
+  "inspiredBy": "brand-bubble-letter-poster",
+  "source": "design-daily/data/items/brand-bubble-letter-poster.json",
+  "scheme": "light",
+  "weight": 1,
+  "tokens": {
+    "bg": "#fff4e0",
+    "surface": "#fffaf0",
+    "ink": "#2b2118",
+    "muted": "#7a6656",
+    "line": "#2b2118",
+    "accent": "#ff5d8f",
+    "accent-ink": "#2b2118",
+    "radius": "18px",
+    "border-w": "2.5px",
+    "shadow": "3px 4px 0 #2b2118",
+    "font-display": "'Arial Rounded MT Bold','Nunito','Hiragino Maru Gothic ProN','PingFang SC',sans-serif",
+    "font-body": "'Nunito','PingFang SC','Noto Sans SC',system-ui,sans-serif",
+    "font-mono": "'JetBrains Mono','SF Mono',ui-monospace,monospace",
+    "bg-pattern": "radial-gradient(#2b211814 1.2px, transparent 1.3px) 0 0/18px 18px",
+    "tilt": "-0.6deg"
+  }
+}

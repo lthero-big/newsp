@@ -1,0 +1,2 @@
+/* news-daily ↔ shared ix contract (README.md): map this site's tokens to the --ix-* names shared variants use. Always loaded; no visual effect. */
+[data-theme]{--ix-bg:var(--bg);--ix-surface:var(--surface);--ix-ink:var(--ink);--ix-muted:var(--muted);--ix-line:var(--line);--ix-accent:var(--accent);--ix-on-accent:var(--accent-ink);--ix-radius:var(--radius);--ix-font-d:var(--font-display);--ix-font:var(--font-body);--ix-per:2}

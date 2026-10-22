@@ -1,0 +1,79 @@
+/* v3.4 preview: editorial asymmetric mix (readability first). Loaded only when NEWS_LAYOUT=v34. */
+.ed{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:22px;align-items:start}
+.ed-lead .card.feature{height:auto}
+.ed-lead .card.feature h3{font-size:clamp(24px,2.4vw,32px);line-height:1.25}
+.ed-side{display:flex;flex-direction:column;gap:0;border-top:var(--border-w) solid var(--line)}
+.card.mini{display:grid;grid-template-columns:minmax(0,1fr) 96px;grid-template-areas:"meta pic" "h pic" "orig orig" "sum sum" "foot foot";gap:4px 14px;padding:14px 4px;background:none;border:0;border-bottom:var(--border-w) solid var(--line);border-radius:0;box-shadow:none}
+.card.mini .meta{grid-area:meta}.card.mini h3{grid-area:h;font-size:17px;line-height:1.4;margin:0}
+.card.mini .orig{grid-area:orig;display:none}.card.mini .ex{grid-area:sum;font-size:15px;line-height:1.65;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:0}
+.card.mini .pic{grid-area:pic;width:96px;height:72px;aspect-ratio:auto!important;margin:0;border-radius:min(var(--radius),10px);overflow:hidden}
+.card.mini .pic img,.card.mini .pic video{width:100%;height:100%;object-fit:cover}
+.card.mini .tags,.card.mini .take,.card.mini .ext{display:none}.card.mini .foot{grid-area:foot;border-top:0;padding-top:2px}
+.ed-more{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px;margin-top:22px}
+.ed-more>.card.std{grid-column:span 3}.ed-more>.card.wide{grid-column:span 6;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:24px;align-content:start}
+.ed-more>.card.wide>.pic{grid-column:2;grid-row:1/span 6}.ed-more>.card.wide>:not(.pic){grid-column:1}
+.card .take{margin:0;padding:8px 12px;border-left:3px solid var(--accent);background:color-mix(in srgb,var(--accent) 7%,transparent);font-size:15px;line-height:1.65;border-radius:0 8px 8px 0}
+.card .take span,.card .ext span{font:600 11px var(--font-mono);letter-spacing:.08em;color:var(--accent);margin-right:8px}
+.card .ext{margin:0;display:flex;flex-wrap:wrap;gap:4px 12px;font-size:13.5px;line-height:1.6}.card .ext a{color:var(--muted);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--muted) 40%,transparent);text-underline-offset:3px}.card .ext a:hover{color:var(--accent)}
+.card .ex.sum{font-size:16px;line-height:1.75}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:20px;margin-top:24px}
+.chart{margin:0;padding:16px 18px;border:var(--border-w) solid var(--line);border-radius:var(--radius);background:var(--surface)}
+.chart figcaption{display:flex;flex-direction:column;gap:2px;margin-bottom:10px}.chart figcaption b{font-size:15px}.chart figcaption span{font:11.5px var(--font-mono);color:var(--muted)}
+.chart table{width:100%;border-collapse:collapse;font-size:13.5px}.chart th{font-weight:500;text-align:left;max-width:180px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:5px 10px 5px 0}
+.chart td{padding:5px 0}.chart td:nth-child(2){width:45%}.chart .cb{display:block;height:8px;width:var(--w);border-radius:4px;background:color-mix(in srgb,var(--muted) 45%,transparent)}
+.chart tr.top .cb{background:var(--accent)}.chart tr.top th{font-weight:700}.chart .num{font:12.5px var(--font-mono);font-variant-numeric:tabular-nums;text-align:right;padding-left:10px;color:var(--muted)}
+@media (max-width:900px){.ed{grid-template-columns:1fr}.ed-more{grid-template-columns:1fr}.ed-more>.card.std,.ed-more>.card.wide{grid-column:1/-1}.ed-more>.card.wide{display:flex}}
+@media (max-width:640px){.card.mini{grid-template-columns:minmax(0,1fr) 80px}.card.mini .pic{width:80px;height:60px}}
+.card.feature.noimg .ex{font-size:clamp(18px,1.6vw,21px);line-height:1.75;color:var(--ink)}
+.card.feature.noimg h3{font-size:clamp(26px,2.8vw,36px)}
+.card.feature.noimg{padding:clamp(22px,2.4vw,34px)}
+.chart.bench{padding:12px 14px;background:color-mix(in srgb,var(--surface) 80%,var(--bg));margin:0}
+.chart figcaption a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.ed-lead:has(.noimg){align-self:stretch}.ed-lead .card.feature.noimg{height:100%;justify-content:center}
+/* v3.4.1 mobile: every v34 container is one full-width column (any archetype's span rules would otherwise create implicit tracks) */
+@media (max-width:640px){
+.ed,.ed-more,.charts,.ed-side{grid-template-columns:minmax(0,1fr)!important;width:100%}
+.ed>*,.ed-more>*,.charts>*,.ed-side>*{grid-column:1/-1!important;width:auto!important;max-width:100%;min-width:0}
+.card .ext{display:grid;gap:6px}
+.card .ext a{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;white-space:normal;max-width:none;text-overflow:clip}
+}
+.card .ext a{max-width:100%;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+/* v3.4.2 wide card: text column keeps natural heights; image spans all rows; footer pinned to the last (1fr) row */
+.ed-more>.card.wide{grid-template-rows:repeat(10,auto) 1fr;row-gap:0;align-items:start}
+.ed-more>.card.wide>:not(.pic){margin-top:0;margin-bottom:10px;align-self:start}
+.ed-more>.card.wide>.pic{grid-row:1/-1;align-self:start;max-height:380px;overflow:hidden;margin:0}
+.ed-more>.card.wide>.pic img{width:100%;height:100%;max-height:380px;object-fit:cover}
+.ed-more>.card.wide>.foot{grid-row:-2/-1;align-self:end;margin-bottom:0}
+.card .tags{align-self:start;align-items:flex-start}.card .tags>*{height:auto;align-self:flex-start}
+.card .pic.logo{width:56px;height:56px;aspect-ratio:1;border-radius:10px;overflow:hidden;margin:4px 0;border:1px solid var(--line);background:#fff}
+.card .pic.logo img{width:100%;height:100%;object-fit:contain}
+/* filters: [hidden] must beat display:flex/grid of v34 cards & containers */
+[hidden]{display:none!important}
+.ed.nolead{grid-template-columns:minmax(0,1fr)}
+body.filtering .charts,body.filtering .arena,body.filtering .module.none{display:none!important}
+.card .pic.vid video{width:100%;height:100%;object-fit:contain;background:#000;display:block}.card audio.aud{width:100%;margin:6px 0}
+/* 今日提示词 */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px}
+.card .gal{display:grid;gap:6px;grid-template-columns:repeat(2,minmax(0,1fr));margin:4px 0}
+.card .gal.n1{grid-template-columns:minmax(0,1fr);max-width:420px}
+.card .gal a{display:block;border-radius:calc(var(--radius,10px) * .6);overflow:hidden;border:1px solid var(--line);background:var(--surface)}
+.card .gal img{display:block;width:100%;height:auto;max-height:420px;object-fit:contain}
+.card .prompt{border:var(--border-w,1px) solid var(--line);border-radius:calc(var(--radius,10px) * .6);overflow:hidden;background:color-mix(in srgb,var(--ink) 4%,var(--surface))}
+.card .prompt .ph{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;font:600 12px var(--font-mono,monospace);color:var(--muted);border-bottom:1px solid var(--line)}
+.card .prompt .cp{font:600 12px var(--font-mono,monospace);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:4px 10px;min-height:32px;cursor:pointer}
+.card .prompt .cp:hover{border-color:var(--accent);color:var(--accent)}
+.card .prompt pre{margin:0;padding:10px 12px;font:13.5px/1.65 var(--font-mono,ui-monospace,monospace);white-space:pre-wrap;word-break:break-word;max-height:260px;overflow:auto;user-select:text}
+.pgrid>*{min-width:0}.card .prompt,.card .gal{min-width:0;max-width:100%}
+.pgrid>.card{grid-column:auto!important;width:auto!important}
+.card .meta .stale{font-size:11px;padding:1px 6px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+/* v3.4.9: a ✓-collapsed / promoted card never keeps a stretched height */
+.ed-more>.card.fill{grid-column:span 6}
+/* card meta row (all card sizes, 10-21 fix): nothing shrinks or wraps inside itself — 新增 badge, time, ♥, rank stay one line;
+   the row wraps instead (badge + source on line 1, time/♥/rank on line 2). The source never shrinks; it only ellipsizes when it alone is longer than the whole row. */
+.card .meta{flex-wrap:wrap;row-gap:4px;min-width:0}
+.card .meta>*{white-space:nowrap;flex:none}
+.card .meta>.src{flex:none;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+/* mini without a picture: no empty picture column squeezing meta / title */
+.card.mini:not(:has(>.pic)){grid-template-columns:minmax(0,1fr)!important;grid-template-areas:"meta" "h" "orig" "sum" "foot"!important}
+.card .meta>.src.who,.card .meta>.src.rd-sub,.card .meta>.src.hn{overflow:hidden}
+.card .meta>.src.rd-sub,.card .meta>.src.hn{display:inline-flex;max-width:100%}

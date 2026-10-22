@@ -1,0 +1,661 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:radar:daily:2.0",
+  "title": "Radar daily report v2 (rules pipeline)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "date",
+    "window",
+    "headline",
+    "modules",
+    "items",
+    "arena",
+    "meta"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "start",
+        "end",
+        "timezone"
+      ],
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "timezone": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "headline": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 240
+    },
+    "modules": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "index",
+          "title",
+          "desc",
+          "count"
+        ],
+        "properties": {
+          "id": {
+            "enum": [
+              "model",
+              "opensource",
+              "community"
+            ]
+          },
+          "index": {
+            "type": "string",
+            "pattern": "^0[1-3]$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "desc": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/card"
+      }
+    },
+    "arena": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "boards"
+      ],
+      "properties": {
+        "boards": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/board"
+          }
+        }
+      }
+    },
+    "stats": {
+      "type": "object"
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "generated_at",
+        "generator",
+        "visibility"
+      ],
+      "properties": {
+        "generated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "generator": {
+          "type": "string"
+        },
+        "visibility": {
+          "enum": [
+            "internal",
+            "public"
+          ]
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "card": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "module",
+        "kind",
+        "title",
+        "excerpt",
+        "url",
+        "source",
+        "source_label",
+        "published_at",
+        "metrics",
+        "tags",
+        "score",
+        "links",
+        "visibility"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "module": {
+          "enum": [
+            "model",
+            "opensource",
+            "community"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "post",
+            "release",
+            "repo",
+            "model"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "excerpt": {
+          "type": "string",
+          "maxLength": 400
+        },
+        "url": {
+          "$ref": "#/$defs/url"
+        },
+        "source": {
+          "enum": [
+            "hn",
+            "reddit",
+            "rss",
+            "github",
+            "hf",
+            "ossinsight",
+            "x"
+          ]
+        },
+        "source_label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "published_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "metrics": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "points": {
+              "type": "integer"
+            },
+            "comments": {
+              "type": "integer"
+            },
+            "stars": {
+              "type": "integer"
+            },
+            "forks": {
+              "type": "integer"
+            },
+            "likes": {
+              "type": "integer"
+            },
+            "downloads": {
+              "type": "integer"
+            },
+            "engagement": {
+              "type": "integer"
+            },
+            "replies": {
+              "type": "integer"
+            },
+            "likes_x": {
+              "type": "integer"
+            },
+            "reposts": {
+              "type": "integer"
+            }
+          }
+        },
+        "tags": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "AI",
+              "LLM",
+              "图片视频音频",
+              "Agent"
+            ]
+          }
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "score": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "total"
+          ],
+          "properties": {
+            "total": {
+              "type": "number"
+            },
+            "engagement": {
+              "type": "number"
+            },
+            "specificity": {
+              "type": "number"
+            },
+            "decay": {
+              "type": "number"
+            },
+            "source_weight": {
+              "type": "number"
+            },
+            "feedback": {
+              "type": "number"
+            },
+            "stale": {
+              "type": "number"
+            },
+            "feed_weight": {
+              "type": "number"
+            },
+            "feedback_why": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 4
+            }
+          }
+        },
+        "links": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "url"
+            ],
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "url": {
+                "$ref": "#/$defs/url"
+              }
+            }
+          }
+        },
+        "visibility": {
+          "enum": [
+            "internal",
+            "public"
+          ]
+        },
+        "linked": {
+          "type": "string",
+          "pattern": "^https?://",
+          "description": "primary content an X post links to"
+        },
+        "stale_link": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "url",
+            "published_at"
+          ],
+          "properties": {
+            "url": {
+              "type": "string"
+            },
+            "published_at": {
+              "type": "string"
+            }
+          }
+        },
+        "prompt_pick": {
+          "type": "boolean",
+          "description": "今日提示词 slot"
+        },
+        "prompt": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "text"
+          ],
+          "properties": {
+            "text": {
+              "type": "string",
+              "maxLength": 5000
+            },
+            "from": {
+              "enum": [
+                "post",
+                "thread",
+                "alt"
+              ]
+            }
+          }
+        },
+        "gallery": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "src",
+              "width",
+              "height"
+            ],
+            "properties": {
+              "src": {
+                "type": "string",
+                "pattern": "^https://"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              }
+            }
+          }
+        },
+        "audio": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "src"
+          ],
+          "properties": {
+            "src": {
+              "type": "string",
+              "pattern": "^https://"
+            },
+            "type": {
+              "type": "string"
+            }
+          }
+        },
+        "run": {
+          "type": "string",
+          "pattern": "^[0-2][0-9]:[0-5][0-9]$",
+          "description": "incremental run label (15:00 / 20:00)"
+        },
+        "batch": {
+          "enum": [
+            "am",
+            "pm"
+          ],
+          "description": "am = 早间完整抓取；pm = 15:00 增量新增"
+        },
+        "fetched_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "image": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "src",
+            "width",
+            "height"
+          ],
+          "properties": {
+            "src": {
+              "type": "string",
+              "pattern": "^https://"
+            },
+            "srcset": {
+              "type": "string",
+              "pattern": "^https://"
+            },
+            "width": {
+              "type": "integer",
+              "minimum": 600
+            },
+            "height": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "alt": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "type": {
+              "enum": [
+                "image",
+                "gif",
+                "video"
+              ]
+            },
+            "poster": {
+              "type": "string",
+              "pattern": "^https://"
+            },
+            "logo": {
+              "type": "boolean",
+              "description": "logo-like / flat brand image: small thumb only, never a big card"
+            }
+          }
+        },
+        "title_zh": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 28
+        },
+        "summary_zh": {
+          "type": "string",
+          "maxLength": 60
+        },
+        "author": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "handle"
+          ],
+          "properties": {
+            "handle": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_]{1,15}$"
+            },
+            "name": {
+              "type": "string"
+            },
+            "avatar": {
+              "type": "string",
+              "pattern": "^https://pbs\\.twimg\\.com/"
+            },
+            "verified": {
+              "type": "boolean"
+            }
+          }
+        },
+        "comment_zh": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "bench": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "metric",
+            "rows",
+            "source"
+          ],
+          "properties": {
+            "title": {
+              "type": "string",
+              "maxLength": 40
+            },
+            "metric": {
+              "type": "string",
+              "maxLength": 30
+            },
+            "source": {
+              "type": "string",
+              "pattern": "^https://"
+            },
+            "rows": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 6,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "label",
+                  "value"
+                ],
+                "properties": {
+                  "label": {
+                    "type": "string",
+                    "maxLength": 40
+                  },
+                  "value": {
+                    "type": "number"
+                  },
+                  "raw": {
+                    "type": "string",
+                    "maxLength": 16
+                  },
+                  "self": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "board": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "snapshot_date",
+        "fetch_status",
+        "rows"
+      ],
+      "properties": {
+        "name": {
+          "enum": [
+            "code",
+            "agent_code",
+            "text_to_image",
+            "image_edit",
+            "vision"
+          ]
+        },
+        "snapshot_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "fetch_status": {
+          "enum": [
+            "ok",
+            "failed"
+          ]
+        },
+        "rows": {
+          "type": "array",
+          "maxItems": 10,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "rank",
+              "model"
+            ],
+            "properties": {
+              "rank": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "model": {
+                "type": "string"
+              },
+              "score": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "delta": {
+                "anyOf": [
+                  {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  {
+                    "const": "new"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

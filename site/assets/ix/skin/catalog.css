@@ -1,0 +1,21 @@
+/* ix skin/catalog — Dell 1996 catalog cards. Borders/colours only: no transform, filter or animation on .card or containers.
+   Tints mix ≤14% into the theme surface so text keeps AA in light and dark themes (checked by tests/invariants.mjs). */
+html[data-ix-skin="catalog"] main .card{border:2px solid var(--ink);border-radius:0;box-shadow:none}
+html[data-ix-skin="catalog"] main .card:hover{transform:none;border-color:var(--ink);box-shadow:4px 4px 0 var(--ink)}
+html[data-ix-skin="catalog"] main .card.mini{border:0;border-bottom:2px solid var(--ink);box-shadow:none}
+html[data-ix-skin="catalog"] main .card.mini:hover{box-shadow:none}
+html[data-ix-skin="catalog"] #m-model .card:not(.mini){background:color-mix(in srgb,#b3bd95 14%,var(--surface))}
+html[data-ix-skin="catalog"] #m-opensource .card:not(.mini){background:color-mix(in srgb,#9ab6c8 14%,var(--surface))}
+html[data-ix-skin="catalog"] #m-community .card:not(.mini){background:color-mix(in srgb,#d77a7a 12%,var(--surface))}
+html[data-ix-skin="catalog"] main .card[data-batch="pm"]::before{display:none}
+html[data-ix-skin="catalog"] main .card .pic,html[data-ix-skin="catalog"] main .card .gal a{border-radius:0}
+html[data-ix-skin="catalog"] main .card:not(.mini) .pic:not(.logo){outline:2px solid var(--ink);outline-offset:-2px}
+html[data-ix-skin="catalog"] main .card .tag{border-radius:0;border:1.5px solid var(--ink);background:var(--surface);color:var(--ink);font-weight:700}
+html[data-ix-skin="catalog"] main .card .meta .new{position:relative;border-radius:0;background:#fcc20f;color:#111;padding:3px 9px;font-weight:900;clip-path:polygon(0 12%,8% 0,18% 14%,30% 0,42% 12%,54% 0,66% 12%,78% 0,90% 12%,100% 4%,96% 50%,100% 96%,90% 88%,78% 100%,66% 88%,54% 100%,42% 88%,30% 100%,18% 86%,8% 100%,0 88%,4% 50%)}
+html[data-ix-skin="catalog"] main .card .acts button{border-width:1.75px;border-color:var(--ink)}
+html[data-ix-skin="catalog"] .proof{border-top:2px solid var(--ink)}
+html[data-ix-skin="catalog"] .proof>div{border-left:2px solid var(--ink);padding-left:10px}
+html[data-ix-skin="catalog"] .proof>div:first-child{border-left:0;padding-left:0}
+html[data-ix-skin="catalog"] .seen .shbar{border-radius:0;border:2px solid var(--ink)}
+@media (min-width:641px){html[data-ix-skin="catalog"] body::after{content:"";position:fixed;inset:0;border:6px solid #000;pointer-events:none;z-index:70}}
+@media (prefers-reduced-motion:reduce){html[data-ix-skin="catalog"] main .card:hover{box-shadow:none}}

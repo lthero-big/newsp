@@ -1,0 +1,4 @@
+# Python 3.11+ (stdlib only for the core pipeline). Optional extras:
+pillow>=10        # media.py: image size probing for card pictures
+trafilatura>=1.8  # collect.py: article body extraction (falls back to the RSS excerpt)
+pyarrow>=15       # arena-top.py: Arena leaderboard parquet (falls back to the HF rows API)

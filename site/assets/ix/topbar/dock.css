@@ -1,0 +1,10 @@
+/* ix topbar/dock — desktop nav becomes a floating pill dock; topbar/dock.js magnifies links near the pointer (springs).
+   Hooks: [data-ixh~="nav"]. Phones keep the plain top bar (nav hidden there anyway). */
+@media (min-width:641px){
+html[data-ix-topbar="dock"] [data-ixh~="nav"]{padding:4px;border:var(--border-w,1px) solid var(--ix-line);border-radius:999px;background:var(--ix-surface);box-shadow:0 6px 24px -12px rgb(0 0 0/.35);gap:2px;overflow:visible}
+html[data-ix-topbar="dock"] [data-ixh~="nav"] a,html[data-ix-topbar="dock"] [data-ixh~="nav"] button{transform-origin:50% 100%;will-change:transform}
+html[data-ix-topbar="dock"] [data-ixh~="nav"] a[aria-current]{background:var(--ix-accent);color:var(--ix-on-accent)}
+html[data-ix-topbar="dock"] [data-ixh~="nav"] a[aria-current] span{color:inherit}
+}
+@media (prefers-reduced-motion:reduce){html[data-ix-topbar="dock"] [data-ixh~="nav"] a{transform:none!important;will-change:auto}}
+html.dd-rm[data-ix-topbar="dock"] [data-ixh~="nav"] a{transform:none!important}

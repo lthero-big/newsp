@@ -1,0 +1,8 @@
+/* ix press/elastic — shared with design-daily (same file). The JS drives spring keyframes on buttons only; here we retire the built-in press styles.
+   Never touches .card/.grid. Reduced motion / 减少动效: built-ins are restored (JS also skips). */
+html[data-ix-press="elastic"] .acts button:active{transform:none}
+html[data-ix-press="elastic"] .fav.pop,html[data-ix-press="elastic"] .like.pop{animation:none}
+html[data-ix-press="elastic"] .stars button:hover{transform:none}
+html[data-ix-press="elastic"] .stars button,html[data-ix-press="elastic"] .acts button{transition:color .15s,background .2s,border-color .2s}
+@media (prefers-reduced-motion:reduce){html[data-ix-press="elastic"] .acts button:active{transform:scale(.96)}}
+html.dd-rm[data-ix-press="elastic"] .acts button:active{transform:scale(.96)}

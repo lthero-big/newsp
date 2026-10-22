@@ -1,0 +1,2270 @@
+{
+  "schema_version": "2.0",
+  "date": "2026-10-21",
+  "window": {
+    "start": "2026-10-20T00:27:44Z",
+    "end": "2026-10-21T12:11:51Z",
+    "timezone": "Asia/Shanghai"
+  },
+  "headline": "Mistral has released new Speech models! Voxtral Small Transcribe 3 takes the #3 spot on the Artificial Analysis Speech to Text leaderboard, and Voxtral 3 TTS en",
+  "modules": [
+    {
+      "id": "model",
+      "index": "01",
+      "title": "模型新闻",
+      "desc": "新模型、版本发布与榜单",
+      "count": 13
+    },
+    {
+      "id": "opensource",
+      "index": "02",
+      "title": "开源项目发现",
+      "desc": "新仓库、热门模型权重与工具发布",
+      "count": 9
+    },
+    {
+      "id": "community",
+      "index": "03",
+      "title": "社区新闻",
+      "desc": "HN、Reddit 与 X 上的讨论",
+      "count": 22
+    }
+  ],
+  "items": [
+    {
+      "id": "sha256:c939521b1b205a27e77f49c098614c539bffd44f89ecbe3c7f87f5423a0fedb1",
+      "module": "model",
+      "kind": "post",
+      "title": "Mistral has released new Speech models! Voxtral Small Transcribe 3 takes the #3 spot on the Artificial Analysis Speech to Text leaderboard, and Voxtral 3 TTS en",
+      "excerpt": "Mistral has released new Speech models! Voxtral Small Transcribe 3 takes the #3 spot on the Artificial Analysis Speech to Text leaderboard, and Voxtral 3 TTS enters the top 12 in both Text to Speech arenas @MistralAI has…",
+      "url": "https://x.com/ArtificialAnlys/status/2112587905222709432",
+      "source": "x",
+      "source_label": "X · @ArtificialAnlys",
+      "published_at": "2026-10-20T16:53:01Z",
+      "metrics": {
+        "engagement": 346,
+        "replies": 18,
+        "likes_x": 284,
+        "reposts": 31
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "图片视频音频"
+      ],
+      "keywords": [
+        "Mistral",
+        "benchmark",
+        "model",
+        "speech recognition",
+        "text-to-speech"
+      ],
+      "score": {
+        "total": 72.15,
+        "engagement": 0.61,
+        "specificity": 1,
+        "decay": 0.803,
+        "source_weight": 0.9,
+        "feedback": 1.1573,
+        "feedback_why": [
+          "kw:text-to-speech",
+          "x:@artificialanlys"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "image": {
+        "src": "https://pbs.twimg.com/media/HVFq7vwWEAA2ys-?format=jpg&name=large",
+        "srcset": "https://pbs.twimg.com/media/HVFq7vwWEAA2ys-?format=jpg&name=small 680w, https://pbs.twimg.com/media/HVFq7vwWEAA2ys-?format=jpg&name=medium 1200w, https://pbs.twimg.com/media/HVFq7vwWEAA2ys-?format=jpg&name=large 2048w, https://pbs.twimg.com/media/HVFq7vwWEAA2ys-?format=jpg&name=orig 3240w",
+        "width": 3240,
+        "height": 1230,
+        "alt": "",
+        "logo": false
+      },
+      "author": {
+        "handle": "ArtificialAnlys",
+        "name": "Artificial Analysis",
+        "avatar": "https://pbs.twimg.com/profile_images/2042402069320290304/A8C1lP07_400x400.jpg",
+        "verified": true
+      },
+      "title_zh": "Mistral 新语音模型登上评测榜",
+      "summary_zh": "Voxtral Small Transcribe 3 转写第三，Voxtral 3 TTS 前十二。"
+    },
+    {
+      "id": "sha256:536f23cd94f139849c62e2753108d37e174f900ce6ec52ef90b6a207f9a80da1",
+      "module": "model",
+      "kind": "post",
+      "title": "ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model",
+      "excerpt": "ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model Learned memory takes a basic ReAct agent with GPT-4.1 to the top Using GPT-4.1, an older, non-reasoning mod…",
+      "url": "https://huggingface.co/blog/ibm-research/altk-evolve-bc",
+      "source": "rss",
+      "source_label": "hf-blog",
+      "published_at": "2026-10-20T15:19:48Z",
+      "metrics": {},
+      "tags": [
+        "AI"
+      ],
+      "keywords": [
+        "Hugging Face",
+        "benchmark",
+        "model"
+      ],
+      "score": {
+        "total": 55.42,
+        "engagement": 0.5,
+        "specificity": 0.4,
+        "decay": 0.768,
+        "source_weight": 1.25
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "image": {
+        "src": "https://cdn-uploads.huggingface.co/production/uploads/6435a1131860001f144239ea/rzXYJh7e7UdoYgCLwOZjH.jpeg",
+        "width": 1910,
+        "height": 1000,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "title_zh": "ALTK-Evolve 靠记忆登顶客服评测",
+      "summary_zh": "给使用 GPT-4.1 的基础 ReAct Agent 加上学习式记忆，就能登顶 τ²-bench。",
+      "comment_zh": "客服任务的提升不只靠换模型，记忆机制也能拉开差距。"
+    },
+    {
+      "id": "sha256:e8a8161ff83426ef4f6b8321af038a82ced31c3402f885cb426986b43b349f8c",
+      "module": "model",
+      "kind": "post",
+      "title": "NVIDIA Cosmos3-H-Dreams: Bringing Clinical Surgery to Life Through Generative Simulation",
+      "excerpt": "NVIDIA Cosmos3-H-Dreams: Bringing Clinical Surgery to Life Through Generative Simulation Our first Cosmos-H-Dreams release, built on Cosmos-Predict2.5, brought interactive generative simulation to dVRK tabletop suturing,…",
+      "url": "https://huggingface.co/blog/nvidia/cosmos3-h-dreams",
+      "source": "rss",
+      "source_label": "hf-blog",
+      "published_at": "2026-10-20T18:17:47Z",
+      "metrics": {},
+      "tags": [
+        "AI"
+      ],
+      "keywords": [
+        "Hugging Face",
+        "NVIDIA"
+      ],
+      "score": {
+        "total": 52.15,
+        "engagement": 0.5,
+        "specificity": 0.25,
+        "decay": 0.837,
+        "source_weight": 1.25
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "image": {
+        "src": "https://cdn-uploads.huggingface.co/production/uploads/67a4f15057fb66b9db6dac82/45XSEtdQHqTdspRe3wkYs.png",
+        "width": 2026,
+        "height": 951,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "title_zh": "Cosmos3-H-Dreams 生成手术仿真",
+      "summary_zh": "NVIDIA 将生成式仿真用于临床手术，前一代基于 Cosmos-Predict2.5 构建。"
+    },
+    {
+      "id": "sha256:ef73bf2ace8ac67192910f29383fdaeabcc1f1c3f55e1ee321602bf2faa4d9c1",
+      "module": "model",
+      "kind": "post",
+      "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
+      "excerpt": "FairStress: A deeper evaluation of fairness in LLM decision-making Today we’re introducing FairStress, a benchmark for measuring demographic fairness in LLMs beyond the choice a model ultimately makes in decisions impact…",
+      "url": "https://huggingface.co/blog/allenai/fairstress",
+      "source": "rss",
+      "source_label": "hf-blog",
+      "published_at": "2026-10-20T16:09:19Z",
+      "metrics": {},
+      "tags": [
+        "AI",
+        "LLM"
+      ],
+      "keywords": [
+        "Hugging Face",
+        "LLM"
+      ],
+      "score": {
+        "total": 50.41,
+        "engagement": 0.5,
+        "specificity": 0.25,
+        "decay": 0.787,
+        "source_weight": 1.25
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "image": {
+        "src": "https://cdn-uploads.huggingface.co/production/uploads/638e39b249de7ae552d977b5/7zYjyTWswjO2erWsO5HNf.png",
+        "width": 2048,
+        "height": 1463,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "title_zh": "FairStress 测公平性，不只看最终选择",
+      "summary_zh": "这项新评测衡量大模型决策中的人口群体公平性，把考察范围扩展到最终选择之外。"
+    },
+    {
+      "id": "sha256:1725d137aa3debc0d8ae9b76a5f8f5fc192130afd14f5151c2319be05f1a5dd1",
+      "module": "model",
+      "kind": "post",
+      "title": "Franchisee reconciles cash in 94% less time with ChatGPT Work",
+      "excerpt": "An independent Schlotzsky’s and Cinnabon franchisee cut menu repricing time by 95% and built a workflow that could free up $100K in cash flow.",
+      "url": "https://openai.com/index/ted-taylor-restaurant",
+      "source": "rss",
+      "source_label": "openai-news",
+      "published_at": "2026-10-20T10:00:00Z",
+      "metrics": {},
+      "tags": [
+        "AI",
+        "LLM",
+        "Agent"
+      ],
+      "keywords": [
+        "ChatGPT",
+        "OpenAI",
+        "workflow"
+      ],
+      "score": {
+        "total": 45.97,
+        "engagement": 0.5,
+        "specificity": 0.25,
+        "decay": 0.659,
+        "source_weight": 1.25
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "title_zh": "ChatGPT Work 帮加盟商缩短对账时间",
+      "summary_zh": "加盟商对账耗时减少 94%、菜单调价耗时减少 95%，并搭建了或可释放 10 万美元现金流的流程。"
+    },
+    {
+      "id": "sha256:79ab8ee17ea747cb2c14b17ba4e26133ebbf21df2b04168191f48f9634443a40",
+      "module": "model",
+      "kind": "post",
+      "title": "DeepSeek-V4.1-Flash-20261017 (Max) by @deepseek_ai landed in the Arena as the #1 open model in both the Agent Arena and the Code Arena: WebDev!",
+      "excerpt": "DeepSeek-V4.1-Flash-20261017 (Max) by @deepseek_ai landed in the Arena as the #1 open model in both the Agent Arena and the Code Arena: WebDev! See 3D world generations from this model by @petergostev, and find more deta…",
+      "url": "https://x.com/arena/status/2112683123406479810",
+      "source": "x",
+      "source_label": "X · @arena",
+      "published_at": "2026-10-20T23:11:23Z",
+      "metrics": {
+        "engagement": 0
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "Agent"
+      ],
+      "keywords": [
+        "AI",
+        "DeepSeek",
+        "agent",
+        "benchmark",
+        "model"
+      ],
+      "score": {
+        "total": 45.96,
+        "engagement": 0,
+        "specificity": 1,
+        "decay": 0.964,
+        "source_weight": 0.9,
+        "feedback": 1.16,
+        "feedback_why": [
+          "x:@arena"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "author": {
+        "handle": "arena",
+        "name": "Arena.ai",
+        "avatar": "https://pbs.twimg.com/profile_images/2017015061454438400/iNKfXZ_I_400x400.jpg",
+        "verified": false
+      },
+      "title_zh": "DeepSeek-V4.1-Flash (Max) 夺冠",
+      "summary_zh": "Arena 公布榜单：模型在 Agent 和网页开发代码两项评测中，均位居开放模型第一。"
+    },
+    {
+      "id": "sha256:07395aaab74e419c19915809d3d93310a7447b1be9e232422f58c347135dcbb4",
+      "module": "model",
+      "kind": "model",
+      "title": "OpenMOSS-Team/MOSS-Image-Base",
+      "excerpt": "",
+      "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-Base",
+      "source": "hf",
+      "source_label": "Hugging Face",
+      "published_at": "2026-10-19T08:31:00.000Z",
+      "metrics": {
+        "likes": 434,
+        "downloads": 3558
+      },
+      "tags": [
+        "AI",
+        "图片视频音频"
+      ],
+      "keywords": [
+        "Hugging Face",
+        "text-to-image"
+      ],
+      "score": {
+        "total": 41.03,
+        "engagement": 0.554,
+        "specificity": 0.1,
+        "decay": 0.749,
+        "source_weight": 0.95,
+        "feedback": 1.1565,
+        "feedback_why": [
+          "hf:openmoss-team",
+          "hffam:openmoss-team/moss"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "image": {
+        "src": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-Base/resolve/main/assets/teaser.webp",
+        "width": 1936,
+        "height": 1088,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "title_zh": "MOSS-Image-Base 已上架模型社区",
+      "summary_zh": "OpenMOSS-Team 的模型已上架，累计下载 3558 次、获赞 434 次。"
+    },
+    {
+      "id": "sha256:a48628008ee5d519cadf44cb9093e067101c8d8e19dc9a7ca3efbcaef515e44f",
+      "module": "model",
+      "kind": "post",
+      "title": "FastH3 Omni is out with day-0 ComfyUI support: open weights, up to 11.9x faster reference-to-video",
+      "excerpt": "We just open-sourced FastH3 OmniRef from the FastVideo team at Hao AI Lab, and it works in ComfyUI from day one.",
+      "url": "https://www.reddit.com/r/comfyui/comments/1xb2xz6/fasth3_omni_is_out_with_day0_comfyui_support_open/",
+      "source": "reddit",
+      "source_label": "r/comfyui",
+      "published_at": "2026-10-20T20:16:07Z",
+      "metrics": {
+        "points": 1,
+        "comments": 0
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "图片视频音频",
+        "Agent"
+      ],
+      "keywords": [
+        "AI",
+        "ComfyUI",
+        "MiniMax",
+        "NVIDIA",
+        "model",
+        "open weights"
+      ],
+      "score": {
+        "total": 40.16,
+        "engagement": 0.072,
+        "specificity": 0.85,
+        "decay": 0.886,
+        "source_weight": 0.85,
+        "feedback": 1.16,
+        "feedback_why": [
+          "sub:comfyui"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "title_zh": "FastH3 Omni 参考转视频最高快近十二倍",
+      "summary_zh": "Hao AI Lab 的 FastVideo 团队已开源 OmniRef，首日就支持 ComfyUI。",
+      "comment_zh": "首日接入现成工作流，比单独放出模型更容易让用户试起来。"
+    },
+    {
+      "id": "sha256:d2ace7e9d2436a978a3a613d9fee7c6adf56b3dca550eedf967dc95580041484",
+      "module": "opensource",
+      "kind": "release",
+      "title": "ollama v0.40.7-rc1：mlx: deduplicate CUDA runtime payloads (#17956)",
+      "excerpt": "Deduplicate MLX CUDA runtime payloads Move CUDA libraries shared by the GGML and MLX backends into the sibling CUDA payload, and teach in-process and subprocess MLX loading to resolve that packaged dependency directory.",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.40.7-rc1",
+      "source": "rss",
+      "source_label": "ollama-releases",
+      "published_at": "2026-10-20T21:15:15Z",
+      "metrics": {
+        "points": 0
+      },
+      "tags": [
+        "AI",
+        "LLM"
+      ],
+      "keywords": [
+        "NVIDIA",
+        "Ollama"
+      ],
+      "score": {
+        "total": 91.03,
+        "engagement": 0.5,
+        "specificity": 0.85,
+        "decay": 0.912,
+        "source_weight": 1.25,
+        "feedback": 1.1436,
+        "feedback_why": [
+          "feed:ollama-releases",
+          "repo:ollama/ollama"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "title_zh": "ollama v0.40.7-rc1 运行库去重",
+      "summary_zh": "将 GGML 与 MLX 共用的 CUDA 库移入独立载荷，并调整进程内与子进程的加载方式。"
+    },
+    {
+      "id": "sha256:37211cd8f1e2e3ccf5906964a520bfdbc82634e453a6b9cfa941a6a3ea0920eb",
+      "module": "opensource",
+      "kind": "post",
+      "title": "Show HN: Vibe Prospecting – B2B Prospecting from Claude and Claude Code via MCP",
+      "excerpt": "Power your chat with live B2B data — build lead lists, research companies, enrich contacts, and personalize outreach, all from inside your AI assistant. Vibe Prospecting is a remote MCP server.",
+      "url": "https://github.com/explorium-ai/vibeprospecting-mcp",
+      "source": "hn",
+      "source_label": "Hacker News",
+      "published_at": "2026-10-20T12:20:40Z",
+      "metrics": {
+        "points": 3,
+        "comments": 1
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "Agent"
+      ],
+      "keywords": [
+        "AI",
+        "Claude",
+        "Claude Code",
+        "MCP"
+      ],
+      "score": {
+        "total": 53.07,
+        "engagement": 0.193,
+        "specificity": 1,
+        "decay": 0.705,
+        "source_weight": 1,
+        "feedback": 1.16,
+        "feedback_why": [
+          "kw:mcp"
+        ]
+      },
+      "links": [
+        {
+          "label": "Hacker News",
+          "url": "https://github.com/metahumansworld/SIwithin"
+        },
+        {
+          "label": "Hacker News",
+          "url": "https://github.com/wangjohn/agent-archive"
+        },
+        {
+          "label": "讨论",
+          "url": "https://news.ycombinator.com/item?id=50165257"
+        }
+      ],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "title_zh": "Vibe Prospecting 用 MCP 找客户",
+      "summary_zh": "远程 MCP 服务接入实时企业数据，在 Claude 内就能筛选潜在客户、研究公司并补全联系人。"
+    },
+    {
+      "id": "sha256:d1faa34b0ffc535270e86d8562ac6ec49aa7f78a8e70e8d08e049e0cf35ad376",
+      "module": "opensource",
+      "kind": "post",
+      "title": "Show HN: Code-mode – keep MCP tool results out of Claude Code's context",
+      "excerpt": "code-mode is a Claude Code plugin. Claude writes one JavaScript program that calls your MCP tools in a sandbox, filters and joins the data there, and sends back only the answer.",
+      "url": "https://github.com/gabe4coding/claude-code-mode",
+      "source": "hn",
+      "source_label": "Hacker News",
+      "published_at": "2026-10-20T13:19:40Z",
+      "metrics": {
+        "points": 2,
+        "comments": 0
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "Agent"
+      ],
+      "keywords": [
+        "Claude",
+        "Claude Code",
+        "MCP"
+      ],
+      "score": {
+        "total": 50.1,
+        "engagement": 0.122,
+        "specificity": 1,
+        "decay": 0.725,
+        "source_weight": 1,
+        "feedback": 1.16,
+        "feedback_why": [
+          "kw:mcp"
+        ]
+      },
+      "links": [
+        {
+          "label": "讨论",
+          "url": "https://news.ycombinator.com/item?id=50165966"
+        }
+      ],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "image": {
+        "src": "https://repository-images.githubusercontent.com/1412099792/763ff1f0-997c-459f-9c19-feafe1a3d841",
+        "width": 1280,
+        "height": 640,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "title_zh": "Code-mode 不让工具结果挤满上下文",
+      "summary_zh": "Claude Code 插件让工具调用在沙箱内执行，先筛选、合并数据，再只把答案返回上下文。",
+      "comment_zh": "工具越多，越需要把数据处理和模型上下文分开。"
+    },
+    {
+      "id": "sha256:02b82d367685ef5a5558071dc830003387bf2c57f1d605982d836c911e2bc717",
+      "module": "opensource",
+      "kind": "post",
+      "title": "Show HN: VoidAccess – open-source dark web OSINT, from query to a graph",
+      "excerpt": "Hi HN! Im Katriel, and im a Security Researcher/Enthusiast and in the wave of AI, i wanted to build that next gen of security tooling that surpasses the current tools, and even the paid industries with an open source eng…",
+      "url": "https://github.com/KatrielMoses/voidaccess",
+      "source": "hn",
+      "source_label": "Hacker News",
+      "published_at": "2026-10-20T14:49:33Z",
+      "metrics": {
+        "points": 127,
+        "comments": 13
+      },
+      "tags": [
+        "AI"
+      ],
+      "keywords": [
+        "AI"
+      ],
+      "score": {
+        "total": 43.78,
+        "engagement": 0.686,
+        "specificity": 0.1,
+        "decay": 0.757,
+        "source_weight": 1
+      },
+      "links": [
+        {
+          "label": "讨论",
+          "url": "https://news.ycombinator.com/item?id=50167286"
+        }
+      ],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "image": {
+        "src": "https://raw.githubusercontent.com/KatrielMoses/voidaccess/HEAD/public/terminal-hero.png",
+        "width": 1094,
+        "height": 569,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "title_zh": "VoidAccess 把暗网查询变成图谱",
+      "summary_zh": "安全研究者 Katriel 推出开源暗网情报工具，将查询结果组织成图谱，供安全调查使用。"
+    },
+    {
+      "id": "sha256:df1d6ce7caa4eee397d5bcfc6cc9b0067e2939f41991ff5bb0ec1219a6f1a422",
+      "module": "opensource",
+      "kind": "release",
+      "title": "llama.cpp b11763（另有 9 个版本：b11761、b11765、b11759…）",
+      "excerpt": "opencl: add several gemm variants for small batches and some fixes ( #30850 ) opencl: fix OOB read in mul_mv_mxfp4_f32_flat opencl: remove large-N guard that forces CPU weight placement this condition claims that large b…",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11763",
+      "source": "rss",
+      "source_label": "llamacpp-releases",
+      "published_at": "2026-10-20T23:01:45Z",
+      "metrics": {
+        "points": 0
+      },
+      "tags": [
+        "AI",
+        "LLM"
+      ],
+      "keywords": [
+        "Llama",
+        "NVIDIA",
+        "model"
+      ],
+      "score": {
+        "total": 35.03,
+        "engagement": 0.5,
+        "specificity": 0.7,
+        "decay": 0.959,
+        "source_weight": 1.25,
+        "feedback": 0.4633,
+        "feedback_why": [
+          "feed:llamacpp-releases",
+          "repo:ggml-org/llama.cpp"
+        ]
+      },
+      "links": [
+        {
+          "label": "b11761",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11761"
+        },
+        {
+          "label": "b11765",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11765"
+        },
+        {
+          "label": "b11759",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11759"
+        }
+      ],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "title_zh": "llama.cpp b11763 优化小批量计算",
+      "summary_zh": "OpenCL 新增多种小批量矩阵乘法实现，修复越界读取，并移除强制权重放在 CPU 的限制。"
+    },
+    {
+      "id": "sha256:8720072390c5992adee05c62f454c2ce9f929b6603fddec3bdfb547b85800bd4",
+      "module": "opensource",
+      "kind": "repo",
+      "title": "marclou/mailcheap",
+      "excerpt": "Newsletters where you pay for the emails you send, not for dormant subscribers, at a fraction of the price of beehiiv and the like. Open source: self-host it, or use mailcheap.ai.",
+      "url": "https://github.com/marclou/mailcheap",
+      "source": "github",
+      "source_label": "GitHub",
+      "published_at": "2026-10-10T12:55:36Z",
+      "metrics": {
+        "stars": 1275,
+        "forks": 324
+      },
+      "tags": [
+        "AI",
+        "Agent"
+      ],
+      "keywords": [
+        "AI",
+        "MCP",
+        "agent"
+      ],
+      "score": {
+        "total": 34.34,
+        "engagement": 0.836,
+        "specificity": 0.1,
+        "decay": 0.163,
+        "source_weight": 1,
+        "feedback": 1.16,
+        "feedback_why": [
+          "kw:mcp"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "image": {
+        "src": "https://raw.githubusercontent.com/marclou/mailcheap/HEAD/docs/screenshots/overview.webp",
+        "width": 1804,
+        "height": 1129,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "title_zh": "mailcheap 按发信量收费，不按订阅人数",
+      "summary_zh": "开源邮件通讯工具支持自托管或使用托管服务，不为沉睡订阅者收费，主打比同类平台更低的成本。",
+      "comment_zh": "订阅名单越大、发信越少，按发送量计费越有吸引力。"
+    },
+    {
+      "id": "sha256:2311446a3d6c10d7a89abb8ef6df806241cdf5fc991eedf6b771b5ff25ead237",
+      "module": "community",
+      "kind": "post",
+      "title": "国模Agent第一！MiniMax爆改Flash战力，全时段大肥鱼谷价",
+      "excerpt": "国模Agent第一！MiniMax爆改Flash战力，全时段大肥鱼谷价 兔皮底下，竟然是MiniMax！ Jay发自 凹非寺 量子位 | 公众号QbitAI 国庆期间在OpenRouter上横空出世、匿名屠榜的神秘模型Space Bunny（玉兔），马甲终于被扒下来了。 兔皮底下，竟然是MiniMax！ 正式交卷的代号是M3.1 Flash。",
+      "url": "https://www.qbitai.com/2026/10/504517.html",
+      "source": "rss",
+      "source_label": "量子位",
+      "published_at": "2026-10-20T13:29:54Z",
+      "metrics": {},
+      "tags": [
+        "AI",
+        "LLM",
+        "Agent"
+      ],
+      "keywords": [
+        "MiniMax",
+        "agent"
+      ],
+      "score": {
+        "total": 70.37,
+        "engagement": 0.5,
+        "specificity": 0.85,
+        "decay": 0.729,
+        "source_weight": 1.25
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "title_zh": "MiniMax M3.1 Flash 就是匿名玉兔",
+      "summary_zh": "报道称，国庆期间在 OpenRouter 匿名亮相的 Space Bunny，正式身份现已揭晓。"
+    },
+    {
+      "id": "sha256:dafa829046fe0dc04b533b0504b4cd963ce7bd037211a8c632f54b82c26705cf",
+      "module": "community",
+      "kind": "post",
+      "title": "比 Opus 5.5 便宜 88 倍！MiniMax M3.1 Flash “杀“回王座，顺手拿了个 Agent 国模第一",
+      "excerpt": "MiniMax M3.1 Flash 正式发布，白菜价拥有旗舰性能 大模型行业，正在进入一场更现实的竞争。 过去几年，模型厂商比参数规模、比榜单分数、比谁能在数学题和编程基准上拿到更高的成绩。但当 AI 开始写代码、操作电脑、调用工具，甚至独立完成一整套工作流程时，问题也随之发生了变化：模型不仅要聪明，还得真的能把活干完，不仅要能干活，还得干得快、干得起。 毕竟，模型在测试题上多拿几分，未必能直接转化为生产力。",
+      "url": "https://www.infoq.cn/article/7Twa7KBWIzi8JGOdVwCK",
+      "source": "rss",
+      "source_label": "InfoQ AI",
+      "published_at": "2026-10-20T16:26:48Z",
+      "metrics": {},
+      "tags": [
+        "AI",
+        "LLM",
+        "Agent"
+      ],
+      "keywords": [
+        "AI",
+        "MiniMax",
+        "agent"
+      ],
+      "score": {
+        "total": 66.08,
+        "engagement": 0.5,
+        "specificity": 0.85,
+        "decay": 0.793,
+        "source_weight": 1.25,
+        "feedback": 0.8974,
+        "feedback_why": [
+          "feed:infoq ai",
+          "site:infoq.cn"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "image": {
+        "src": "https://static001.infoq.cn/resource/image/38/f1/38b28004757ed9a5dc9a6b10a1affff1.jpg",
+        "width": 1600,
+        "height": 1067,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "title_zh": "MiniMax M3.1 Flash 主打低价",
+      "summary_zh": "报道称，新模型比 Opus 5.5 便宜 88 倍，并拿下国产模型 Agent 第一。"
+    },
+    {
+      "id": "sha256:0c5a0ed2408bc6003a91e74d631b6b66e3eab795dbb06cef47930285404d3385",
+      "module": "community",
+      "kind": "post",
+      "title": "Anthropic logged net loss of over $80B in first half of 2026",
+      "excerpt": "",
+      "url": "https://www.reuters.com/business/anthropic-recorded-net-loss-over-80-billion-first-half-this-year-wsj-reports-2026-10-20/",
+      "source": "hn",
+      "source_label": "Hacker News",
+      "published_at": "2026-10-20T20:09:46Z",
+      "metrics": {
+        "points": 93,
+        "comments": 50
+      },
+      "tags": [
+        "AI"
+      ],
+      "keywords": [
+        "Anthropic"
+      ],
+      "score": {
+        "total": 65.16,
+        "engagement": 0.724,
+        "specificity": 0.7,
+        "decay": 0.883,
+        "source_weight": 1,
+        "feedback": 0.9428,
+        "feedback_why": [
+          "site:reuters.com"
+        ]
+      },
+      "links": [
+        {
+          "label": "讨论",
+          "url": "https://news.ycombinator.com/item?id=50171966"
+        }
+      ],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "title_zh": "Anthropic 半年净亏超800亿美元",
+      "summary_zh": "Hacker News 转述称，Anthropic 在2026年上半年净亏损超过800亿美元。"
+    },
+    {
+      "id": "sha256:ce625fa1e8fc20770c0345dcbf4c68c742e65ee3fd9060b55e904e936dc7e30c",
+      "module": "community",
+      "kind": "post",
+      "title": "Anthropic recorded a staggering $80B net loss in the first half of 2026",
+      "excerpt": "Polymarket @Polymarket JUST IN: Anthropic recorded a staggering $80,000,000,000.00 net loss in the first half of 2026.",
+      "url": "https://twitter.com/Polymarket/status/2112634886070919426",
+      "source": "hn",
+      "source_label": "Hacker News",
+      "published_at": "2026-10-20T22:27:07Z",
+      "metrics": {
+        "points": 20,
+        "comments": 10
+      },
+      "tags": [
+        "AI"
+      ],
+      "keywords": [
+        "Anthropic"
+      ],
+      "score": {
+        "total": 58.41,
+        "engagement": 0.472,
+        "specificity": 0.7,
+        "decay": 0.944,
+        "source_weight": 1
+      },
+      "links": [
+        {
+          "label": "讨论",
+          "url": "https://news.ycombinator.com/item?id=50173557"
+        }
+      ],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "title_zh": "Anthropic 上半年净亏800亿美元",
+      "summary_zh": "Polymarket 发布消息称，Anthropic 在2026年上半年录得800亿美元净亏损。"
+    },
+    {
+      "id": "sha256:7ea9643e58f85ef884295d5b3ebcb68dfd93dc5281f6da6aa433aae365958c81",
+      "module": "community",
+      "kind": "post",
+      "title": "Your coding agent shouldn’t have to rediscover the same codebase every session.",
+      "excerpt": "Your coding agent shouldn’t have to rediscover the same codebase every session. Trail-code is a self-learning context layer for coding agents that maps your code and preserves what your team has learned about it.",
+      "url": "https://x.com/DanKornas/status/2112532789186687190",
+      "source": "x",
+      "source_label": "X · @DanKornas",
+      "published_at": "2026-10-20T13:14:00Z",
+      "metrics": {
+        "engagement": 91,
+        "replies": 21,
+        "likes_x": 55,
+        "reposts": 18
+      },
+      "tags": [
+        "AI",
+        "Agent"
+      ],
+      "keywords": [
+        "agent",
+        "coding agent"
+      ],
+      "score": {
+        "total": 58.3,
+        "engagement": 0.505,
+        "specificity": 0.85,
+        "decay": 0.723,
+        "source_weight": 0.9,
+        "feedback": 1.1504,
+        "feedback_why": [
+          "x:@dankornas"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "image": {
+        "src": "https://pbs.twimg.com/media/HVE5X0FXMAE_dS5?format=jpg&name=orig",
+        "srcset": "https://pbs.twimg.com/media/HVE5X0FXMAE_dS5?format=jpg&name=small 680w, https://pbs.twimg.com/media/HVE5X0FXMAE_dS5?format=jpg&name=orig 1200w",
+        "width": 1200,
+        "height": 1392,
+        "alt": "",
+        "logo": false
+      },
+      "author": {
+        "handle": "DanKornas",
+        "name": "Dan Kornas",
+        "avatar": "https://pbs.twimg.com/profile_images/2040754559711432704/ZSBG2g7X_400x400.jpg",
+        "verified": false
+      },
+      "title_zh": "Trail-code 让编码 Agent 不再重复读代码",
+      "summary_zh": "作者 @DanKornas 分享 Trail-code，它能为编码 Agent 映射代码库并保存团队经验。"
+    },
+    {
+      "id": "sha256:1a1edc3721552e2e43dcb5bb82928ec8e89cda672474c1184b60ad6f659edd66",
+      "module": "community",
+      "kind": "post",
+      "title": "Publish fake stats, get cited in LLMs",
+      "excerpt": "What I learned about AI search when I made up 50,000 stats that got cited by ChatGPT... About 7 months ago, I launched a website with 50,000 statistics. Every one of them was fake.",
+      "url": "https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web",
+      "source": "hn",
+      "source_label": "Hacker News",
+      "published_at": "2026-10-20T13:06:22Z",
+      "metrics": {
+        "points": 315,
+        "comments": 180
+      },
+      "tags": [
+        "AI",
+        "LLM"
+      ],
+      "keywords": [
+        "AI",
+        "LLM"
+      ],
+      "score": {
+        "total": 34.88,
+        "engagement": 0.929,
+        "specificity": 0.25,
+        "decay": 0.72,
+        "source_weight": 1,
+        "stale": 0.6
+      },
+      "links": [
+        {
+          "label": "讨论",
+          "url": "https://news.ycombinator.com/item?id=50165801"
+        }
+      ],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "stale_link": {
+        "url": "https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web",
+        "published_at": "2026-10-07T12:41:00Z"
+      },
+      "image": {
+        "src": "https://framerusercontent.com/images/g61nppL2S0T51TuBYG0bTxac2U.png?width=2150&height=1126",
+        "width": 2150,
+        "height": 1126,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "title_zh": "伪造5万条数据，竟被ChatGPT引用",
+      "summary_zh": "作者称，他发布5万条虚假统计数据，后来发现这些内容被ChatGPT引用。",
+      "comment_zh": "AI搜索会放大可抓取内容，真假校验不能指望模型代劳。"
+    },
+    {
+      "id": "sha256:6a45251399c8de3bf5bc869ae02f7ffad2bba795543037f9b31d4170672d12fc",
+      "module": "community",
+      "kind": "post",
+      "title": "A practical guide to AI image generation, from diffusion to agents",
+      "excerpt": "AI Image Generation This is my general guide to AI image generation. It covers how the models work at a high level, the different types, a bit of history, what you actually get from ChatGPT and how to build image generat…",
+      "url": "https://danielball.com/notes/ai_image_generation.html",
+      "source": "hn",
+      "source_label": "Hacker News",
+      "published_at": "2026-10-20T19:22:39Z",
+      "metrics": {
+        "points": 8,
+        "comments": 2
+      },
+      "tags": [
+        "AI",
+        "图片视频音频",
+        "Agent"
+      ],
+      "keywords": [
+        "AI",
+        "agent",
+        "diffusion",
+        "text-to-image"
+      ],
+      "score": {
+        "total": 56.74,
+        "engagement": 0.305,
+        "specificity": 1,
+        "decay": 0.863,
+        "source_weight": 1
+      },
+      "links": [
+        {
+          "label": "讨论",
+          "url": "https://news.ycombinator.com/item?id=50171379"
+        }
+      ],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "title_zh": "AI 图像生成指南：从扩散模型到 Agent",
+      "summary_zh": "这份实用指南梳理图像模型原理、发展历史、生成方式，以及ChatGPT等工具的使用体验。"
+    },
+    {
+      "id": "sha256:8cb28a3d9f4606ba3922e03139e60d9011cfdb0b9ec7cf1659d72d7603f9bb41",
+      "module": "community",
+      "kind": "post",
+      "title": "Created with Nano Banana pro",
+      "excerpt": "Created with Nano Banana pro Prompt. Cinematic portrait of a young woman with long, silky dark brown hair, sitting and resting her chin on her hand, gazing softly off to the side with a gentle smile.",
+      "url": "https://x.com/LettyVesper/status/2112553939312820295",
+      "source": "x",
+      "source_label": "X · @LettyVesper",
+      "published_at": "2026-10-20T14:38:03Z",
+      "metrics": {
+        "engagement": 82,
+        "replies": 6,
+        "likes_x": 80,
+        "reposts": 1
+      },
+      "tags": [
+        "AI",
+        "图片视频音频"
+      ],
+      "keywords": [
+        "Nano Banana"
+      ],
+      "score": {
+        "total": 56.21,
+        "engagement": 0.449,
+        "specificity": 0.7,
+        "decay": 0.753,
+        "source_weight": 0.9,
+        "feedback": 1.239,
+        "feedback_why": [
+          "kw:nano_banana",
+          "x:@lettyvesper"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "image": {
+        "src": "https://pbs.twimg.com/media/HVFMTdYacAEZ5al?format=jpg&name=large",
+        "srcset": "https://pbs.twimg.com/media/HVFMTdYacAEZ5al?format=jpg&name=small 680w, https://pbs.twimg.com/media/HVFMTdYacAEZ5al?format=jpg&name=medium 1200w, https://pbs.twimg.com/media/HVFMTdYacAEZ5al?format=jpg&name=orig 1536w",
+        "width": 1536,
+        "height": 2752,
+        "alt": "",
+        "logo": false
+      },
+      "author": {
+        "handle": "LettyVesper",
+        "name": "Letty",
+        "avatar": "https://pbs.twimg.com/profile_images/2106867939173380096/k8rok6_s_400x400.jpg",
+        "verified": false
+      },
+      "title_zh": "Nano Banana pro 提示词：电影感女性肖像",
+      "summary_zh": "作者 @LettyVesper 分享 Nano Banana pro 生成的电影感女性肖像，并附上可复用提示词。"
+    },
+    {
+      "id": "sha256:2fe5559b8d1737e760bac7209e8e10e11942c47a15dc898aa7b0fa9dbd99baf6",
+      "module": "community",
+      "kind": "post",
+      "title": "The one man Elon never prepared for🧸🚀",
+      "excerpt": "The one man Elon never prepared for🧸🚀 Made with Seedance 2.5 + GPT Image 2.5 Prompts for my subscribers👇🏻",
+      "url": "https://x.com/TechieBySA/status/2112503438932345088",
+      "source": "x",
+      "source_label": "X · @TechieBySA",
+      "published_at": "2026-10-20T11:17:22Z",
+      "metrics": {
+        "engagement": 485,
+        "replies": 25,
+        "likes_x": 395,
+        "reposts": 45
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "图片视频音频"
+      ],
+      "keywords": [
+        "GPT",
+        "GPT Image",
+        "Seedance"
+      ],
+      "score": {
+        "total": 41.2,
+        "engagement": 0.651,
+        "specificity": 0.1,
+        "decay": 0.684,
+        "source_weight": 0.9,
+        "feedback": 1.1463,
+        "feedback_why": [
+          "x:@techiebysa"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "image": {
+        "src": "https://video.twimg.com/amplify_video/2112503401279787008/vid/avc1/720x720/_1bCN_y1czIR_Ua9.mp4",
+        "poster": "https://pbs.twimg.com/media/HVEepp7WQAAipdK?format=jpg&name=orig",
+        "width": 1080,
+        "height": 1080,
+        "alt": "",
+        "type": "video"
+      },
+      "prompt_pick": true,
+      "author": {
+        "handle": "TechieBySA",
+        "name": "TechieSA",
+        "avatar": "https://pbs.twimg.com/profile_images/1933182609758052352/k_CZpuNi_400x400.jpg",
+        "verified": false
+      },
+      "title_zh": "Seedance 2.5 提示词：Elon遇到的意外来客",
+      "summary_zh": "作者 @TechieBySA 用两款模型制作画面，并附上订阅者可用的提示词。"
+    },
+    {
+      "id": "sha256:4c55647b98055ae1519d5ec0df87af75caa17ad8f195ce1e57741ba72d5940da",
+      "module": "community",
+      "kind": "post",
+      "title": "What actually happens when Putin and Trump meets💥💀",
+      "excerpt": "What actually happens when Putin and Trump meets💥💀 GPT Image 2.5 + Seedance 2.5 Prompts👇🏻",
+      "url": "https://x.com/TechieBySA/status/2112547913242918927",
+      "source": "x",
+      "source_label": "X · @TechieBySA",
+      "published_at": "2026-10-20T14:14:06Z",
+      "metrics": {
+        "engagement": 241,
+        "replies": 6,
+        "likes_x": 193,
+        "reposts": 24
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "图片视频音频"
+      ],
+      "keywords": [
+        "GPT",
+        "GPT Image",
+        "Seedance"
+      ],
+      "score": {
+        "total": 37.63,
+        "engagement": 0.538,
+        "specificity": 0.1,
+        "decay": 0.744,
+        "source_weight": 0.9,
+        "feedback": 1.1463,
+        "feedback_why": [
+          "x:@techiebysa"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "am",
+      "fetched_at": "2026-10-21T00:27:44Z",
+      "image": {
+        "src": "https://video.twimg.com/amplify_video/2112547874227527680/vid/avc1/720x720/b4tSAKBjdw54CQBg.mp4",
+        "poster": "https://pbs.twimg.com/media/HVFHGUrXcAAp9Vh?format=jpg&name=orig",
+        "width": 1080,
+        "height": 1080,
+        "alt": "",
+        "type": "video"
+      },
+      "prompt_pick": true,
+      "author": {
+        "handle": "TechieBySA",
+        "name": "TechieSA",
+        "avatar": "https://pbs.twimg.com/profile_images/1933182609758052352/k_CZpuNi_400x400.jpg",
+        "verified": false
+      },
+      "title_zh": "GPT Image 2.5 提示词：普京与特朗普会面",
+      "summary_zh": "作者 @TechieBySA 分享两款模型制作的画面，并附上可复用提示词。"
+    },
+    {
+      "id": "sha256:34eebb73284a047d63a9c0c11115fe61ca948f747bea79f64e8d532ca5d7aea5",
+      "module": "model",
+      "kind": "post",
+      "title": "DeepSeek开源最新推理框架：单集群日吞吐155万亿Token，KVCache可保存7天",
+      "excerpt": "10月20日，DeepSeek宣布正式开源大规模云服务推理框架 DeepInfer。该框架已经用于 DeepSeek V4.1 Flash 的大规模线上推理服务。 据介绍，DeepInfer集成了高性能算子和深度优化的推理引擎，支持分布式推理、推测解码、SWA Bounded Replay、结构化输出等能力，并能够运行在 NVIDIA 与华为昇腾平台上。",
+      "url": "https://www.infoq.cn/article/NBXP966Bz3eqr6Qidvaf",
+      "source": "rss",
+      "source_label": "InfoQ AI",
+      "published_at": "2026-10-21T04:06:48Z",
+      "metrics": {},
+      "tags": [
+        "AI",
+        "LLM"
+      ],
+      "keywords": [
+        "DeepSeek",
+        "NVIDIA"
+      ],
+      "score": {
+        "total": 74.88,
+        "engagement": 0.5,
+        "specificity": 0.7,
+        "decay": 0.929,
+        "source_weight": 1.25,
+        "feedback": 1.009,
+        "feedback_why": [
+          "feed:infoq ai",
+          "site:infoq.cn"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T06:39:09Z",
+      "image": {
+        "src": "https://static001.infoq.cn/resource/image/d6/c9/d64821f37cf7538920505891eba449c9.png",
+        "width": 1672,
+        "height": 940,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "run": "15:00",
+      "title_zh": "DeepSeek开源推理框架，日吞吐155万亿Token",
+      "summary_zh": "DeepSeek称框架已用于 V4.1 Flash 线上服务，支持分布式推理和英伟达、昇腾平台。"
+    },
+    {
+      "id": "sha256:c7c1db1d24f97b16930900ba1c0155d84b4c693e69bc12e1dd92023bb46f0906",
+      "module": "model",
+      "kind": "post",
+      "title": "Southeast Asia’s digital economy to hit $368 billion",
+      "excerpt": "Cover image for the e-Conomy SEA 2026 report titled Building the intelligent economy by Google, Temasek, and Bain and Company.",
+      "url": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+      "source": "rss",
+      "source_label": "google-ai-blog",
+      "published_at": "2026-10-21T04:00:00Z",
+      "metrics": {},
+      "tags": [
+        "AI"
+      ],
+      "keywords": [],
+      "score": {
+        "total": 44.8,
+        "engagement": 0.5,
+        "specificity": 0,
+        "decay": 0.926,
+        "source_weight": 1.25
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T06:39:09Z",
+      "image": {
+        "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Hero_Image_e-Conomy_SEA_2026.width-1300.png",
+        "width": 1300,
+        "height": 731,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "run": "15:00",
+      "title_zh": "东南亚数字经济规模将达3680亿美元",
+      "summary_zh": "Google、Temasek与贝恩发布报告，预计东南亚数字经济到2026年将达3680亿美元。"
+    },
+    {
+      "id": "sha256:91b654fab6322ef6f712b2fafbb26317da8bc644c8046e3b20bd482bd0d96c11",
+      "module": "model",
+      "kind": "post",
+      "title": "when do you think open source image generation will actually be solved?",
+      "excerpt": "",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1xbcc98/when_do_you_think_open_source_image_generation/",
+      "source": "reddit",
+      "source_label": "r/StableDiffusion",
+      "published_at": "2026-10-21T03:21:12Z",
+      "metrics": {
+        "points": 1,
+        "comments": 0
+      },
+      "tags": [
+        "AI",
+        "图片视频音频"
+      ],
+      "keywords": [
+        "text-to-image"
+      ],
+      "score": {
+        "total": 41.35,
+        "engagement": 0.072,
+        "specificity": 0.7,
+        "decay": 0.909,
+        "source_weight": 0.85,
+        "feed_weight": 1,
+        "feedback": 1.0285,
+        "feedback_why": [
+          "sub:stablediffusion"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T06:39:09Z",
+      "run": "15:00",
+      "title_zh": "开源图像生成何时真正成熟？",
+      "summary_zh": "r/StableDiffusion 网友发问开源图像生成何时能真正解决，把问题抛给社区讨论。"
+    },
+    {
+      "id": "sha256:86cb76492e93ed0a125c7ef97c043004234eb4974714487ec4c3e4d7de00e767",
+      "module": "opensource",
+      "kind": "release",
+      "title": "ollama v0.40.7（另有 1 个版本：v0.40.7-rc1）",
+      "excerpt": "What's Changed pplx-decider is a 27B decision model from Perplexity, fine-tuned from Qwen3.8-27B Continuing an OpenAI-compatible Responses conversation no longer fails when switching between models with and without think…",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.40.7",
+      "source": "rss",
+      "source_label": "ollama-releases",
+      "published_at": "2026-10-21T04:01:19Z",
+      "metrics": {
+        "points": 0
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "Agent"
+      ],
+      "keywords": [
+        "Claude",
+        "Claude Code",
+        "Codex",
+        "Llama",
+        "Ollama",
+        "OpenAI"
+      ],
+      "score": {
+        "total": 63.62,
+        "engagement": 0.5,
+        "specificity": 0.7,
+        "decay": 0.927,
+        "source_weight": 1.25,
+        "feedback": 0.8586,
+        "feedback_why": [
+          "feed:ollama-releases",
+          "repo:ollama/ollama"
+        ]
+      },
+      "links": [
+        {
+          "label": "v0.40.7-rc1",
+          "url": "https://github.com/ollama/ollama/releases/tag/v0.40.7-rc1"
+        }
+      ],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T06:39:09Z",
+      "run": "15:00",
+      "title_zh": "Ollama v0.40.7 支持 27B 决策模型",
+      "summary_zh": "新版加入基于 Qwen3.8-27B 微调的 pplx-decider，并修复切换模型时对话失败问题。"
+    },
+    {
+      "id": "sha256:9d97e084d9511587a8bca369752f4282c6775097875ddad1bf6a50675c87d406",
+      "module": "opensource",
+      "kind": "release",
+      "title": "llama.cpp b11780（另有 9 个版本：b11785、b11781、b11776…）",
+      "excerpt": "server: add realtime transcription API ( #30636 ) server: add realtime transcription API drop transcription_sessions proxy ws add docs server: let the API key middleware guard the websocket httplib runs the pre-routing h…",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11780",
+      "source": "rss",
+      "source_label": "llamacpp-releases",
+      "published_at": "2026-10-21T04:14:51Z",
+      "metrics": {
+        "points": 0
+      },
+      "tags": [
+        "AI",
+        "LLM"
+      ],
+      "keywords": [
+        "Llama"
+      ],
+      "score": {
+        "total": 34.43,
+        "engagement": 0.5,
+        "specificity": 0.7,
+        "decay": 0.933,
+        "source_weight": 1.25,
+        "feedback": 0.4629,
+        "feedback_why": [
+          "feed:llamacpp-releases",
+          "repo:ggml-org/llama.cpp"
+        ]
+      },
+      "links": [
+        {
+          "label": "b11785",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11785"
+        },
+        {
+          "label": "b11781",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11781"
+        },
+        {
+          "label": "b11776",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11776"
+        }
+      ],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T06:39:09Z",
+      "run": "15:00",
+      "title_zh": "llama.cpp b11780 加入实时转写 API",
+      "summary_zh": "llama.cpp 服务端新增实时转写 API，并补充 WebSocket 文档。"
+    },
+    {
+      "id": "sha256:ca274f6e11d076c30e3418726bff0b4bdd21f055ec2fe633b972978a7552f829",
+      "module": "community",
+      "kind": "post",
+      "title": "Anthropic几乎停招初级员工！占比一年半骤降33%：Agent工时已是员工6倍",
+      "excerpt": "Anthropic 首席执行官 Dario Amodei 曾预测，到 2030 年，一半入门级白领工作可能消失。现在，Anthropic 自己公布的数据，已经显现在技术团队中：初级员工占比下降，AI Agent 的工作时长则快速增长。",
+      "url": "https://www.infoq.cn/article/bTVDaYaUJy2OvNlyuHgz",
+      "source": "rss",
+      "source_label": "InfoQ AI",
+      "published_at": "2026-10-21T04:01:59Z",
+      "metrics": {},
+      "tags": [
+        "AI",
+        "LLM",
+        "Agent"
+      ],
+      "keywords": [
+        "AI",
+        "Anthropic",
+        "Claude",
+        "agent"
+      ],
+      "score": {
+        "total": 81.11,
+        "engagement": 0.5,
+        "specificity": 0.85,
+        "decay": 0.927,
+        "source_weight": 1.25,
+        "feedback": 1.009,
+        "feedback_why": [
+          "feed:infoq ai",
+          "site:infoq.cn"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T06:39:09Z",
+      "image": {
+        "src": "https://static001.infoq.cn/resource/image/19/36/195b13b365fbf74050cb9c25b9530936.png",
+        "width": 1918,
+        "height": 820,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "run": "15:00",
+      "title_zh": "Anthropic初级员工降33%，Agent工时6倍",
+      "summary_zh": "Anthropic数据显示，技术团队初级员工占比下降，AI Agent 工时已是员工6倍。"
+    },
+    {
+      "id": "sha256:1eb2ee195f44fb1d830188edfc24a4ddc8db05d5bcc80bc278aea00f22f19cd7",
+      "module": "community",
+      "kind": "post",
+      "title": "Devin Fusion with Claude Opus 5.5 (max) and a GPT-6 Luna (high) sidekick scores 68 on the Coding Agent Index, 2 points above Claude Code with Opus 5.5 (max) at",
+      "excerpt": "Devin Fusion with Claude Opus 5.5 (max) and a GPT-6 Luna (high) sidekick scores 68 on the Coding Agent Index, 2 points above Claude Code with Opus 5.5 (max) at 31% lower cost per task @cognition's Devin Fusion runs a fro…",
+      "url": "https://x.com/ArtificialAnlys/status/2112773422698606736",
+      "source": "x",
+      "source_label": "X · @ArtificialAnlys",
+      "published_at": "2026-10-21T05:10:12Z",
+      "metrics": {
+        "engagement": 117,
+        "replies": 21,
+        "likes_x": 109,
+        "reposts": 4
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "Agent"
+      ],
+      "keywords": [
+        "Claude",
+        "Claude Code",
+        "Devin",
+        "GPT",
+        "GPT-5",
+        "agent"
+      ],
+      "score": {
+        "total": 75.06,
+        "engagement": 0.526,
+        "specificity": 1,
+        "decay": 0.958,
+        "source_weight": 0.9,
+        "feedback": 1.1573,
+        "feedback_why": [
+          "x:@artificialanlys"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T06:39:09Z",
+      "image": {
+        "src": "https://pbs.twimg.com/media/HVIUH4dbkAAD8PY?format=jpg&name=large",
+        "srcset": "https://pbs.twimg.com/media/HVIUH4dbkAAD8PY?format=jpg&name=small 680w, https://pbs.twimg.com/media/HVIUH4dbkAAD8PY?format=jpg&name=medium 1200w, https://pbs.twimg.com/media/HVIUH4dbkAAD8PY?format=jpg&name=large 2048w, https://pbs.twimg.com/media/HVIUH4dbkAAD8PY?format=jpg&name=orig 2464w",
+        "width": 2464,
+        "height": 2040,
+        "alt": "",
+        "logo": false
+      },
+      "author": {
+        "handle": "ArtificialAnlys",
+        "name": "Artificial Analysis",
+        "avatar": "https://pbs.twimg.com/profile_images/2042402069320290304/A8C1lP07_400x400.jpg",
+        "verified": true
+      },
+      "run": "15:00",
+      "title_zh": "Devin Fusion胜Claude Code，成本低",
+      "summary_zh": "作者称 Devin Fusion 得分68，比 Claude Code 高2分，单任务成本低31%。"
+    },
+    {
+      "id": "sha256:92f26f72a977bd7c92617a6926e24aeb0eb46c1cbc97ff15881a7d8ec13cdb67",
+      "module": "community",
+      "kind": "post",
+      "title": "Alibaba hikes DeepSeek V4 Flash 0731 output prices by 230%",
+      "excerpt": "Stork AI Daily/October 2026/Tuesday, October 20, 2026 Alibaba quietly tripled DeepSeek prices. By Wren Calloway·Reads 40 AI newsletters a day so you only read one.",
+      "url": "https://www.stork.ai/newsletter/2026-10-20-alibaba-quietly-tripled-deepseek-prices#lead",
+      "source": "hn",
+      "source_label": "Hacker News",
+      "published_at": "2026-10-21T05:17:15Z",
+      "metrics": {
+        "points": 21,
+        "comments": 17
+      },
+      "tags": [
+        "AI",
+        "LLM"
+      ],
+      "keywords": [
+        "AI",
+        "DeepSeek"
+      ],
+      "score": {
+        "total": 60.81,
+        "engagement": 0.505,
+        "specificity": 0.7,
+        "decay": 0.961,
+        "source_weight": 1
+      },
+      "links": [
+        {
+          "label": "讨论",
+          "url": "https://news.ycombinator.com/item?id=50176351"
+        }
+      ],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T06:39:09Z",
+      "image": {
+        "src": "https://expert-egret-407.convex.cloud/api/storage/e24390a8-4524-4829-8244-30a446faf82c",
+        "width": 1536,
+        "height": 864,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "run": "15:00",
+      "title_zh": "DeepSeek V4 Flash输出价格涨230%",
+      "summary_zh": "报道称，阿里把 DeepSeek V4 Flash 0731 的输出价格上调230%，涨幅达到原价的两倍以上。"
+    },
+    {
+      "id": "sha256:07a31440a52f4e6620df11f9c6e707da7b72f949b63d9219b3c14387a0fb0eb4",
+      "module": "community",
+      "kind": "post",
+      "title": "GPT Image 2.5 on ChatGPT",
+      "excerpt": "GPT Image 2.5 on ChatGPT Prompt: Create an ultra-realistic 6-photo portrait collage arranged in a seamless 3×2 grid, featuring a naturally beautiful young Portuguese woman in her early 20s.",
+      "url": "https://x.com/john_my07/status/2112737725430554781",
+      "source": "x",
+      "source_label": "X · @john_my07",
+      "published_at": "2026-10-21T02:48:21Z",
+      "metrics": {
+        "engagement": 96,
+        "replies": 34,
+        "likes_x": 88,
+        "reposts": 4
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "图片视频音频"
+      ],
+      "keywords": [
+        "ChatGPT",
+        "GPT",
+        "GPT Image"
+      ],
+      "score": {
+        "total": 62.47,
+        "engagement": 0.529,
+        "specificity": 1,
+        "decay": 0.895,
+        "source_weight": 0.9
+      },
+      "links": [
+        {
+          "label": "X",
+          "url": "https://x.com/aiwithaayat/status/2112766800777875753"
+        }
+      ],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T06:39:09Z",
+      "image": {
+        "src": "https://pbs.twimg.com/media/HVHzwmuakAAKdjt?format=jpg&name=orig",
+        "srcset": "https://pbs.twimg.com/media/HVHzwmuakAAKdjt?format=jpg&name=small 680w, https://pbs.twimg.com/media/HVHzwmuakAAKdjt?format=jpg&name=orig 1086w",
+        "width": 1086,
+        "height": 1448,
+        "alt": "",
+        "logo": false
+      },
+      "prompt_pick": true,
+      "prompt": {
+        "text": "Create an ultra-realistic 6-photo portrait collage arranged in a seamless 3×2 grid, featuring a naturally beautiful young Portuguese woman in her early 20s. She has warm olive-toned skin, expressive hazel-brown eyes, long chestnut-brown hair",
+        "from": "post"
+      },
+      "author": {
+        "handle": "john_my07",
+        "name": "Johnn",
+        "avatar": "https://pbs.twimg.com/profile_images/1967102770500300803/ylHD6oXM_400x400.jpg",
+        "verified": false
+      },
+      "run": "15:00",
+      "title_zh": "GPT Image 2.5 提示词：葡萄牙女生肖像",
+      "summary_zh": "作者 @john_my07 分享提示词，可生成3×2无缝网格的超写实六联肖像，主角是20岁出头的葡萄牙女性。"
+    },
+    {
+      "id": "sha256:32694d7b05454b04f0254d9a3e06122991e4e3c32d3c13961b5d9aa7e763e3bb",
+      "module": "model",
+      "kind": "post",
+      "title": "Announcing SimReady Central: An Open Library of Simulation-Ready 3D Assets for Robotics and AI Factories",
+      "excerpt": "Announcing SimReady Central: An Open Library of Simulation-Ready 3D Assets for Robotics and AI Factories Building robotics simulations and high-fidelity AI factory digital twins takes more than 3D models.",
+      "url": "https://huggingface.co/blog/nvidia/simready-central-assets-robotics-ai-factories",
+      "source": "rss",
+      "source_label": "hf-blog",
+      "published_at": "2026-10-21T10:59:42Z",
+      "metrics": {},
+      "tags": [
+        "AI"
+      ],
+      "keywords": [
+        "AI",
+        "Hugging Face",
+        "NVIDIA"
+      ],
+      "score": {
+        "total": 61.68,
+        "engagement": 0.5,
+        "specificity": 0.25,
+        "decay": 0.981,
+        "source_weight": 1.25,
+        "feedback": 1.0792,
+        "feedback_why": [
+          "feed:hf-blog"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T11:40:03Z",
+      "image": {
+        "src": "https://cdn-uploads.huggingface.co/production/uploads/6abfe9e7d7cf09a9b38ef308/3wax5pSyzdQK6EWPgxhmR.png",
+        "width": 1920,
+        "height": 1080,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "run": "20:00",
+      "title_zh": "SimReady Central 开放仿真用3D资产库",
+      "summary_zh": "这个开放资产库面向机器人仿真与高保真 AI 工厂数字孪生，提供可用于仿真的3D资产。"
+    },
+    {
+      "id": "sha256:5b637a5f719f3394959f1e1f80603274764cc1b496badefe113de2924e3d3e52",
+      "module": "model",
+      "kind": "post",
+      "title": "▲ Mistral AI just released Voxtral 3, a full voice stack: 3 transcription models, 1 TTS model and a voice agent SDK.",
+      "excerpt": "▲ Mistral AI just released Voxtral 3, a full voice stack: 3 transcription models, 1 TTS model and a voice agent SDK. The key idea is 1 streaming pipeline. Realtime Transcribe 3 listens and detects end of turn.",
+      "url": "https://x.com/Marktechpost/status/2112787224798670989",
+      "source": "x",
+      "source_label": "X · @Marktechpost",
+      "published_at": "2026-10-21T06:05:02Z",
+      "metrics": {
+        "engagement": 40,
+        "replies": 5,
+        "likes_x": 24,
+        "reposts": 8
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "图片视频音频",
+        "Agent"
+      ],
+      "keywords": [
+        "AI",
+        "Gemini",
+        "LLM",
+        "Mistral",
+        "agent",
+        "model"
+      ],
+      "score": {
+        "total": 54.18,
+        "engagement": 0.384,
+        "specificity": 1,
+        "decay": 0.851,
+        "source_weight": 0.9
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T11:40:03Z",
+      "image": {
+        "src": "https://pbs.twimg.com/media/HVIgtZ6acAAI85O?format=jpg&name=large",
+        "srcset": "https://pbs.twimg.com/media/HVIgtZ6acAAI85O?format=jpg&name=small 680w, https://pbs.twimg.com/media/HVIgtZ6acAAI85O?format=jpg&name=medium 1200w, https://pbs.twimg.com/media/HVIgtZ6acAAI85O?format=jpg&name=large 2048w, https://pbs.twimg.com/media/HVIgtZ6acAAI85O?format=jpg&name=orig 3750w",
+        "width": 3750,
+        "height": 3750,
+        "alt": "",
+        "logo": false
+      },
+      "author": {
+        "handle": "Marktechpost",
+        "name": "▲ Marktechpost AI",
+        "avatar": "https://pbs.twimg.com/profile_images/994114664874180608/tD0vcytP_400x400.jpg",
+        "verified": false
+      },
+      "run": "20:00",
+      "title_zh": "Mistral Voxtral 3 串起完整语音栈",
+      "summary_zh": "包含3个转写模型、1个语音合成模型和语音 Agent SDK，以统一流式管线串联。"
+    },
+    {
+      "id": "sha256:765a9894d2fa75a2da9860b1131101aa8d5ecd9b709cf3e8c47ee16d4e14faf5",
+      "module": "opensource",
+      "kind": "repo",
+      "title": "MemTensor/MemT-1.0",
+      "excerpt": "Official repository for MemT-1.0",
+      "url": "https://github.com/MemTensor/MemT-1.0",
+      "source": "github",
+      "source_label": "GitHub",
+      "published_at": "2026-10-19T03:29:30Z",
+      "metrics": {
+        "stars": 247,
+        "forks": 7
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "Agent"
+      ],
+      "keywords": [
+        "AI",
+        "DeepSeek",
+        "LLM",
+        "Qwen",
+        "SGLang",
+        "agent"
+      ],
+      "score": {
+        "total": 34.81,
+        "engagement": 0.546,
+        "specificity": 0.1,
+        "decay": 0.667,
+        "source_weight": 1
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T11:40:03Z",
+      "image": {
+        "src": "https://raw.githubusercontent.com/MemTensor/MemT-1.0/HEAD/assets/memt-arc.jpg",
+        "width": 3813,
+        "height": 1907,
+        "alt": "",
+        "type": "image",
+        "logo": false
+      },
+      "run": "20:00",
+      "title_zh": "MemTensor 公开 MemT-1.0 官方仓库",
+      "summary_zh": "MemTensor 的 MemT-1.0 官方仓库已上线，可在 GitHub 访问项目入口。"
+    },
+    {
+      "id": "sha256:b9dc1a91e45ba8558c6828c862405a942aefb8ac9dda75c1644b8b842115823f",
+      "module": "community",
+      "kind": "post",
+      "title": "多智能体协同重构医疗AI！清华AIR孵化：医生AI分身“坐诊”医院",
+      "excerpt": "医疗AI质变时刻 不会……只有我这样做吧？ 现在每次去医院看病前，我都会 让AI帮我跑一轮 。 哪里不舒服、持续了多久，还包括既往病史，这些零零碎碎的信息，都在预问诊阶段准备妥帖。 等到和医生面对面，结果发现医生也在 Vibe Working ： Agent协助医生下判断，诊室之外的随访与健康信息管理也由AI跟上。 乍一听有点赛博朋克，但却是实实在在发生在现实的一幕。",
+      "url": "https://www.qbitai.com/2026/10/504734.html",
+      "source": "rss",
+      "source_label": "量子位",
+      "published_at": "2026-10-21T11:30:59Z",
+      "metrics": {},
+      "tags": [
+        "AI",
+        "Agent"
+      ],
+      "keywords": [
+        "AI",
+        "agent"
+      ],
+      "score": {
+        "total": 57.66,
+        "engagement": 0.5,
+        "specificity": 0.25,
+        "decay": 0.996,
+        "source_weight": 1.25
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T11:40:03Z",
+      "run": "20:00",
+      "title_zh": "清华 AIR 孵化医生 AI 分身，已进医院",
+      "summary_zh": "多 Agent 协同覆盖预问诊、辅助医生判断，以及诊室之外的随访和健康信息管理。"
+    },
+    {
+      "id": "sha256:cd2dfd00bf8737e6712b471d764b78905fbed3f1a04057abb76eaf66bc10c13e",
+      "module": "community",
+      "kind": "post",
+      "title": "生数科技Motubrain团队将直播Physical AI训练全流程，持续半个月",
+      "excerpt": "10月21日，生数科技世界模型团队正式开启Motubrain 2.0训练全流程公开直播 大模型训练过程，开始更多地出现在公众视野中。 此前，小米MiMo负责人罗福莉公开了MiMo-V2.6强化学习阶段的训练进展，让外界看到了大模型训练中的一些具体细节。 现在，Physical AI领域也有了类似尝试。",
+      "url": "https://www.qbitai.com/2026/10/504730.html",
+      "source": "rss",
+      "source_label": "量子位",
+      "published_at": "2026-10-21T09:45:22Z",
+      "metrics": {},
+      "tags": [
+        "AI",
+        "Agent"
+      ],
+      "keywords": [
+        "AI",
+        "agent"
+      ],
+      "score": {
+        "total": 55.95,
+        "engagement": 0.5,
+        "specificity": 0.25,
+        "decay": 0.946,
+        "source_weight": 1.25
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T11:40:03Z",
+      "run": "20:00",
+      "title_zh": "生数科技 Motubrain 2.0 训练直播半个月",
+      "summary_zh": "世界模型团队于10月21日开启全流程公开直播，让外界看到 Physical AI 的训练过程。"
+    },
+    {
+      "id": "sha256:78d7f77e947b6fb8d2ce496021ca5c06cb6de2fb3bc1f98c3acda2b2b28a6581",
+      "module": "community",
+      "kind": "post",
+      "title": "Minimax H3 Fast-Omni Studio - Reference - Image to video - Extend clip",
+      "excerpt": "Hello, Here is my workflow, wishing you successful generation.",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1xbjnv6/minimax_h3_fastomni_studio_reference_image_to/",
+      "source": "reddit",
+      "source_label": "r/StableDiffusion",
+      "published_at": "2026-10-21T10:37:29Z",
+      "metrics": {
+        "points": 1,
+        "comments": 0
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "图片视频音频",
+        "Agent"
+      ],
+      "keywords": [
+        "MiniMax",
+        "text-to-video",
+        "workflow"
+      ],
+      "score": {
+        "total": 54.71,
+        "engagement": 0.072,
+        "specificity": 1,
+        "decay": 0.97,
+        "source_weight": 0.85,
+        "feed_weight": 1,
+        "feedback": 1.0292,
+        "feedback_why": [
+          "sub:stablediffusion"
+        ]
+      },
+      "links": [
+        {
+          "label": "原文",
+          "url": "https://civitai.com/articles/37128/minimax-h3-fast-omni-studio-reference-image-to-video-extend-clip"
+        }
+      ],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T11:40:03Z",
+      "run": "20:00",
+      "title_zh": "H3 Fast-Omni Studio 图生视频续接",
+      "summary_zh": "Reddit 网友分享 Minimax 视频生成工作流，涵盖参考图、图生视频和片段延长。"
+    },
+    {
+      "id": "sha256:f4d793ba2a3320afc9de6ede7754e4fca4eef07951be7ebf08378deb69a8acbf",
+      "module": "community",
+      "kind": "post",
+      "title": "Made with Grok Imagine 2.0",
+      "excerpt": "Made with Grok Imagine 2.0 Halloween costume 🎃 Prompt 👇 Halloween costume, Woman in 20s dressed as playboy. bunny in bunny ears in just a lowcut black one-piece swimsuit-cut bodysuit showing cleavage no pants and white f…",
+      "url": "https://x.com/dreamydigiarts/status/2112823707555320296",
+      "source": "x",
+      "source_label": "X · @dreamydigiarts",
+      "published_at": "2026-10-21T08:30:00Z",
+      "metrics": {
+        "engagement": 34,
+        "replies": 2,
+        "likes_x": 32,
+        "reposts": 1
+      },
+      "tags": [
+        "AI",
+        "LLM"
+      ],
+      "keywords": [
+        "Grok"
+      ],
+      "score": {
+        "total": 45.45,
+        "engagement": 0.342,
+        "specificity": 0.7,
+        "decay": 0.913,
+        "source_weight": 0.9
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T11:40:03Z",
+      "gallery": [
+        {
+          "src": "https://pbs.twimg.com/media/HVEJYAYakAA8LGB?format=jpg&name=orig",
+          "width": 675,
+          "height": 1200
+        },
+        {
+          "src": "https://pbs.twimg.com/media/HVEJYAZaIAEAe-q?format=jpg&name=orig",
+          "width": 675,
+          "height": 1200
+        }
+      ],
+      "prompt_pick": true,
+      "prompt": {
+        "text": "Halloween costume, Woman in 20s dressed as playboy. bunny in bunny ears in just a lowcut black one-piece swimsuit-cut bodysuit showing cleavage no pants and white fluffy tail, realistic 2000s lighting at a party on a",
+        "from": "post"
+      },
+      "author": {
+        "handle": "dreamydigiarts",
+        "name": "dreamy digital arts",
+        "avatar": "https://pbs.twimg.com/profile_images/1978397989195722752/rOn5pQE7_400x400.jpg",
+        "verified": false
+      },
+      "run": "20:00",
+      "title_zh": "Grok Imagine 2.0 提示词：兔女郎装",
+      "summary_zh": "作者晒出万圣节兔女郎装扮生成图，附兔耳与黑色连体衣的提示词，可复用来生成同主题画面。"
+    },
+    {
+      "id": "sha256:403dd6f60f9fa94b1a6c2e2761afb7a9e861098d166c488e7167041bcfe87348",
+      "module": "community",
+      "kind": "post",
+      "title": "Please help me understand the Minimax h3",
+      "excerpt": "Please help me understand the Minimax h3. I like this as i can create a stylized animation with the help of claude and it's skills file and can run on my PC What i need is i need to understand how to make a character con…",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1xbl2e3/please_help_me_understand_the_minimax_h3/",
+      "source": "reddit",
+      "source_label": "r/StableDiffusion",
+      "published_at": "2026-10-21T11:53:20Z",
+      "metrics": {
+        "points": 1,
+        "comments": 0
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "Agent"
+      ],
+      "keywords": [
+        "Claude",
+        "MiniMax",
+        "skills"
+      ],
+      "score": {
+        "total": 43.52,
+        "engagement": 0.072,
+        "specificity": 0.7,
+        "decay": 0.991,
+        "source_weight": 0.85,
+        "feed_weight": 1,
+        "feedback": 1.0292,
+        "feedback_why": [
+          "sub:stablediffusion"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T12:11:51Z",
+      "run": "20:00",
+      "title_zh": "Minimax h3 动画用法求助，想在本机跑",
+      "summary_zh": "网友求助如何理解和使用模型，希望借助 Claude 和技能文件，在自己电脑上制作风格化动画。"
+    },
+    {
+      "id": "sha256:187aa8d80a0dd6ec985b505501c7e8b0b9d6884908f3f8c06661ed4cfe305363",
+      "module": "community",
+      "kind": "post",
+      "title": "Built DUMEdb: A local, hardware-aligned 32-byte register memory engine for AI agents (OpenAI-compatible proxy, LMDB backend, zero prompt bloat)",
+      "excerpt": "",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xbl2hi/built_dumedb_a_local_hardwarealigned_32byte/",
+      "source": "reddit",
+      "source_label": "r/LocalLLaMA",
+      "published_at": "2026-10-21T11:53:28Z",
+      "metrics": {
+        "points": 1,
+        "comments": 1
+      },
+      "tags": [
+        "AI",
+        "Agent"
+      ],
+      "keywords": [
+        "AI",
+        "OpenAI",
+        "agent"
+      ],
+      "score": {
+        "total": 43.09,
+        "engagement": 0.108,
+        "specificity": 1,
+        "decay": 0.991,
+        "source_weight": 0.85
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T12:11:51Z",
+      "run": "20:00",
+      "title_zh": "DUMEdb 给 Agent 做本地记忆，不撑大提示词",
+      "summary_zh": "作者构建硬件对齐的记忆引擎，采用 LMDB 后端，提供兼容 OpenAI 的代理。"
+    },
+    {
+      "id": "sha256:24f9be9aa1afe9e520a58c2fffa9469426aa1a92c6950af6c38ffc19f6d00a9b",
+      "module": "community",
+      "kind": "post",
+      "title": "Looking for a great image to video generator highly recommend 👌 a2e ai.has a ton of great ai tools",
+      "excerpt": "",
+      "url": "https://www.reddit.com/r/comfyui/comments/1xbkp7q/looking_for_a_great_image_to_video_generator/",
+      "source": "reddit",
+      "source_label": "r/comfyui",
+      "published_at": "2026-10-21T11:34:15Z",
+      "metrics": {
+        "points": 1,
+        "comments": 0
+      },
+      "tags": [
+        "AI",
+        "图片视频音频"
+      ],
+      "keywords": [
+        "AI",
+        "text-to-video"
+      ],
+      "score": {
+        "total": 42.64,
+        "engagement": 0.072,
+        "specificity": 0.85,
+        "decay": 0.982,
+        "source_weight": 0.85,
+        "feedback": 1.16,
+        "feedback_why": [
+          "sub:comfyui"
+        ]
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T12:11:51Z",
+      "run": "20:00",
+      "title_zh": "a2e ai 图生视频工具获网友推荐",
+      "summary_zh": "ComfyUI 社区网友推荐用它做图生视频，并称平台还提供多种 AI 工具。"
+    },
+    {
+      "id": "sha256:ea78176ce5727bdd20263b8b83154126a62bd173b84f252d66b832204348d7a4",
+      "module": "community",
+      "kind": "post",
+      "title": "Nothing is moving, nothing is in a hurry, and everything is exactly where it should be.",
+      "excerpt": "Nothing is moving, nothing is in a hurry, and everything is exactly where it should be. Created in @gmi_cloud model: GPT Image 2.5 Flare 🏞 Prompt: Impasto oil painting on coarse canvas, thick sculptural palette-knife pai…",
+      "url": "https://x.com/churvikv/status/2112858088373940495",
+      "source": "x",
+      "source_label": "X · @churvikv",
+      "published_at": "2026-10-21T10:46:37Z",
+      "metrics": {
+        "engagement": 42,
+        "replies": 13,
+        "likes_x": 28,
+        "reposts": 7
+      },
+      "tags": [
+        "AI",
+        "LLM",
+        "图片视频音频"
+      ],
+      "keywords": [
+        "GPT",
+        "GPT Image",
+        "model"
+      ],
+      "score": {
+        "total": 32.29,
+        "engagement": 0.423,
+        "specificity": 0.1,
+        "decay": 0.96,
+        "source_weight": 0.9
+      },
+      "links": [],
+      "visibility": "public",
+      "batch": "pm",
+      "fetched_at": "2026-10-21T12:11:51Z",
+      "image": {
+        "src": "https://pbs.twimg.com/media/HVJg6ijWUAA34mk?format=jpg&name=large",
+        "srcset": "https://pbs.twimg.com/media/HVJg6ijWUAA34mk?format=jpg&name=small 680w, https://pbs.twimg.com/media/HVJg6ijWUAA34mk?format=jpg&name=medium 1200w, https://pbs.twimg.com/media/HVJg6ijWUAA34mk?format=jpg&name=orig 2048w",
+        "width": 2048,
+        "height": 1152,
+        "alt": "",
+        "logo": false
+      },
+      "prompt_pick": true,
+      "prompt": {
+        "text": "Impasto oil painting on coarse canvas, thick sculptural palette-knife paint standing in raised ridges, wide 16:9 panoramic composition, symmetrically mirrored scene. Edge to edge, no frame, no border.\n\nCONCEPT: a still lake splits the canvas dead centre into a perfect horizontal mirror line, the upper half the world and the lower half its exact rippled reflection.\n\nSKY upper: pale silver-white torn cloud banks of heavy thick knife-paint, their undersides shaded grey-cream, opening in the middle to a band of soft duck-egg turquoise and pale aqua. Low on the horizon, a warm blush of peach, apricot and faint rose glows behind a distant ridge.\n\nMOUNTAINS: a soft pale blue-lavender ridge sits in the centre distance, hazy and simple, its crest catching the warm horizon light.\n\nTREES: on both shores stand tall slender cypresses in deep teal-blue and near-black, their surface built from dense vertical knife-scrapes. Around them cluster rounded bushy trees in pale ice-blue and silvery turquoise. The trunks are dark and faint, and thin bare branches on the right shore rise against the sky. The tree masses crowd both banks symmetrically, framing the water.\n\nBANKS: narrow strips of pale silver-tan bank with fine grass strokes run along both sides at the waterline.\n\nWATER: the mirror surface is painted in long horizontal knife-drags, its colour a vivid saturated turquoise shading to deep indigo, with wide pale gold and peach patches where the horizon glow reflects.\n\nREFLECTION lower: every element repeats downward upside-down — the cypress spires pointing down, the bushy crowns as silvery fans, the sky as torn pale slabs, all of it smeared by horizontal knife ridges and broken into flat elongated flecks like floating debris.\n\nPALETTE: teal blue, turquoise, silver-white, pale aqua, slate, peach and apricot glow, near-black cypress. Heavy tactile ridges, matte glossy paint, serene and dreamlike, clean and unmarked.",
+        "from": "post"
+      },
+      "author": {
+        "handle": "churvikv",
+        "name": "Viki",
+        "avatar": "https://pbs.twimg.com/profile_images/1646825232663994368/QM8Iy2m3_400x400.jpg",
+        "verified": false
+      },
+      "run": "20:00",
+      "title_zh": "GPT Image 2.5 Flare 提示词：厚涂油画",
+      "summary_zh": "作者晒出用 GPT Image 2.5 Flare 生成的粗帆布厚涂油画，附提示词可复用。"
+    }
+  ],
+  "arena": {
+    "boards": [
+      {
+        "name": "code",
+        "snapshot_date": null,
+        "fetch_status": "failed",
+        "rows": []
+      },
+      {
+        "name": "agent_code",
+        "snapshot_date": null,
+        "fetch_status": "failed",
+        "rows": []
+      },
+      {
+        "name": "text_to_image",
+        "snapshot_date": null,
+        "fetch_status": "failed",
+        "rows": []
+      },
+      {
+        "name": "image_edit",
+        "snapshot_date": null,
+        "fetch_status": "failed",
+        "rows": []
+      },
+      {
+        "name": "vision",
+        "snapshot_date": null,
+        "fetch_status": "failed",
+        "rows": []
+      }
+    ]
+  },
+  "stats": {
+    "fetched": 475,
+    "kept_after_filter": 344,
+    "selected": 44,
+    "dropped": {
+      "no_keyword": 65,
+      "removed": 0,
+      "seen_before": 36,
+      "off_topic": 9
+    },
+    "sources": {
+      "hn": {
+        "fetched": 87
+      },
+      "reddit": {
+        "fetched": 220,
+        "errors": [
+          "LocalLLaMA:new:pullpush:FetchError:http:429",
+          "StableDiffusion:new:rss:http:429",
+          "StableDiffusion:new:pullpush:FetchError:http:429",
+          "comfyui:new:rss:http:429",
+          "comfyui:new:pullpush:FetchError:http:429"
+        ]
+      },
+      "rss": {
+        "fetched": 17
+      },
+      "rsshub": {
+        "fetched": 14,
+        "errors": [
+          "rsshub-anthropic:FetchError:http:503"
+        ]
+      },
+      "github": {
+        "fetched": 45
+      },
+      "hf": {
+        "fetched": 20
+      },
+      "ossinsight": {
+        "fetched": 0,
+        "skipped": "ossinsight data_quality=unavailable"
+      },
+      "x": {
+        "fetched": 83
+      }
+    },
+    "incremental": {
+      "fetched": 480,
+      "added": 4,
+      "dropped": {
+        "no_keyword": 65,
+        "removed": 0,
+        "known": 319,
+        "seen_before": 23,
+        "stale": 57,
+        "below_bar": 9,
+        "off_topic": 1
+      }
+    }
+  },
+  "meta": {
+    "generated_at": "2026-10-21T00:28:46+00:00",
+    "generator": "news-daily/rules",
+    "visibility": "public",
+    "updated_at": "2026-10-21T12:13:43+00:00"
+  }
+}

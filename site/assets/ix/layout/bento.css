@@ -1,0 +1,21 @@
+/* ix layout/bento — CSS only, same HTML. Desktop ≥901px. Never transforms/animates .card or layout containers (FLIP/peek own them).
+   Reduced motion: nothing animates here (prefers-reduced-motion handled by having no motion). */
+@media (min-width:901px){
+html[data-ix-layout="bento"] .ed{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px}
+html[data-ix-layout="bento"] .ed-lead .card{border-radius:min(var(--radius),18px)}
+html[data-ix-layout="bento"] .ed-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;border-top:0;align-content:start}
+html[data-ix-layout="bento"] .ed-side>.card.mini{grid-template-columns:minmax(0,1fr);grid-template-areas:"meta" "h" "sum" "pic" "foot";padding:14px 14px 10px;background:var(--surface);border:var(--border-w) solid var(--line);border-radius:min(var(--radius),18px);align-content:start}
+html[data-ix-layout="bento"] .ed-side>.card.mini .meta{padding-right:40px}
+html[data-ix-layout="bento"] .ed-side>.card.mini:not(.peek)>.pic{width:100%;height:96px;margin-top:4px}
+html[data-ix-layout="bento"] .ed-side>.card.mini .ex{-webkit-line-clamp:3}
+html[data-ix-layout="bento"] .ed-side>.card:nth-child(odd):last-child{grid-column:1/-1}
+/* 看大图: the side goes back to one column so the opened picture gets the full column width (DESIGN-RULES §2) */
+html[data-ix-layout="bento"] .ed-side:has(>.card.peek){grid-template-columns:minmax(0,1fr)}
+html[data-ix-layout="bento"] .ed-side:has(>.card.peek)>.card{grid-column:1/-1}
+html[data-ix-layout="bento"] .ed-more{--ix-per:3;gap:16px}
+html[data-ix-layout="bento"] .ed-more>.card.std{grid-column:span 2}
+html[data-ix-layout="bento"] .ed-more>.card.half{grid-column:span 3}
+html[data-ix-layout="bento"] .ed-more>.card.fill{grid-column:span 6}
+html[data-ix-layout="bento"] .ed-more>.card{border-radius:min(var(--radius),18px)}
+}
+@media (prefers-reduced-motion:reduce){html[data-ix-layout="bento"] .ed-side{transition:none}}

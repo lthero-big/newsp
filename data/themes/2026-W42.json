@@ -1,0 +1,36 @@
+{
+ "id": "wk-2026-w42",
+ "name": "Brink 播客播放页 · 2026-W42",
+ "inspiredBy": "Brink 播客播放页",
+ "sourceId": "ui-brink-now-playing",
+ "week": "2026-W42",
+ "source": "mcp",
+ "fallback": false,
+ "weight": 1,
+ "scheme": "dark",
+ "tokens": {
+  "bg": "#1a0f08",
+  "surface": "#251b14",
+  "ink": "#ffffff",
+  "muted": "#989390",
+  "line": "#3f3530",
+  "accent": "#f2b46b",
+  "accent-ink": "#111111",
+  "radius": "14px",
+  "border-w": "1px",
+  "shadow": "none",
+  "font-display": "'Fraunces','Georgia','Noto Serif SC',serif",
+  "font-body": "'Inter','PingFang SC','Noto Sans SC',system-ui,sans-serif",
+  "font-mono": "'JetBrains Mono','SF Mono',ui-monospace,monospace",
+  "bg-pattern": "none",
+  "tilt": "0deg"
+ },
+ "checks": {
+  "ink": 18.82,
+  "muted": 6.19,
+  "ink_on_surface": 16.86,
+  "accent": 10.32,
+  "accent_ink": 10.36
+ },
+ "arch": "brutal"
+}

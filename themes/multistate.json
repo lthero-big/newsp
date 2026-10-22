@@ -1,0 +1,25 @@
+{
+  "id": "multistate",
+  "name": "多状态按钮",
+  "inspiredBy": "motion-21st-multistate-button",
+  "source": "design-daily/data/items/motion-21st-multistate-button.json",
+  "scheme": "light",
+  "weight": 1,
+  "tokens": {
+    "bg": "#fafafa",
+    "surface": "#ffffff",
+    "ink": "#0a0a0a",
+    "muted": "#6b6b6b",
+    "line": "#e6e6e6",
+    "accent": "#22c55e",
+    "accent-ink": "#0a0a0a",
+    "radius": "10px",
+    "border-w": "1px",
+    "shadow": "0 1px 0 #e6e6e6",
+    "font-display": "'Geist','Inter','PingFang SC',system-ui,sans-serif",
+    "font-body": "'Geist','Inter','PingFang SC',system-ui,sans-serif",
+    "font-mono": "'JetBrains Mono','SF Mono',ui-monospace,monospace",
+    "bg-pattern": "none",
+    "tilt": "0deg"
+  }
+}

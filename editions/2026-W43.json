@@ -1,0 +1,12 @@
+{
+ "id": "2026-W43",
+ "week": "2026-W43",
+ "status": "approved",
+ "level": "skin",
+ "theme": "wk-2026-w43",
+ "slots": {},
+ "inspiredBy": [{ "id": "ui-youtube-desktop-layout", "title": "YouTube 新桌面布局：视频变小了", "stars": 4, "note": "旧版每周主题（只换配色），补登为版本" }],
+ "note": "本周线上外观（YouTube 深色配色 + CRT 版式原型），所有槽位 default。补登记录，页面外观不变。",
+ "approvedAt": "2026-10-19",
+ "approvedBy": "backfill"
+}

@@ -1,0 +1,7 @@
+/* ix chips/direction — a sliding selection bubble (chips/direction.js) under the pressed chip. Hooks: [data-ixh~="chips"] (scroll row), [data-ixh~="chip"]. */
+html[data-ix-chips="direction"] [data-ixh~="chips"]{position:relative;isolation:isolate}
+html[data-ix-chips="direction"] [data-ixh~="chip"]{position:relative;z-index:1;background:transparent;transition:color .2s,border-color .2s}
+html[data-ix-chips="direction"] [data-ixh~="chip"][aria-pressed="true"]{background:transparent;color:var(--ix-on-accent);border-color:transparent}
+html[data-ix-chips="direction"] .ixbub{position:absolute;z-index:0;top:0;left:0;height:0;border-radius:999px;background:var(--ix-accent);pointer-events:none}
+html[data-ix-chips="direction"]:not(.ix-chips-on) [data-ixh~="chip"][aria-pressed="true"]{background:var(--ix-accent)}
+@media (prefers-reduced-motion:reduce){html[data-ix-chips="direction"] [data-ixh~="chip"]{transition:none}}

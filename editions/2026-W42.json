@@ -1,0 +1,12 @@
+{
+ "id": "2026-W42",
+ "week": "2026-W42",
+ "status": "approved",
+ "level": "skin",
+ "theme": "wk-2026-w42",
+ "slots": {},
+ "inspiredBy": [{ "id": "ui-brink-now-playing", "title": "Brink 播客播放页", "stars": 3, "note": "旧版每周主题（只换配色），补登为版本" }],
+ "note": "v3.6 之前的每周主题（配色 + 版式原型）。补登记录，页面外观不变。",
+ "approvedAt": "2026-10-19",
+ "approvedBy": "backfill"
+}

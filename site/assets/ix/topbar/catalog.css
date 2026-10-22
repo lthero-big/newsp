@@ -1,0 +1,13 @@
+/* ix topbar/catalog — Dell 1996 black banner. Hooks: [data-ixh~="topbar"] (header), [data-ixh~="nav"] (desktop nav, links with aria-current).
+   Colours are fixed black/white (AA in every theme); the theme orb and logo keep their own tokens. No motion → reduced motion unaffected. */
+html[data-ix-topbar="catalog"] [data-ixh~="topbar"]{background:#000;color:#fff;border-bottom:3px solid #e91d2a;-webkit-backdrop-filter:none;backdrop-filter:none}
+html[data-ix-topbar="catalog"] [data-ixh~="topbar"] .logo .glyph{background:#fff;color:#000;border-radius:0}
+html[data-ix-topbar="catalog"] [data-ixh~="topbar"] .logo .glyph svg path[stroke="currentColor"]{stroke:#000}
+html[data-ix-topbar="catalog"] [data-ixh~="topbar"] .logo .glyph::after{border-radius:0;border-color:#fff}
+html[data-ix-topbar="catalog"] [data-ixh~="topbar"] .word{color:#fff;font-family:"Arial Black","Archivo Black",var(--ix-font-d);font-weight:900;letter-spacing:-.01em}
+html[data-ix-topbar="catalog"] [data-ixh~="topbar"] .word b{color:#fcc20f}
+html[data-ix-topbar="catalog"] [data-ixh~="nav"] a,html[data-ix-topbar="catalog"] [data-ixh~="nav"] button{color:#fff;border-radius:0;font-weight:700;letter-spacing:.02em}
+html[data-ix-topbar="catalog"] [data-ixh~="nav"] a:hover{background:#222;color:#fff}
+html[data-ix-topbar="catalog"] [data-ixh~="nav"] a[aria-current]{background:none;color:#fff;box-shadow:inset 0 -3px 0 #e91d2a}
+html[data-ix-topbar="catalog"] [data-ixh~="nav"] .favcount,html[data-ix-topbar="catalog"] [data-ixh~="nav"] .trashcount{color:#fcc20f}
+@media (prefers-reduced-motion:reduce){html[data-ix-topbar="catalog"] [data-ixh~="nav"] a{transition:none}}

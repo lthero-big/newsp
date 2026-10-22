@@ -1,0 +1,25 @@
+{
+  "id": "pricing-toggle",
+  "name": "套餐切换",
+  "inspiredBy": "ui-replit-pricing-toggle",
+  "source": "design-daily/data/items/ui-replit-pricing-toggle.json",
+  "scheme": "light",
+  "weight": 1,
+  "tokens": {
+    "bg": "#f5f7fa",
+    "surface": "#ffffff",
+    "ink": "#0e1525",
+    "muted": "#5c6370",
+    "line": "#dfe3ea",
+    "accent": "#f26207",
+    "accent-ink": "#ffffff",
+    "radius": "12px",
+    "border-w": "1px",
+    "shadow": "0 0 0 3px transparent",
+    "font-display": "'IBM Plex Sans','Inter','PingFang SC',system-ui,sans-serif",
+    "font-body": "'IBM Plex Sans','Inter','PingFang SC',system-ui,sans-serif",
+    "font-mono": "'JetBrains Mono','SF Mono',ui-monospace,monospace",
+    "bg-pattern": "none",
+    "tilt": "0deg"
+  }
+}

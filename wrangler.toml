@@ -1,0 +1,11 @@
+# Cloudflare Pages project + D1 state. scripts/setup-cloudflare.sh fills in name / database_id for your account
+# (commit the result in your own copy — the Pages Git build reads this file for the D1 binding).
+name = "newsp"
+compatibility_date = "2026-10-01"
+pages_build_output_dir = "dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "newsp-state"
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "migrations"

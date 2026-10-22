@@ -1,0 +1,25 @@
+{
+  "id": "one-accent",
+  "name": "单一强调色",
+  "inspiredBy": "brand-one-accent-poster",
+  "source": "design-daily/data/items/brand-one-accent-poster.json",
+  "scheme": "dark",
+  "weight": 1,
+  "tokens": {
+    "bg": "#151515",
+    "surface": "#1d1d1d",
+    "ink": "#f2f0eb",
+    "muted": "#9a968e",
+    "line": "#2e2e2e",
+    "accent": "#f97316",
+    "accent-ink": "#151515",
+    "radius": "3px",
+    "border-w": "1px",
+    "shadow": "none",
+    "font-display": "'Oswald','Bebas Neue','Impact','Noto Sans SC',sans-serif",
+    "font-body": "'Inter','PingFang SC','Noto Sans SC',system-ui,sans-serif",
+    "font-mono": "'JetBrains Mono','SF Mono',ui-monospace,monospace",
+    "bg-pattern": "none",
+    "tilt": "0deg"
+  }
+}

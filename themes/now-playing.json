@@ -1,0 +1,25 @@
+{
+  "id": "now-playing",
+  "name": "播客暖棕",
+  "inspiredBy": "ui-brink-now-playing",
+  "source": "design-daily/data/items/ui-brink-now-playing.json",
+  "scheme": "dark",
+  "weight": 1,
+  "tokens": {
+    "bg": "#2a1d17",
+    "surface": "#36261e",
+    "ink": "#f6e9dc",
+    "muted": "#c2a690",
+    "line": "#4a362b",
+    "accent": "#f4a259",
+    "accent-ink": "#2a1d17",
+    "radius": "20px",
+    "border-w": "1px",
+    "shadow": "0 18px 40px -24px rgba(0,0,0,.6)",
+    "font-display": "'Fraunces','Georgia','Songti SC',serif",
+    "font-body": "'Inter','PingFang SC',system-ui,sans-serif",
+    "font-mono": "'JetBrains Mono','SF Mono',ui-monospace,monospace",
+    "bg-pattern": "radial-gradient(800px 380px at 100% 0, #4a2f22 0, transparent 60%)",
+    "tilt": "0deg"
+  }
+}

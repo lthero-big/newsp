@@ -1,0 +1,433 @@
+{
+ "_doc": "共享交互层 registry（格式与 design-daily assets/ix/registry.json 相同，另加 sites / kind / size 字段）。slots → default = 站点内置行为（不需要文件）+ variants（assets/ix/<slot>/<variant>.{css,js}）。契约见 assets/ix/README.md；新闻站每周版本 editions/<week>.json 用 slots 声明；预览 ?ix=slot:variant[,slot:default] 或 ?ed=<week>。 变体可带 pair（推荐配色 token），每周合成时优先用结构类变体的 pair 作为本周配色（仍过 AA 校验）。",
+ "contract": 1,
+ "slots": {
+  "layout": {
+   "label": "模块版式",
+   "sites": [
+    "news"
+   ],
+   "default": "v34.css 编辑部混排：头条 + 侧栏小卡 + 下方 2 列网格（--ix-per 2）",
+   "variants": {
+    "bento": {
+     "kind": "layout",
+     "sites": [
+      "news"
+     ],
+     "css": "assets/ix/layout/bento.css",
+     "desc": "便当格：头条一块大砖，侧栏小卡变成 2×2 小砖（单数时最后一块占满一行；有「看大图」时侧栏回到单列），下方网格 3 列（--ix-per 3，剩余格由 app.js 补成整行/半行）。手机不变。",
+     "params": {
+      "侧栏": "2 列砖，gap 14px",
+      "网格": "6 列轨道 · std 占 2 · wide 占 6 · 余 1 → 整行，余 2 → 各半",
+      "圆角": "min(var(--radius),18px)"
+     },
+     "inspiredBy": {
+      "id": "theme:bento-slate",
+      "title": "Bento 便当格（整页主题）",
+      "stars": 5,
+      "date": "2026-10-16",
+      "url": "https://design.lthero.com/"
+     },
+     "added": "2026-10-19"
+    },
+    "timeline": {
+     "kind": "layout",
+     "sites": [
+      "news"
+     ],
+     "css": "assets/ix/layout/timeline.css",
+     "desc": "时间轴：侧栏小卡挂在一条带刻度的竖轴上（按模块着色的刻度），下方网格变成单列时间线（--ix-per 1），每条一个圆点。头条、看大图、收起补位规则不变；手机只加左侧细轴。",
+     "params": {
+      "轴": "2px var(--line)，刻度 10px 圆点 var(--accent)",
+      "网格": "单列，宽卡保留左文右图",
+      "灵感": "Browserbase 运行回放的彩色时间轴 + 步骤列表"
+     },
+     "inspiredBy": {
+      "id": "ui-browserbase-agent-run",
+      "title": "Browserbase Agent 运行回放",
+      "stars": 5,
+      "date": "2026-10-19",
+      "url": "https://design.lthero.com/design/2026-10-19#ui-browserbase-agent-run"
+     },
+     "added": "2026-10-19"
+    }
+   }
+  },
+  "topbar": {
+   "label": "顶栏（桌面 + 手机顶栏外观）",
+   "sites": [
+    "news",
+    "design"
+   ],
+   "default": "style.css .top：半透明毛玻璃 + 文字导航",
+   "variants": {
+    "catalog": {
+     "kind": "skin",
+     "sites": [
+      "news",
+      "design"
+     ],
+     "css": "assets/ix/topbar/catalog.css",
+     "desc": "Dell 1996 目录页的黑色横幅：纯黑顶栏、白字、当前页红色下划线、Arial Black 字标；手机同样只有 Logo + 字标 + 主题圆点。",
+     "params": {
+      "底": "#000，字 #fff",
+      "当前页": "3px #e91d2a 下划线",
+      "字标": "Arial Black 900"
+     },
+     "inspiredBy": {
+      "id": "brand-dell-1996-catalog",
+      "title": "Dell 1996 目录页",
+      "stars": 5,
+      "date": "2026-10-19",
+      "url": "https://design.lthero.com/design/2026-10-19#brand-dell-1996-catalog"
+     },
+     "added": "2026-10-19"
+    },
+    "dock": {
+     "kind": "motion",
+     "sites": [
+      "news",
+      "design"
+     ],
+     "css": "assets/ix/topbar/dock.css",
+     "js": "assets/ix/topbar/dock.js",
+     "desc": "磁吸 Dock：桌面导航收成一条居中悬浮胶囊，指针靠近时链接按高斯衰减放大上抬（弹簧驱动），键盘聚焦同样放大。只动导航链接本身。",
+     "params": {
+      "σ": "60px",
+      "最大缩放": "1.22",
+      "弹簧": "k 420 · c 26",
+      "上抬": "3px"
+     },
+     "inspiredBy": {
+      "id": "motion-21st-magnetic-dock",
+      "title": "磁吸 Dock",
+      "stars": 5,
+      "date": "2026-10-16",
+      "url": "https://design.lthero.com/design/2026-10-16#motion-21st-magnetic-dock"
+     },
+     "added": "2026-10-19"
+    }
+   }
+  },
+  "skin": {
+   "label": "卡片外观",
+   "sites": [
+    "news"
+   ],
+   "default": "style.css .card：主题圆角 + 细边 + 阴影",
+   "variants": {
+    "catalog": {
+     "kind": "skin",
+     "sites": [
+      "news"
+     ],
+     "css": "assets/ix/skin/catalog.css",
+     "desc": "Dell 1996 目录卡：2px 墨色直角框、无阴影，按模块铺一层很淡的色块（sage / sky / salmon，与卡片底色混合 ≤16%，任何主题都过 AA），「新增」标签做成黄色爆炸贴，页面四周 6px 黑框（不占布局）。",
+     "params": {
+      "框": "2px var(--ink)，圆角 0",
+      "色块": "sage #b3bd95 · sky #9ab6c8 · salmon #d77a7a（混合 14%）",
+      "贴纸": "#fcc20f 星形 clip-path"
+     },
+     "inspiredBy": {
+      "id": "brand-dell-1996-catalog",
+      "title": "Dell 1996 目录页",
+      "stars": 5,
+      "date": "2026-10-19",
+      "url": "https://design.lthero.com/design/2026-10-19#brand-dell-1996-catalog"
+     },
+     "added": "2026-10-19",
+     "pair": {
+      "name": "Dell 1996 目录",
+      "scheme": "light",
+      "tokens": {
+       "bg": "#f7f5ee",
+       "surface": "#ffffff",
+       "ink": "#111111",
+       "muted": "#4d4a40",
+       "line": "#c9c8b6",
+       "accent": "#c8161d",
+       "accent-ink": "#ffffff",
+       "radius": "0px",
+       "border-w": "2px",
+       "shadow": "none",
+       "font-display": "\"Arial Black\",\"Archivo Black\",\"Inter Tight\",\"PingFang SC\",\"Noto Sans SC\",system-ui,sans-serif",
+       "font-body": "Helvetica,Arial,\"PingFang SC\",\"Noto Sans SC\",system-ui,sans-serif",
+       "font-mono": "\"JetBrains Mono\",\"SF Mono\",ui-monospace,monospace",
+       "bg-pattern": "none",
+       "tilt": "0deg"
+      }
+     }
+    }
+   }
+  },
+  "sechead": {
+   "label": "模块标题",
+   "sites": [
+    "news"
+   ],
+   "default": "style.css .mhead：序号 + 标题 + 说明 + 计数",
+   "variants": {
+    "livery": {
+     "kind": "skin",
+     "sites": [
+      "news"
+     ],
+     "css": "assets/ix/sechead/livery.css",
+     "desc": "Ferrari 赛报涂装：序号做成 Rosso Corsa 斜切色带上的白色号码牌，旁边一道 Hypersail 黄细带；标题 700 字重、字距收紧；色带进入视口时 scaleX 0→1（只动伪元素）。",
+     "params": {
+      "色带": "#da291c skewX(−18deg)",
+      "点缀": "#fff200",
+      "入场": "scaleX 0→1 .9s cubic-bezier(.65,0,.35,1)"
+     },
+     "inspiredBy": {
+      "id": "brand-ferrari-livery-poster",
+      "title": "Ferrari 赛报海报",
+      "stars": 5,
+      "date": "2026-10-17",
+      "url": "https://design.lthero.com/design/2026-10-17#brand-ferrari-livery-poster"
+     },
+     "added": "2026-10-19"
+    },
+    "bubble": {
+     "kind": "skin",
+     "sites": [
+      "news"
+     ],
+     "css": "assets/ix/sechead/bubble.css",
+     "desc": "文具风泡泡字：模块标题用粗描边 + 硬投影（paint-order stroke），序号是一枚圆形贴纸，悬停时果冻弹一下（只动标题文字）。",
+     "params": {
+      "描边": "-webkit-text-stroke 2px var(--ink) + paint-order",
+      "硬投影": "3px 3px 0 var(--accent)",
+      "弹跳": "cubic-bezier(.34,1.8,.64,1)"
+     },
+     "inspiredBy": {
+      "id": "brand-bubble-letter-poster",
+      "title": "文具风泡泡字海报",
+      "stars": 5,
+      "date": "2026-10-16",
+      "url": "https://design.lthero.com/design/2026-10-16#brand-bubble-letter-poster"
+     },
+     "added": "2026-10-19"
+    }
+   }
+  },
+  "toast": {
+   "label": "提示条（已收起 · 撤销 / 已记下 · 撤销）",
+   "sites": [
+    "news",
+    "design"
+   ],
+   "default": "style.css .ntoast / .rtoast：底部胶囊，淡入上移",
+   "variants": {
+    "island": {
+     "kind": "motion",
+     "sites": [
+      "news",
+      "design"
+     ],
+     "css": "assets/ix/toast/island.css",
+     "js": "assets/ix/toast/island.js",
+     "desc": "灵动岛：提示条是墨色胶囊，出现时从 52×44 的小岛按弹簧（k 400 · c 30）展开成完整宽度（clip-path，不动位置），内容 scale .9 / y 5 / 模糊弹入。位置规则不变（标签栏上方）。",
+     "params": {
+      "弹簧": "stiffness 400 · damping 30",
+      "起始": "minimal 52×44 r22",
+      "内容": "scale .9→1，y 5→0，blur 6px→0"
+     },
+     "inspiredBy": {
+      "id": "motion-cult-dynamic-island",
+      "title": "灵动岛形变",
+      "stars": 5,
+      "date": "2026-10-19",
+      "url": "https://design.lthero.com/design/2026-10-19#motion-cult-dynamic-island"
+     },
+     "added": "2026-10-19"
+    }
+   }
+  },
+  "chips": {
+   "label": "筛选标签",
+   "sites": [
+    "news",
+    "design"
+   ],
+   "default": "style.css .chip：按下态整块强调色",
+   "variants": {
+    "direction": {
+     "kind": "motion",
+     "sites": [
+      "news",
+      "design"
+     ],
+     "css": "assets/ix/chips/direction.css",
+     "js": "assets/ix/chips/direction.js",
+     "desc": "方向感知 Tabs：选中气泡是一块会滑动的强调色底，从旧标签按方向弹簧滑到新标签（bounce .19，400ms），文字从滑来的方向带 4px 模糊进入。只动气泡和标签文字，不动卡片。",
+     "params": {
+      "气泡弹簧": "bounce .19 · 400ms（linear() 采样）",
+      "文字": "x ±10px · blur 4px → 0"
+     },
+     "inspiredBy": {
+      "id": "motion-cult-direction-aware-tabs",
+      "title": "方向感知 Tabs",
+      "stars": 5,
+      "date": "2026-10-17",
+      "url": "https://design.lthero.com/design/2026-10-17#motion-cult-direction-aware-tabs"
+     },
+     "added": "2026-10-19"
+    },
+    "direction2": {
+     "kind": "motion",
+     "sites": [
+      "news",
+      "design"
+     ],
+     "css": "assets/ix/chips/direction2.css",
+     "js": "assets/ix/chips/direction2.js",
+     "desc": "方向感知 Tabs 2：同 direction（选中气泡按方向弹簧滑动，文字带模糊从滑来的方向进入），另外支持单选组：选中态认 aria-pressed=true 或 aria-checked=true（role=radio）；在 role=radiogroup 里方向键 / Home / End 切换选项（选择跟随焦点，用 click() 交给站点自己改状态，不改 ARIA）。行内重绘后气泡自动补回。",
+     "params": {
+      "气泡弹簧": "bounce .19 · 400ms（linear() 采样）",
+      "文字": "x ±10px · blur 4px → 0",
+      "选中态": "aria-pressed | aria-checked",
+      "键盘": "←↑ / →↓ 循环，Home / End"
+     },
+     "inspiredBy": {
+      "id": "motion-cult-direction-aware-tabs",
+      "title": "方向感知 Tabs",
+      "stars": 5,
+      "date": "2026-10-17",
+      "url": "https://design.lthero.com/design/2026-10-17#motion-cult-direction-aware-tabs"
+     },
+     "added": "2026-10-19"
+    }
+   }
+  },
+  "tabbar": {
+   "label": "手机底部标签栏",
+   "sites": [
+    "news"
+   ],
+   "default": "style.css .tabbar：悬浮胶囊，当前页强调色",
+   "variants": {
+    "dock": {
+     "kind": "motion",
+     "sites": [
+      "news"
+     ],
+     "css": "assets/ix/tabbar/dock.css",
+     "js": "assets/ix/tabbar/dock.js",
+     "desc": "磁吸 Dock 版标签栏：当前页下面一颗指示点；按下的标签图标放大上抬后弹簧回位（k 420 · c 26），按下时指示点先滑过去再跳页。入口、顺序、角标、隐藏规则不变。",
+     "params": {
+      "放大": "1.28",
+      "上抬": "4px",
+      "弹簧": "k 420 · c 26"
+     },
+     "inspiredBy": {
+      "id": "motion-21st-magnetic-dock",
+      "title": "磁吸 Dock",
+      "stars": 5,
+      "date": "2026-10-16",
+      "url": "https://design.lthero.com/design/2026-10-16#motion-21st-magnetic-dock"
+     },
+     "added": "2026-10-19"
+    }
+   }
+  },
+  "press": {
+   "label": "按钮 / 书签收藏 按压反馈",
+   "sites": [
+    "news",
+    "design"
+   ],
+   "default": "style.css .acts button:active scale(.92)；收藏 .pop 关键帧",
+   "variants": {
+    "elastic": {
+     "kind": "motion",
+     "sites": [
+      "news",
+      "design"
+     ],
+     "css": "assets/ix/press/elastic.css",
+     "js": "assets/ix/press/elastic.js",
+     "desc": "与 design-daily press/elastic 同一份代码：按下压扁（1.14 × .86），松开弹簧回弹带一次过冲；点赞 / 收藏成功额外弹出。只动按钮本身。",
+     "params": {
+      "spring": "stiffness 500 · damping 16 · mass 1",
+      "squash": "scaleX 1.14 · scaleY .86，90ms",
+      "pop": "峰值 ≈1.3"
+     },
+     "inspiredBy": {
+      "id": "motion-21st-elastic-switch",
+      "title": "弹簧拉伸开关",
+      "stars": 5,
+      "date": "2026-10-18",
+      "url": "https://design.lthero.com/design/2026-10-18#motion-21st-elastic-switch"
+     },
+     "added": "2026-10-19"
+    }
+   }
+  },
+  "numbers": {
+   "label": "统计数字",
+   "sites": [
+    "news",
+    "design"
+   ],
+   "default": "静态数字",
+   "variants": {
+    "rolling": {
+     "kind": "motion",
+     "sites": [
+      "news",
+      "design"
+     ],
+     "js": "assets/ix/numbers/rolling.js",
+     "desc": "弹簧滚动数字：首屏统计数字（[data-ixh~=num]）进入时由弹簧（mass .8 · k 75 · c 15）从 0 追到真实值。动画画在一层 aria-hidden 覆盖层上，原数字文本不变（读屏和脚本读到的始终是真值）。",
+     "params": {
+      "mass": ".8",
+      "stiffness": "75",
+      "damping": "15",
+      "子步": "每帧 4 步半隐式欧拉"
+     },
+     "inspiredBy": {
+      "id": "motion-cult-rolling-number",
+      "title": "弹簧滚动数字",
+      "stars": 4,
+      "date": "2026-10-17",
+      "url": "https://design.lthero.com/design/2026-10-17#motion-cult-rolling-number"
+     },
+     "added": "2026-10-19"
+    }
+   }
+  },
+  "transition": {
+   "label": "期与期之间的切换",
+   "sites": [
+    "news",
+    "design"
+   ],
+   "default": "无跨页动画（新闻站）/ nav-boot.js 方向滑动（设计站）",
+   "variants": {
+    "book": {
+     "kind": "motion",
+     "sites": [
+      "news",
+      "design"
+     ],
+     "css": "assets/ix/transition/book.css",
+     "desc": "3D 翻书：在日报之间跳转（前一天 / 后一天 / 日历）时，旧页像书页一样绕左边缘翻走（perspective 1500px，rotateY 0→−100°），新页从后面浮上来；往前翻方向相反。只作用于跨文档 View Transition 的快照伪元素；方向类型 ix-next / ix-prev 由 boot.js 在 pagereveal 里按新旧 URL 的日期写入（共享契约）。",
+     "params": {
+      "透视": "1500px",
+      "翻页": "rotateY 0 → −100deg，560ms cubic-bezier(.65,0,.35,1)",
+      "新页": "scale .96→1 + 淡入"
+     },
+     "inspiredBy": {
+      "id": "motion-uselayouts-3d-book",
+      "title": "3D 翻书",
+      "stars": 5,
+      "date": "2026-10-17",
+      "url": "https://design.lthero.com/design/2026-10-17#motion-uselayouts-3d-book"
+     },
+     "added": "2026-10-19"
+    }
+   }
+  }
+ }
+}
