@@ -11,6 +11,29 @@
 
 口令验证通过后保存在这个浏览器里，换设备要重新输入。连续输错 3 次，这个 IP（IPv6 按 /64）锁定 15 分钟。
 
+## 设置、修改和补设口令
+
+主人口令就是 Worker secret `RATINGS_TOKEN`，站点和接口只认这一个值；它不存进 D1，也不在仓库里。建议用长随机串，例如 `openssl rand -hex 24`。
+
+**首次设置**：一键部署时在设置页填 `RATINGS_TOKEN`；手动连接或命令行部署见 [部署](Deployment)。
+
+**补设（部署时漏填）**：主人功能接口会返回 503 `not configured`。任选一种方式补上，保存后立即生效，不用重新部署：
+
+- Cloudflare 控制台 → Workers & Pages → 你的 Worker → Settings → Variables and Secrets → 添加，类型选 **Secret**，名字 `RATINGS_TOKEN`；
+- 或命令行：`npx wrangler secret put RATINGS_TOKEN`（按提示粘贴口令）。
+
+**修改（换口令 / 怀疑泄露）**：
+
+1. 先在已解锁的浏览器里点顶栏菜单的「退出」，清掉本地保存的旧口令。不退出的话，这些页面会继续带旧口令请求接口，每次都算一次输错，可能把你的 IP 锁 15 分钟。
+2. 用上面同样的位置把 `RATINGS_TOKEN` 改成新值（控制台里编辑这个 secret，或再执行一次 `wrangler secret put RATINGS_TOKEN`）。
+3. 出刊环境要同步改成同一个值：GitHub Actions 的仓库 secret `RATINGS_TOKEN`，或自托管时 `~/.config/newsp/env` 里的 `RATINGS_TOKEN`。不改的话出刊读不到主人反馈、上传不了信息源状态。
+4. 本地开发如果用了 `.dev.vars`，也一起改。
+5. 在各设备上用新口令重新解锁。
+
+换口令不影响已有数据（收藏、垃圾箱、偏好、信息源设置都在 D1 里），也不影响已经生成的 MCP 令牌；MCP 令牌要单独在「MCP」页吊销。
+
+**忘了口令**：口令没法找回，按上面「修改」的步骤直接设一个新的即可。
+
 ## 卡片反馈与偏好学习
 
 | 操作 | 效果 |
