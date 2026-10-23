@@ -2,7 +2,7 @@
 // POST /mcp JSON-RPC · GET -> 405 (HTML -> /mcp-admin) · DELETE -> 204.  Auth: Bearer <MCP token> (managed on /mcp-admin, owner only).
 import catalog from '../lib/catalog.js';
 import { json, mcpGate } from './api/_auth.js';
-import SRC_DEFAULTS from '../config/collect-sources.json';  // plain import like functions/api/sources.js (the Pages build's bundler rejects import attributes); tests add a json loader hook
+import SRC_DEFAULTS from '../config/collect-sources.json';  // plain import like functions/api/sources.js (kept bundler-neutral; wrangler/esbuild bundles it into src/worker.js); tests add a json loader hook
 const VERSIONS = ['2025-06-18', '2025-03-26', '2024-11-05'];
 const CORS = { 'access-control-allow-origin': '*', 'access-control-allow-headers': 'authorization, content-type, mcp-session-id, mcp-protocol-version, last-event-id', 'access-control-allow-methods': 'POST, GET, DELETE, OPTIONS', 'access-control-expose-headers': 'mcp-session-id, www-authenticate' };
 const SITE = 'https://news.lthero.com';

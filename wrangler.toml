@@ -1,11 +1,21 @@
-# Cloudflare Pages project + D1 state. scripts/setup-cloudflare.sh fills in name / database_id for your account
-# (commit the result in your own copy — the Pages Git build reads this file for the D1 binding).
+# Cloudflare Worker (static assets in dist/ + API in src/worker.js) + D1 state.
+# No account-specific ids here: "Deploy to Cloudflare" / `wrangler deploy` provisions the D1 database newsp-state on first deploy
+# (automatic resource provisioning) and keeps it linked by name; `npm run deploy` then applies migrations/ to it.
 name = "newsp"
+main = "src/worker.js"
 compatibility_date = "2026-10-01"
-pages_build_output_dir = "dist"
+workers_dev = true
+preview_urls = true
+
+[assets]
+directory = "dist"
+binding = "ASSETS"
+# every request goes through the Worker first (old day URL redirects + X-Robots-Tag on everything, as the Pages middleware did)
+run_worker_first = true
+html_handling = "auto-trailing-slash"
+not_found_handling = "404-page"
 
 [[d1_databases]]
 binding = "DB"
 database_name = "newsp-state"
-database_id = "00000000-0000-0000-0000-000000000000"
 migrations_dir = "migrations"

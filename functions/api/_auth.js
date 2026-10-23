@@ -17,7 +17,7 @@ export async function recordFail(env, ip, scope) { const now = Date.now();
   return locked ? Math.ceil(LOCK_MS / 1000) : 0; }
 export const clearFails = (env, ip, scope) => env.DB.prepare('DELETE FROM auth_fail WHERE ip=?1 AND scope=?2').bind(ip, scope).run();
 const tooMany = sec => json({ error: 'too many failed attempts, locked', retryAfter: sec }, 429, { 'retry-after': String(sec) });
-// The passphrase is the Pages secret RATINGS_TOKEN (wrangler pages secret put RATINGS_TOKEN). Returns null when OK.
+// The passphrase is the Worker secret RATINGS_TOKEN (wrangler secret put RATINGS_TOKEN). Returns null when OK.
 export async function ownerGate(request, env) {
   if (!env.DB || !env.RATINGS_TOKEN) return json({ error: 'not configured' }, 503);
   const ip = clientIp(request); const left = await lockedFor(env, ip, 'owner'); if (left) return tooMany(left);

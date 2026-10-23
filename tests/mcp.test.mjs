@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import catalog from '../lib/catalog.js';
 import { register } from 'node:module';
-// functions/mcp.js imports config/*.json without import attributes (as the Pages bundler wants); let node load it as json here
+// functions/mcp.js imports config/*.json without import attributes (bundler-neutral, see the comment there); let node load it as json here
 register('data:text/javascript,' + encodeURIComponent("export async function load(u, c, n) { return n(u, u.endsWith('.json') ? { ...c, importAttributes: { ...c.importAttributes, type: 'json' } } : c); }"));
 const { onRequestPost: mcp } = await import('../functions/mcp.js');
 import { onRequestPost as tokens } from '../functions/api/mcp-tokens.js';

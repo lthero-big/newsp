@@ -63,7 +63,7 @@ function metricsHtml(m) {
 // Incremental runs (15:00, 20:00, …): label from card.run, else from fetched_at (Shanghai hour ≥17 → 20:00).
 export function runOf(c) { if (c.batch !== 'pm') return ''; if (c.run) return c.run; const h = c.fetched_at ? +new Date(c.fetched_at).toLocaleString('en-GB', { timeZone: 'Asia/Shanghai', hour: '2-digit', hour12: false }) : 15; return h >= 17 ? '20:00' : '15:00'; }
 let LATEST_RUN = '';
-// v3.6 page layout: day pages live in <yyyy>/<mm>/<date>.html (served as /yyyy/mm/date); old /date(.html) URLs 301 via functions/_middleware.js.
+// v3.6 page layout: day pages live in <yyyy>/<mm>/<date>.html (served as /yyyy/mm/date); old /date(.html) URLs 301 via functions/_middleware.js (run by src/worker.js).
 export const dayPath = date => `${date.slice(0, 4)}/${date.slice(5, 7)}/${date}.html`;
 let ROOT = '';  // relative prefix back to the site root for the page being rendered ('' at root, '../../' for day pages)
 const IC_LIKE = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 13.6S2 10 2 6a3 3 0 0 1 6-1 3 3 0 0 1 6 1c0 4-6 7.6-6 7.6z"/></svg>';
@@ -617,8 +617,9 @@ async function loadRecords(files) {
 }
 async function writeMetadata(output) {
   await writeFile(join(output, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
-  const sha = process.env.CF_PAGES_COMMIT_SHA || '';
-  await writeFile(join(output, 'build.txt'), `commit ${sha || 'local'}\nbranch ${process.env.CF_PAGES_BRANCH || 'local'}\nbuilt ${new Date().toISOString()}\nby ${sha ? 'cloudflare-pages-git' : 'local'}\n`);
+  const sha = process.env.WORKERS_CI_COMMIT_SHA || process.env.CF_PAGES_COMMIT_SHA || '';  // Workers Builds (Git) / direct deploy (publish.sh)
+  const branch = process.env.WORKERS_CI_BRANCH || process.env.CF_PAGES_BRANCH || '';
+  await writeFile(join(output, 'build.txt'), `commit ${sha || 'local'}\nbranch ${branch || 'local'}\nbuilt ${new Date().toISOString()}\nby ${process.env.WORKERS_CI_COMMIT_SHA ? 'cloudflare-workers-git' : sha ? 'direct' : 'local'}\n`);
   await writeFile(join(output, '404.html'), `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>404 · NewsDaily</title><style>body{font:16px/1.7 system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0;background:#faf7f0;color:#222}a{color:#c2410c}</style></head><body><main><h1>404</h1><p>页面不存在。<a href="/">回到今日新闻</a></p></main></body></html>\n`);
   await writeFile(join(output, '_headers'), `/*\n  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; media-src 'self' https:; font-src 'self'; connect-src 'self'; frame-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  X-Robots-Tag: noindex, nofollow\n/demos/*\n  ! Content-Security-Policy\n  Content-Security-Policy: default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; font-src data:; frame-ancestors 'self'; base-uri 'none'; form-action 'none'; sandbox allow-scripts\n/\n  Cache-Control: no-cache\n/:page\n  Cache-Control: no-cache\n/:y/:m/:page\n  Cache-Control: no-cache\n/assets/*\n  Cache-Control: public, max-age=300, must-revalidate\n/api/*\n  Cache-Control: no-store\n/build.txt\n  Cache-Control: no-store\n`);
 }
@@ -689,7 +690,7 @@ async function main() {
     await copyFile(join(root, 'scripts/keys.mjs'), join(tempDir, 'assets', 'keys.mjs'));
     await writeFile(join(tempDir, 'items.json'), JSON.stringify(items));
     await writeFile(join(tempDir, 'mcp-admin.html'), mcpAdminPage({ themes, theme: latestTheme }));
-    // MCP catalog for functions/mcp.js (bundled by wrangler at deploy time).
+    // MCP catalog for functions/mcp.js (bundled into src/worker.js by wrangler at deploy time).
     const catalogFile = process.env.NEWS_CATALOG_FILE || join(root, 'lib', 'catalog.js');
     await mkdir(dirname(catalogFile), { recursive: true });
     await writeFile(catalogFile, `export default ${JSON.stringify({ version: records[0].data.date, items: catalogItems.map(({ score, visibility, ...c }) => ({ ...c, score: score.total })), fkeys })};\n`);

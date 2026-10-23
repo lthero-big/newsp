@@ -1,5 +1,5 @@
 // Owner-only: forward a card to a generic webhook (深挖这条 / 自由指令) — any agent, automation or bot that accepts a JSON POST.
-// No AI here, just a validated relay. Pages secrets: AGENT_WEBHOOK_URL (https), AGENT_WEBHOOK_KEY (optional); optional
+// No AI here, just a validated relay. Worker secrets: AGENT_WEBHOOK_URL (https), AGENT_WEBHOOK_KEY (optional); optional
 // AGENT_WEBHOOK_AUTH = bearer | header | both (default both: "Authorization: Bearer <key>" and "X-Webhook-Key: <key>").
 // URL unset -> {configured:false} and the site hides both buttons. 20 tasks / day.
 import { json, ownerGate } from './_auth.js';

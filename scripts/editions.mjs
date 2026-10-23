@@ -10,8 +10,8 @@ import { lintCss } from './ix.mjs';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const ED_DIR = process.env.NEWS_EDITIONS_DIR || join(root, 'editions');
 export const STATUSES = ['candidate', 'approved', 'rejected'];
-// preview mode: NEWS_EDITION_PREVIEW=<week>, or a Cloudflare Pages build of branch edition/<week>
-export const previewWeek = () => process.env.NEWS_EDITION_PREVIEW || (process.env.CF_PAGES_BRANCH || '').match(/^edition\/(\d{4}-W\d{2})$/)?.[1] || null;
+// preview mode: NEWS_EDITION_PREVIEW=<week>, or a Cloudflare Workers Builds (or Pages) build of branch edition/<week>
+export const previewWeek = () => process.env.NEWS_EDITION_PREVIEW || (process.env.WORKERS_CI_BRANCH || process.env.CF_PAGES_BRANCH || '').match(/^edition\/(\d{4}-W\d{2})$/)?.[1] || null;
 export function loadEditions(dir = ED_DIR) {
   if (!existsSync(dir)) return [];
   return readdirSync(dir).filter(f => /^\d{4}-W\d{2}\.json$/.test(f)).sort().map(f => { const e = JSON.parse(readFileSync(join(dir, f), 'utf8'));

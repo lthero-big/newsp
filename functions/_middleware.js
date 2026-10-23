@@ -1,4 +1,4 @@
-// noindex everywhere (pages, functions, 404s), in addition to robots.txt and _headers.
+// noindex everywhere (pages, API, 404s), in addition to robots.txt and _headers. src/worker.js runs this around every request.
 // v3.6: day pages moved from /<date>(.html) to /<yyyy>/<mm>/<date>; old links (chat messages, bookmarks) get a 301, query kept
 // (the #fragment stays in the browser and survives the redirect).
 export const OLD_DAY = /^\/(\d{4})-(\d{2})-(\d{2})(?:\.html)?\/?$/;

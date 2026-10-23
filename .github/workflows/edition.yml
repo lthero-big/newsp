@@ -37,7 +37,8 @@ jobs:
       TZ: Asia/Shanghai
       NEWS_SITE: ${{ vars.NEWS_SITE }}
       NEWS_DEPLOY: ${{ vars.NEWS_DEPLOY || 'git' }}
-      CF_PAGES_PROJECT: ${{ vars.CF_PAGES_PROJECT || 'newsp' }}
+      NEWSP_WORKER: ${{ vars.NEWSP_WORKER || 'newsp' }}
+      NEWSP_WORKERS_SUBDOMAIN: ${{ vars.NEWSP_WORKERS_SUBDOMAIN }}
       RATINGS_TOKEN: ${{ secrets.RATINGS_TOKEN }}
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

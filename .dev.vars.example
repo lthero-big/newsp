@@ -1,0 +1,2 @@
+# Worker secrets (Deploy to Cloudflare asks for these; locally copy to .dev.vars — never commit .dev.vars).
+RATINGS_TOKEN=change-me-to-a-long-passphrase # owner passphrase for 打分 / 收藏 / 垃圾箱 / 信息源 / MCP 管理

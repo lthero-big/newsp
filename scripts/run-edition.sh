@@ -94,10 +94,14 @@ elif [[ -n $PREVIEW ]]; then
   git add data lib/catalog.js && { git diff --cached --quiet || git commit -qm "preview: $DATE $RUNK (NEWS_LLM=$MODE)"; }
   SHA=$(git rev-parse HEAD); git push -qf origin "HEAD:refs/heads/$PREVIEW"
   ALIAS=$(echo "$PREVIEW" | tr 'A-Z' 'a-z' | sed -E 's/[^a-z0-9]+/-/g; s/^-|-$//g' | cut -c1-28 | sed -E 's/-$//')
-  URL="https://$ALIAS.${CF_PAGES_PROJECT:-newsp}.pages.dev"
-  ok=0; for i in $(seq 1 60); do curl -fsS "$URL/build.txt?t=$(date +%s)" 2>/dev/null | grep -q "commit $SHA" && { ok=1; break; }; sleep 10; done
-  [[ $ok == 1 ]] && echo "✓ preview: $URL (${SHA:0:7})" || echo "⚠ preview not at ${SHA:0:7} after 10 min — check Cloudflare deployments ($URL)"
-  URL="$URL/${DATE:0:4}/${DATE:5:2}/$DATE"
+  # Workers Builds uploads non-production branches as preview versions: https://<alias>-<worker>.<account subdomain>.workers.dev
+  # (enable "Builds for non-production branches" on the Worker; set NEWSP_WORKERS_SUBDOMAIN to your <subdomain>.workers.dev prefix)
+  if [[ -n ${NEWSP_WORKERS_SUBDOMAIN:-} ]]; then
+    URL="https://$ALIAS-${NEWSP_WORKER:-newsp}.$NEWSP_WORKERS_SUBDOMAIN.workers.dev"
+    ok=0; for i in $(seq 1 60); do curl -fsS "$URL/build.txt?t=$(date +%s)" 2>/dev/null | grep -q "commit $SHA" && { ok=1; break; }; sleep 10; done
+    [[ $ok == 1 ]] && echo "✓ preview: $URL (${SHA:0:7})" || echo "⚠ preview not at ${SHA:0:7} after 10 min — check the Worker's Builds in Cloudflare ($URL)"
+    URL="$URL/${DATE:0:4}/${DATE:5:2}/$DATE"
+  else echo "· pushed $PREVIEW (${SHA:0:7}); set NEWSP_WORKERS_SUBDOMAIN to wait for its workers.dev preview URL"; URL=""; fi
 else step "不发布（没有 --publish / --preview）"; URL="file://$PWD/dist/index.html"; fi
 
 echo; echo "════ 摘要（$(( $(date +%s) - T0 ))s）"

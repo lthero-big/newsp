@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Usage: scripts/publish.sh YYYY-MM-DD [--incremental]
-# daily (collect→validate→build) -> commit data + push main -> deploy to Cloudflare Pages, one of:
-#   NEWS_DEPLOY=git (default)  the Pages project is connected to this GitHub repo and builds `npm run build` itself;
-#                              we wait until $NEWS_SITE/build.txt shows the pushed commit.
-#   NEWS_DEPLOY=direct         `wrangler pages deploy dist` (Functions + D1 binding from wrangler.toml) — needs
-#                              CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID; no Git integration needed.
+# daily (collect→validate→build) -> commit data + push main -> deploy the Cloudflare Worker, one of:
+#   NEWS_DEPLOY=git (default)  the Worker is connected to this GitHub repo (Workers Builds — what "Deploy to Cloudflare" sets up)
+#                              and runs `npm run build` + `npm run deploy` itself; we wait until $NEWS_SITE/build.txt shows the pushed commit.
+#   NEWS_DEPLOY=direct         `npm run deploy` here (wrangler deploy: Worker + dist/ assets + D1 from wrangler.toml, then
+#                              D1 migrations) — needs CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID; no Git integration needed.
 #   NEWS_DEPLOY=none           commit + push only.
 # Optional backup of dist/: set PAGES_REPO (a git remote) and the built tree is pushed there (same layout as dist/).
 set -euo pipefail
@@ -42,11 +42,11 @@ case "${NEWS_DEPLOY:-git}" in
     ok=0; for i in $(seq 1 60); do
       if curl -fsS -A "newsp-publish" "$SITE_URL/build.txt?t=$(date +%s)" 2>/dev/null | grep -q "commit $SHA"; then ok=1; break; fi; sleep 10
     done
-    if [[ $ok == 1 ]]; then echo "✓ live: $SITE_URL/build.txt = ${SHA:0:7}"; else echo "⚠ build.txt not at ${SHA:0:7} after 10 min — check the Cloudflare Pages deployments"; fi ;;
+    if [[ $ok == 1 ]]; then echo "✓ live: $SITE_URL/build.txt = ${SHA:0:7}"; else echo "⚠ build.txt not at ${SHA:0:7} after 10 min — check the Worker's Builds / Deployments in the Cloudflare dashboard"; fi ;;
   direct)
     : "${CLOUDFLARE_API_TOKEN:?NEWS_DEPLOY=direct needs CLOUDFLARE_API_TOKEN}" "${CLOUDFLARE_ACCOUNT_ID:?and CLOUDFLARE_ACCOUNT_ID}"
     CF_PAGES_COMMIT_SHA=$SHA CF_PAGES_BRANCH=main node scripts/build.mjs | tail -1
-    npx wrangler pages deploy dist --project-name "${CF_PAGES_PROJECT:-newsp}" --branch main --commit-hash "$SHA" --commit-dirty=true ;;
+    npm run --silent deploy ;;
   none) echo "NEWS_DEPLOY=none: pushed, not deployed" ;;
   *) echo "NEWS_DEPLOY must be git|direct|none" >&2; exit 2 ;;
 esac
